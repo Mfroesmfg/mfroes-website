@@ -6,7 +6,7 @@
 
 backend:
   name: github
-  repo: Mfroesmfg/mfroes-website   
+  repo: YOUR-GITHUB-USERNAME/mfroes-website   # <-- CHANGE THIS
   branch: main
 
 # Photos you upload in the admin are saved here:
@@ -177,3 +177,17 @@ collections:
                   - { name: es, label: "Spanish", widget: text, required: false }
               - { name: pdf, label: "Spec sheet PDF (optional)", widget: file, required: false }
               - { name: id, label: "Internal ID — leave blank when adding a new model; do not change on existing ones", widget: string, required: false }
+
+      # ---------- Home page category card photos ----------
+      - name: hometiles
+        label: "Home Page Card Photos"
+        file: "content/home-tiles.json"
+        icon: image
+        fields:
+          - { name: seed-cleaners, label: "Seed Cleaners card photo", widget: image, required: false }
+          - { name: destoners, label: "Destoners card photo", widget: image, required: false }
+          - { name: bucket-elevators, label: "Bucket Elevators card photo", widget: image, required: false }
+          - { name: belt-conveyors, label: "Belt Conveyors card photo", widget: image, required: false }
+          - { name: magnetic-belt, label: "Magnetic Belt Conveyor card photo", widget: image, required: false }
+          - { name: polishers, label: "Polishers card photo", widget: image, required: false }
+          - { name: used-equipment, label: "Used & Refurbished card photo", widget: image, required: false }

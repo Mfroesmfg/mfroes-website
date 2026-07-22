@@ -1671,6 +1671,23 @@
   // ---- Load editable content from the CMS data files ----
   function _mfLoad(u){ return fetch(u,{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;}); }
   function _mfSlug(img){ return (img||'').replace(/^\/?images\//,'').replace(/\.[a-z0-9]+$/i,''); }
+  function _mfApplyTiles(map){
+    if(!map) return;
+    document.querySelectorAll('.card[data-href]').forEach(function(card){
+      var slug=(card.getAttribute('data-href')||'').replace('#/','');
+      var src=map[slug];
+      if(!src) return;
+      var thumb=card.querySelector('.thumb');
+      var img=card.querySelector('.thumb-photo');
+      if(!img && thumb){
+        img=document.createElement('img');
+        img.className='thumb-photo'; img.loading='lazy'; img.decoding='async';
+        img.setAttribute('onerror','this.remove()');
+        thumb.insertBefore(img, thumb.querySelector('svg'));
+      }
+      if(img) img.setAttribute('src', src);
+    });
+  }
   var _mfDefFeat={'seed-cleaners':'std','destoners':'destoner','bucket-elevators':'elevator','belt-conveyors':'belt','polishers':'polisher'};
   function _mfMergeCatalog(cat){
     if(!cat || !cat.models) return;
@@ -1700,13 +1717,14 @@
       });
     });
   }
-  Promise.all([_mfLoad('content/used.json'),_mfLoad('content/videos.json'),_mfLoad('content/plants.json'),_mfLoad('content/story.json'),_mfLoad('content/crops.json'),_mfLoad('content/catalog.json')]).then(function(res){
+  Promise.all([_mfLoad('content/used.json'),_mfLoad('content/videos.json'),_mfLoad('content/plants.json'),_mfLoad('content/story.json'),_mfLoad('content/crops.json'),_mfLoad('content/catalog.json'),_mfLoad('content/home-tiles.json')]).then(function(res){
     if(res[0]&&res[0].items) USED=res[0].items;
     if(res[1]&&res[1].items) VIDEOS=res[1].items;
     if(res[2]&&res[2].items) PLANTS=res[2].items;
     if(res[3]&&res[3].items) STORY=res[3].items;
     if(res[4]&&res[4].items) CROPS=res[4].items.map(function(x){return Array.isArray(x)?x:[x.en,x.es];});
     if(res[5]) _mfMergeCatalog(res[5]);
+    if(res[6]) _mfApplyTiles(res[6]);
     renderVideos(); renderPlants(); renderCrops(); renderStory();
     if(activeSub) renderSubpage(activeSub);
   });

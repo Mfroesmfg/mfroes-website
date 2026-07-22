@@ -1,0 +1,9 @@
+{
+  "seed-cleaners": "images/seed-cleaners.jpg",
+  "destoners": "images/destoners.jpg",
+  "bucket-elevators": "images/bucket-elevators.jpg",
+  "belt-conveyors": "images/belt-conveyors.jpg",
+  "magnetic-belt": "images/magnetic-belt.jpg",
+  "polishers": "images/polishers.jpg",
+  "used-equipment": "images/used-equipment.jpg"
+}
