@@ -8,8 +8,54 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://img.youtube.com">
-<link rel="preload" as="image" href="images/hero.png" fetchpriority="high">
+<link rel="preload" as="image" href="/.netlify/images?url=%2Fimages%2Fhero.png&w=1600&fm=webp&q=72" fetchpriority="high">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<script>
+/* ============================================================
+   PHOTO SPEED BOOSTER
+   Routes every local photo through Netlify's Image CDN so it is
+   automatically resized + converted to modern WebP on the fly.
+   A 5 MB photo becomes ~150 KB. Works for photos already on the
+   site AND every photo uploaded later through the admin.
+   Off automatically on localhost/preview so local files still show.
+   ============================================================ */
+(function(){
+  var f=/[?&]imgopt=(on|off)/.exec(location.search);
+  var ON = f ? f[1]==='on'
+             : (location.protocol!=='file:' &&
+                !/^(localhost|127\.|0\.0\.0\.0|\[::1\])/.test(location.hostname) &&
+                location.hostname!=='');
+  if(!ON) return;
+  function widthFor(img){
+    if(img.id==='imgLightboxImg'||img.id==='mgMain'||img.classList.contains('hero-photo')) return 1600;
+    return 1100;
+  }
+  function opt(img){
+    if(!img || img.getAttribute('data-mfopt')) return;
+    var src=img.getAttribute('src');
+    if(!src){ return; }                                   // src set later — observer will catch it
+    img.setAttribute('data-mfopt','1');
+    if(/^data:/.test(src) || /^https?:\/\//.test(src) || src.indexOf('/.netlify/')!==-1) return;
+    var path = src.charAt(0)==='/' ? src : '/'+src;
+    if(path.indexOf('/images/')===-1) return;             // only optimize photos in /images/
+    img.setAttribute('src', '/.netlify/images?url='+encodeURIComponent(path)+'&w='+widthFor(img)+'&fm=webp&q=72');
+  }
+  function scan(node){
+    if(!node) return;
+    if(node.tagName==='IMG'){ opt(node); return; }
+    if(node.querySelectorAll){ var l=node.querySelectorAll('img'); for(var i=0;i<l.length;i++) opt(l[i]); }
+  }
+  new MutationObserver(function(muts){
+    for(var i=0;i<muts.length;i++){
+      var m=muts[i];
+      for(var j=0;j<m.addedNodes.length;j++) scan(m.addedNodes[j]);
+      if(m.type==='attributes' && m.target.tagName==='IMG'){ m.target.removeAttribute('data-mfopt'); opt(m.target); }
+    }
+  }).observe(document.documentElement,{childList:true,subtree:true,attributes:true,attributeFilter:['src']});
+  if(document.readyState!=='loading') scan(document.body);
+  else document.addEventListener('DOMContentLoaded',function(){ scan(document.body); });
+})();
+</script>
 <style>
   :root{
     --ink:#f6f7f1; --ink-2:#eef1e9; --steel:#ffffff;
@@ -701,15 +747,15 @@
           </div>
           <div class="row">
             <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <div><b data-i18n="c.r3">Mexico · Visit the Shop</b><a class="addr" href="https://www.google.com/maps/search/?api=1&query=Corredor+Comercial+Km+18.42+Cuauhtemoc+Chihuahua+31500" target="_blank" rel="noopener">Corredor Comercial Km 18.42, Cuauhtémoc, Chihuahua 31500, Mexico<span class="dir" data-i18n="c.dir">Get Directions →</span></a></div>
+            <div><b data-i18n="c.r3">Mexico · Visit the Shop</b><a class="addr" href="https://www.google.com/maps/dir/?api=1&destination=Corredor+Comercial+Km+18.42,+Cuauhtemoc,+Chihuahua+31500,+Mexico" target="_blank" rel="noopener">Corredor Comercial Km 18.42, Cuauhtémoc, Chihuahua 31500, Mexico<span class="dir" data-i18n="c.dir">Get Directions →</span></a></div>
           </div>
           <div class="row">
             <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <div><b data-i18n="c.r5">Texas · Office</b><a class="addr" href="https://www.google.com/maps/search/?api=1&query=8509+Valencia+Ave+Lubbock+Texas" target="_blank" rel="noopener">8509 Valencia Ave, Lubbock, Texas<span class="dir" data-i18n="c.dir">Get Directions →</span></a></div>
+            <div><b data-i18n="c.r5">Texas · Office</b><a class="addr" href="https://www.google.com/maps/dir/?api=1&destination=8509+Valencia+Ave,+Lubbock,+TX+79424" target="_blank" rel="noopener">8509 Valencia Ave, Lubbock, TX 79424<span class="dir" data-i18n="c.dir">Get Directions →</span></a></div>
           </div>
           <div class="row">
             <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"/><path d="m3 6 9 7 9-7"/></svg>
-            <div><b data-i18n="c.r6">Email</b><a href="mailto:info@mfroesmfg.com">info@mfroesmfg.com</a></div>
+            <div><b data-i18n="c.r6">Email</b><a href="mailto:dfroesse8@gmail.com">dfroesse8@gmail.com</a></div>
           </div>
           <div class="row">
             <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M8 4v16M3 9h5M3 15h5"/></svg>
@@ -1026,7 +1072,7 @@
   })();
 
   /* ---------- WhatsApp form ---------- */
-  const MF_EMAIL='info@mfroesmfg.com';
+  const MF_EMAIL='dfroesse8@gmail.com';
   function _formLines(){
     const g=id=>document.getElementById(id).value.trim();
     const es = LANG==='es';
