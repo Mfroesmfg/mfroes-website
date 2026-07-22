@@ -130,3 +130,50 @@ collections:
             fields:
               - { name: en, label: "English", widget: string }
               - { name: es, label: "Spanish", widget: string }
+
+      # ---------- New Equipment catalog (models, photos, key info) ----------
+      - name: catalog
+        label: "New Equipment (models & photos)"
+        file: "content/catalog.json"
+        icon: build
+        fields:
+          - name: models
+            label: "Equipment models"
+            label_singular: "Model"
+            widget: list
+            summary: "{{fields.name}}  —  {{fields.category}}"
+            fields:
+              - name: category
+                label: "Category (which section it shows in)"
+                widget: select
+                options:
+                  - { label: "Seed Cleaners", value: "seed-cleaners" }
+                  - { label: "Destoners", value: "destoners" }
+                  - { label: "Bucket Elevators", value: "bucket-elevators" }
+                  - { label: "Belt Conveyors", value: "belt-conveyors" }
+                  - { label: "Magnetic Belt Conveyor", value: "magnetic-belt" }
+                  - { label: "Polishers", value: "polishers" }
+              - { name: name, label: "Model name", widget: string }
+              - name: photos
+                label: "Photos (the first one is the main photo)"
+                label_singular: "Photo"
+                widget: list
+                field: { name: image, label: "Photo", widget: image }
+              - { name: cap, label: "Capacity (e.g. 10 t/h)", widget: string, required: false }
+              - { name: screens, label: "Number of screens (optional)", widget: string, required: false }
+              - { name: size, label: "Screen size (optional)", widget: string, required: false }
+              - name: series
+                label: "Series line (optional, e.g. GenX Series)"
+                widget: object
+                required: false
+                fields:
+                  - { name: en, label: "English", widget: string, required: false }
+                  - { name: es, label: "Spanish", widget: string, required: false }
+              - name: desc
+                label: "Description"
+                widget: object
+                fields:
+                  - { name: en, label: "English", widget: text, required: false }
+                  - { name: es, label: "Spanish", widget: text, required: false }
+              - { name: pdf, label: "Spec sheet PDF (optional)", widget: file, required: false }
+              - { name: id, label: "Internal ID — leave blank when adding a new model; do not change on existing ones", widget: string, required: false }

@@ -1550,7 +1550,7 @@
   function openModel(i){
     const list=(CATEGORIES[activeSub]&&CATEGORIES[activeSub].models)||[];
     const m=list[i]; if(!m) return;
-    const slug=(m.img||'').replace('images/','').replace('.jpg','');
+    const slug=(m.img||'').replace(/^\/?images\//,'').replace(/\.[a-z0-9]+$/i,'');
     const pdfHref = m.pdf || (CATEGORIES[activeSub]&&CATEGORIES[activeSub].pdf) || ('pdfs/'+slug+'.pdf');
     const isC = m.series && m.series.en && m.series.en.indexOf('C-Series')>=0;
     const set = m.feat ? (FEAT[m.feat]||FEAT.std) : (isC?FEAT.c:FEAT.std);
@@ -1574,6 +1574,9 @@
     } else {
       specHtml='<p style="color:var(--muted);font-size:.95rem">'+(LANG==='es'?'Especificaciones completas disponibles a solicitud.':'Full specifications available on request.')+'</p>';
     }
+    var galPhotos = (m.photos&&m.photos.length) ? m.photos : (m.img?[m.img]:[]);
+    var mainSrc = galPhotos[0] || m.img || '';
+    var photoThumbs = galPhotos.map(function(p){ return '<img loading="lazy" decoding="async" src="'+p+'" onerror="this.remove()" onclick="document.getElementById(\''+'mgMain\').src=this.src">'; }).join('');
     const extra=[2,3,4,5,6,7,8,9,10,11,12].map(n=>'<img loading="lazy" decoding="async" src="images/'+slug+'-'+n+'.jpg" onerror="this.remove()" onclick="document.getElementById(\''+'mgMain\').src=this.src">').join('');
     const featLis=pickArr(set.features).map(x=>'<li>'+x+'</li>').join('');
     const optLis=pickArr(set.options).map(x=>'<li>'+x+'</li>').join('');
@@ -1585,8 +1588,8 @@
       '<button class="modal-close" onclick="closeModel()" aria-label="Close">×</button>'+
       '<div class="modal-head"><span class="eyebrow">'+tr(m.series)+'</span><h2>'+name+'</h2></div>'+
       '<div class="modal-body">'+
-        '<div class="modal-gallery"><div class="mg-main"><img id="mgMain" decoding="async" src="'+m.img+'" alt="'+name+'" onerror="this.style.display=\'none\'"></div>'+
-        '<div class="mg-thumbs"><img loading="lazy" decoding="async" src="'+m.img+'" onclick="var g=document.getElementById(\'mgMain\');g.src=this.src;g.style.display=\'block\'">'+extra+'</div></div>'+
+        '<div class="modal-gallery"><div class="mg-main"><img id="mgMain" decoding="async" src="'+mainSrc+'" alt="'+name+'" onerror="this.style.display=\'none\'"></div>'+
+        '<div class="mg-thumbs">'+photoThumbs+extra+'</div></div>'+
         '<div class="modal-info"><h3>'+L.spec+'</h3>'+specHtml+
           '<div class="modal-cta"><a class="btn btn-primary" href="'+pdfHref+'" target="_blank" rel="noopener">'+L.pdf+' ↓</a>'+
           '<a class="btn btn-ghost" href="'+WA_NUM+'?text='+waMsg+'" target="_blank" rel="noopener">'+L.quote+'</a></div></div>'+
@@ -1607,12 +1610,43 @@
   renderStory();
   // ---- Load editable content from the CMS data files ----
   function _mfLoad(u){ return fetch(u,{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;}); }
-  Promise.all([_mfLoad('content/used.json'),_mfLoad('content/videos.json'),_mfLoad('content/plants.json'),_mfLoad('content/story.json'),_mfLoad('content/crops.json')]).then(function(res){
+  function _mfSlug(img){ return (img||'').replace(/^\/?images\//,'').replace(/\.[a-z0-9]+$/i,''); }
+  var _mfDefFeat={'seed-cleaners':'std','destoners':'destoner','bucket-elevators':'elevator','belt-conveyors':'belt','polishers':'polisher'};
+  function _mfMergeCatalog(cat){
+    if(!cat || !cat.models) return;
+    var byCat={};
+    cat.models.forEach(function(jm){ if(!jm||!jm.category) return; (byCat[jm.category]=byCat[jm.category]||[]).push(jm); });
+    Object.keys(byCat).forEach(function(k){
+      if(!CATEGORIES[k]) return;
+      var baseById={};
+      (CATEGORIES[k].models||[]).forEach(function(bm){ baseById[_mfSlug(bm.img)]=bm; });
+      CATEGORIES[k].models = byCat[k].map(function(jm){
+        var bm = (jm.id && baseById[jm.id]) || {};
+        var photos = (jm.photos&&jm.photos.length) ? jm.photos.slice() : (bm.img?[bm.img]:[]);
+        var img = photos[0] || bm.img || '';
+        var out = Object.assign({}, bm);        // keeps specs, feat, chips, features from the original
+        out.id = jm.id || out.id;
+        if(jm.name) out.name = jm.name;
+        if(jm.series && (jm.series.en||jm.series.es)) out.series = jm.series;
+        if(jm.cap!=null && jm.cap!=='') out.cap = jm.cap;
+        if(jm.screens!=null && jm.screens!=='') out.screens = jm.screens;
+        if(jm.size!=null && jm.size!=='') out.size = jm.size;
+        if(jm.desc && (jm.desc.en||jm.desc.es)) out.desc = jm.desc;
+        out.img = img;
+        out.photos = photos;
+        if(jm.pdf) out.pdf = jm.pdf;
+        if(!bm.img){ out.feat = out.feat || _mfDefFeat[k]; }  // new models get the category's default feature set
+        return out;
+      });
+    });
+  }
+  Promise.all([_mfLoad('content/used.json'),_mfLoad('content/videos.json'),_mfLoad('content/plants.json'),_mfLoad('content/story.json'),_mfLoad('content/crops.json'),_mfLoad('content/catalog.json')]).then(function(res){
     if(res[0]&&res[0].items) USED=res[0].items;
     if(res[1]&&res[1].items) VIDEOS=res[1].items;
     if(res[2]&&res[2].items) PLANTS=res[2].items;
     if(res[3]&&res[3].items) STORY=res[3].items;
     if(res[4]&&res[4].items) CROPS=res[4].items.map(function(x){return Array.isArray(x)?x:[x.en,x.es];});
+    if(res[5]) _mfMergeCatalog(res[5]);
     renderVideos(); renderPlants(); renderCrops(); renderStory();
     if(activeSub) renderSubpage(activeSub);
   });

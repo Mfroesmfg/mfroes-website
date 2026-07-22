@@ -1,0 +1,406 @@
+{
+  "models": [
+    {
+      "category": "seed-cleaners",
+      "id": "eclipse-334",
+      "name": "Frontier 34-3",
+      "series": {
+        "en": "Frontier Series",
+        "es": "Serie Frontier"
+      },
+      "cap": "3 t/h",
+      "screens": "3",
+      "size": "34×34\"",
+      "desc": {
+        "en": "A versatile air-screen cleaner in the Frontier series — precise cleaning across a wide range of crops.",
+        "es": "Una cribadora de precisión versátil de la serie Frontier — limpieza precisa para una amplia gama de cultivos."
+      },
+      "photos": [
+        "images/eclipse-334.jpg"
+      ]
+    },
+    {
+      "category": "seed-cleaners",
+      "id": "seed-master-gv254",
+      "name": "Seed Master GV254",
+      "series": {
+        "en": "Seed Master · GV Series",
+        "es": "Seed Master · Serie GV"
+      },
+      "cap": "5.2 t/h",
+      "screens": "2",
+      "size": "54×60\"",
+      "desc": {
+        "en": "A Seed Master GV-series cleaner combining screens and aspiration for clean, high-quality output.",
+        "es": "Una cribadora de precisión Seed Master serie GV que combina cribas y aspiración para una salida limpia y de alta calidad."
+      },
+      "photos": [
+        "images/seed-master-gv254.jpg"
+      ]
+    },
+    {
+      "category": "seed-cleaners",
+      "id": "seed-master-gv260",
+      "name": "Seed Master GV260",
+      "series": {
+        "en": "Seed Master · GV Series",
+        "es": "Seed Master · Serie GV"
+      },
+      "cap": "6 t/h",
+      "screens": "5",
+      "size": "54×26\"",
+      "desc": {
+        "en": "The GV260 steps up capacity in the Seed Master line while keeping the same cleaning precision.",
+        "es": "La GV260 aumenta la capacidad en la línea Seed Master manteniendo la misma precisión de limpieza."
+      },
+      "photos": [
+        "images/seed-master-gv260.jpg"
+      ]
+    },
+    {
+      "category": "seed-cleaners",
+      "id": "genx-8026",
+      "name": "GenX 8026",
+      "series": {
+        "en": "GenX Series",
+        "es": "Serie GenX"
+      },
+      "cap": "10 t/h",
+      "screens": "8",
+      "size": "54×26\"",
+      "desc": {
+        "en": "A GenX-series cleaner engineered for demanding, higher-volume operations.",
+        "es": "Una cribadora de precisión serie GenX diseñada para operaciones exigentes de mayor volumen."
+      },
+      "photos": [
+        "images/genx-8026.jpg"
+      ]
+    },
+    {
+      "category": "seed-cleaners",
+      "id": "c588",
+      "name": "C588",
+      "series": {
+        "en": "C-Series",
+        "es": "Serie C"
+      },
+      "cap": "15 t/h",
+      "screens": "10",
+      "size": "54×44\"",
+      "desc": {
+        "en": "An entry in the C-series, balancing throughput and footprint for growing operations.",
+        "es": "Un modelo de la serie C que equilibra capacidad y espacio para operaciones en crecimiento."
+      },
+      "photos": [
+        "images/c588.jpg"
+      ]
+    },
+    {
+      "category": "seed-cleaners",
+      "id": "c688",
+      "name": "C688",
+      "series": {
+        "en": "C-Series",
+        "es": "Serie C"
+      },
+      "cap": "20 t/h",
+      "screens": "12",
+      "size": "54×44\"",
+      "desc": {
+        "en": "A mid-range C-series cleaner offering more capacity for busier lines.",
+        "es": "Una cribadora de precisión de rango medio de la serie C con mayor capacidad para líneas más ocupadas."
+      },
+      "photos": [
+        "images/c688.jpg"
+      ]
+    },
+    {
+      "category": "seed-cleaners",
+      "id": "c788-highcap",
+      "name": "C788 Highcap",
+      "series": {
+        "en": "C-Series · High-Capacity",
+        "es": "Serie C · Alta Capacidad"
+      },
+      "cap": "25 t/h",
+      "screens": "14",
+      "size": "54×44\"",
+      "desc": {
+        "en": "The high-capacity flagship of the C-series, built for maximum throughput.",
+        "es": "El modelo insignia de alta capacidad de la serie C, hecho para el máximo rendimiento."
+      },
+      "photos": [
+        "images/c788-highcap.jpg"
+      ]
+    },
+    {
+      "category": "destoners",
+      "id": "248-ag",
+      "name": "248 AG",
+      "series": {
+        "en": "AG Series",
+        "es": "Serie AG"
+      },
+      "cap": "2 t/h",
+      "desc": {
+        "en": "The compact AG destoner — dependable stone removal for smaller lines and specialty lots.",
+        "es": "La despedradora AG compacta — remoción de piedras confiable para líneas pequeñas y lotes especiales."
+      },
+      "photos": [
+        "images/248-ag.jpg"
+      ]
+    },
+    {
+      "category": "destoners",
+      "id": "448-ag",
+      "name": "448 AG",
+      "series": {
+        "en": "AG Series",
+        "es": "Serie AG"
+      },
+      "cap": "3–4 t/h",
+      "desc": {
+        "en": "A step up in capacity, keeping the same high separation efficiency for growing operations.",
+        "es": "Un aumento en capacidad, manteniendo la misma alta eficiencia de separación para operaciones en crecimiento."
+      },
+      "photos": [
+        "images/448-ag.jpg"
+      ]
+    },
+    {
+      "category": "destoners",
+      "id": "648-ag",
+      "name": "648 AG",
+      "series": {
+        "en": "AG Series",
+        "es": "Serie AG"
+      },
+      "cap": "6 t/h",
+      "desc": {
+        "en": "A higher-capacity AG destoner for busier lines that still demand clean, precise stone removal.",
+        "es": "Una despedradora AG de mayor capacidad para líneas más ocupadas que aún exigen una remoción de piedras limpia y precisa."
+      },
+      "photos": [
+        "images/648-ag.jpg"
+      ]
+    },
+    {
+      "category": "destoners",
+      "id": "12048-ag",
+      "name": "12048 AG",
+      "series": {
+        "en": "AG Series · High-Capacity",
+        "es": "Serie AG · Alta Capacidad"
+      },
+      "cap": "12 t/h",
+      "desc": {
+        "en": "The high-capacity flagship of the AG line, built for maximum throughput in demanding operations.",
+        "es": "El modelo insignia de alta capacidad de la línea AG, hecho para el máximo rendimiento en operaciones exigentes."
+      },
+      "photos": [
+        "images/12048-ag.jpg"
+      ]
+    },
+    {
+      "category": "bucket-elevators",
+      "id": "b-300",
+      "name": "B 300",
+      "series": {
+        "en": "B Series",
+        "es": "Serie B"
+      },
+      "cap": "up to 5 t/h",
+      "desc": {
+        "en": "The compact entry — a dependable elevator for smaller lines and tight footprints.",
+        "es": "El modelo compacto — un elevador confiable para líneas pequeñas y espacios reducidos."
+      },
+      "photos": [
+        "images/b-300.jpg"
+      ]
+    },
+    {
+      "category": "bucket-elevators",
+      "id": "c-600",
+      "name": "C 600",
+      "series": {
+        "en": "C Series",
+        "es": "Serie C"
+      },
+      "cap": "10 t/h",
+      "desc": {
+        "en": "A step up in capacity for growing operations that need more lift.",
+        "es": "Un aumento en capacidad para operaciones en crecimiento que necesitan más elevación."
+      },
+      "photos": [
+        "images/c-600.jpg"
+      ]
+    },
+    {
+      "category": "bucket-elevators",
+      "id": "d-1000",
+      "name": "D 1000",
+      "series": {
+        "en": "D Series",
+        "es": "Serie D"
+      },
+      "cap": "20 t/h",
+      "desc": {
+        "en": "A higher-capacity elevator for busier lines and taller lifts.",
+        "es": "Un elevador de mayor capacidad para líneas más ocupadas y elevaciones más altas."
+      },
+      "photos": [
+        "images/d-1000.jpg"
+      ]
+    },
+    {
+      "category": "bucket-elevators",
+      "id": "d-3000",
+      "name": "D 3000",
+      "series": {
+        "en": "D Series",
+        "es": "Serie D"
+      },
+      "cap": "70 t/h",
+      "desc": {
+        "en": "Serious throughput for high-volume plants, with the same gentle handling.",
+        "es": "Rendimiento serio para plantas de alto volumen, con el mismo manejo suave."
+      },
+      "photos": [
+        "images/d-3000.jpg"
+      ]
+    },
+    {
+      "category": "bucket-elevators",
+      "id": "ed-3500",
+      "name": "ED 3500",
+      "series": {
+        "en": "ED Series",
+        "es": "Serie ED"
+      },
+      "cap": "96 t/h",
+      "desc": {
+        "en": "An extended-capacity elevator for demanding, continuous operations.",
+        "es": "Un elevador de capacidad extendida para operaciones exigentes y continuas."
+      },
+      "photos": [
+        "images/ed-3500.jpg"
+      ]
+    },
+    {
+      "category": "bucket-elevators",
+      "id": "dd-4000",
+      "name": "DD 4000",
+      "series": {
+        "en": "DD Series · High-Capacity",
+        "es": "Serie DD · Alta Capacidad"
+      },
+      "cap": "120 t/h",
+      "desc": {
+        "en": "The high-capacity flagship, built for maximum throughput across the biggest lines.",
+        "es": "El modelo insignia de alta capacidad, hecho para el máximo rendimiento en las líneas más grandes."
+      },
+      "photos": [
+        "images/dd-4000.jpg"
+      ]
+    },
+    {
+      "category": "belt-conveyors",
+      "id": "belt-model-12",
+      "name": "Model 12",
+      "series": {
+        "en": "Belt Series",
+        "es": "Serie de Banda"
+      },
+      "desc": {
+        "en": "A gentle belt conveyor for transferring and feeding across your line, sized to your layout.",
+        "es": "Una banda transportadora suave para transferir y alimentar a lo largo de tu línea, a la medida de tu planta."
+      },
+      "photos": [
+        "images/belt-model-12.jpg"
+      ]
+    },
+    {
+      "category": "belt-conveyors",
+      "id": "belt-model-16",
+      "name": "Model 16",
+      "series": {
+        "en": "Belt Series",
+        "es": "Serie de Banda"
+      },
+      "desc": {
+        "en": "A wider-belt conveyor for higher throughput while keeping the same low-impact handling.",
+        "es": "Una banda más ancha para mayor rendimiento manteniendo el mismo manejo de bajo impacto."
+      },
+      "photos": [
+        "images/belt-model-16.jpg"
+      ]
+    },
+    {
+      "category": "magnetic-belt",
+      "id": "x10-60",
+      "name": "X10-60",
+      "series": {
+        "en": "Magnetic Separation",
+        "es": "Separación Magnética"
+      },
+      "desc": {
+        "en": "Separates seed by surface texture using iron powder and a magnetic belt — ideal for removing dodder, buckhorn, and other rough weed seeds from clover, alfalfa, flax, and grasses.",
+        "es": "Separa la semilla por textura de superficie usando polvo de hierro y una banda magnética — ideal para remover cuscuta, llantén y otras semillas de maleza rugosas del trébol, la alfalfa, el lino y los pastos."
+      },
+      "photos": [
+        "images/x10-60.jpg"
+      ]
+    },
+    {
+      "category": "polishers",
+      "id": "mf254",
+      "name": "MF254",
+      "series": {
+        "en": "MF Series · High-Capacity",
+        "es": "Serie MF · Alta Capacidad"
+      },
+      "cap": "up to 10 t/h",
+      "desc": {
+        "en": "The high-capacity MF polisher — five polishing boxes buff the seed coat and remove hairs and awns for smooth, free-flowing seed.",
+        "es": "La pulidora MF de alta capacidad — cinco cajas de pulido pulen la cubierta de la semilla y remueven pelos y aristas para una semilla lisa y de libre flujo."
+      },
+      "photos": [
+        "images/mf254.jpg"
+      ]
+    },
+    {
+      "category": "polishers",
+      "id": "mf536",
+      "name": "MF536",
+      "series": {
+        "en": "MF Series",
+        "es": "Serie MF"
+      },
+      "cap": "up to 5–6 t/h",
+      "desc": {
+        "en": "A mid-capacity MF polisher with two polishing boxes — clean finishing that improves flow, metering, and bag presentation.",
+        "es": "Una pulidora MF de capacidad media con dos cajas de pulido — un acabado limpio que mejora el flujo, la dosificación y la presentación en la bolsa."
+      },
+      "photos": [
+        "images/mf536.jpg"
+      ]
+    },
+    {
+      "category": "polishers",
+      "id": "mf218",
+      "name": "MF218",
+      "series": {
+        "en": "MF Series · Compact",
+        "es": "Serie MF · Compacta"
+      },
+      "cap": "up to 2 t/h",
+      "desc": {
+        "en": "The compact single-box MF polisher — finishes seed to a smooth, uniform coat, ready for treating or bagging.",
+        "es": "La pulidora MF compacta de una caja — da a la semilla un acabado liso y uniforme, lista para tratar o embolsar."
+      },
+      "photos": [
+        "images/mf218.jpg"
+      ]
+    }
+  ]
+}
