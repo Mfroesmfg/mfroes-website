@@ -1,0 +1,11 @@
+# Netlify build settings for the MFroes site.
+# No build step is needed — the site is plain HTML.
+[build]
+  publish = "."
+  command = ""
+
+# Always serve the freshest content files (so admin edits show up right away)
+[[headers]]
+  for = "/content/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

@@ -1,0 +1,1584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MFroes Manufacturing — Rooted in Tradition. Built to Last.</title>
+<meta name="description" content="MFroes Manufacturing supplies, fabricates, and refurbishes seed cleaning, sizing, and conditioning machinery. Family-owned since 1999, combining proven craftsmanship with North American engineering.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://img.youtube.com">
+<link rel="preload" as="image" href="images/hero.png" fetchpriority="high">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#f6f7f1; --ink-2:#eef1e9; --steel:#ffffff;
+    --bone:#1f2a17; --bone-2:#3c4632; --muted:#66705c;
+    --tan:#9a7a26; --tan-2:#b9922e; --grain:#4e9d2d; --green-deep:#35771f;
+    --olive:#6b6f47; --rust:#a8542b;
+    --line:rgba(31,42,23,.10);
+    --shadow:0 20px 50px -24px rgba(45,60,30,.26);
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Barlow',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    background:var(--ink);color:var(--bone);line-height:1.6;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+  h1,h2,h3,.display{font-family:'Oswald',Impact,sans-serif;font-weight:600;letter-spacing:.01em;line-height:1.02;text-transform:uppercase}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .eyebrow{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.28em;font-size:.74rem;color:var(--tan-2);font-weight:600}
+  .btn{display:inline-flex;align-items:center;gap:.6em;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.09em;font-weight:600;font-size:.95rem;padding:15px 30px;border-radius:2px;cursor:pointer;transition:transform .15s ease, background .2s ease, color .2s ease, border-color .2s}
+  .btn-primary{background:var(--grain);color:#1a1710;border:1px solid var(--grain)}
+  .btn-primary:hover{background:var(--tan-2);border-color:var(--tan-2);transform:translateY(-2px)}
+  .btn-ghost{background:transparent;color:var(--bone);border:1px solid rgba(35,42,25,.28)}
+  .btn-ghost:hover{border-color:var(--grain);color:var(--tan-2);transform:translateY(-2px)}
+  .grain-tex{background-image:radial-gradient(rgba(0,0,0,.014) 1px, transparent 1px),radial-gradient(rgba(0,0,0,.018) 1px, transparent 1px);background-size:5px 5px, 7px 7px;background-position:0 0, 3px 4px}
+
+  /* NAV */
+  header.nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:16px 24px;background:linear-gradient(180deg, rgba(246,247,241,.97), rgba(246,247,241,.75));transition:background .3s ease, padding .3s ease}
+  header.nav.scrolled{background:rgba(245,240,229,.97);border-bottom:1px solid var(--line);padding:11px 24px}
+  .brand{display:flex;align-items:center;gap:12px;font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+  .brand .mark{width:34px;height:34px;flex:0 0 34px}
+  .brand .txt{font-size:1.15rem;line-height:1}
+  .brand .txt small{display:block;font-size:.5rem;letter-spacing:.34em;color:var(--tan-2);font-weight:600;margin-top:3px}
+  .brand-logo{height:46px;width:auto;display:block}
+  .brand-fallback{display:none;align-items:center;gap:12px}
+  footer .brand-logo{height:40px}
+  header.nav.scrolled .brand-logo{height:40px}
+  .navright{display:flex;align-items:center;gap:22px}
+  nav.links{display:flex;align-items:center;gap:28px}
+  nav.links a{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:.86rem;color:var(--bone-2);font-weight:500}
+  nav.links a:hover{color:var(--grain)}
+  nav.links .btn{padding:11px 22px}
+  .langtoggle{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:.8rem;font-weight:600;color:var(--bone);background:transparent;border:1px solid rgba(35,42,25,.28);border-radius:2px;padding:8px 12px;cursor:pointer;display:flex;align-items:center;gap:6px;transition:border-color .2s,color .2s}
+  .langtoggle:hover{border-color:var(--grain);color:var(--tan-2)}
+  .langtoggle svg{width:14px;height:14px}
+  .navtoggle{display:none;background:none;border:none;color:var(--bone);cursor:pointer}
+
+  /* HERO */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;z-index:0}
+  .hero-bg .layer1{position:absolute;inset:0;background:radial-gradient(120% 90% at 78% 15%, rgba(95,158,42,.12), transparent 55%),radial-gradient(90% 80% at 15% 90%, rgba(168,134,63,.12), transparent 60%),linear-gradient(160deg,#f7f9f3 0%, #eef1ea 55%, #e9ede2 100%)}
+  .hero-bg .beams{position:absolute;inset:0;opacity:.4;background:repeating-linear-gradient(115deg, transparent 0 46px, rgba(35,42,25,.045) 46px 48px);mask-image:linear-gradient(90deg,transparent,black 40%,black 60%,transparent)}
+  .hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center;width:100%}
+  .hero h1{font-size:clamp(2.9rem,6.4vw,5.4rem);font-weight:700}
+  .hero h1 .accent{color:var(--grain);display:block}
+  .hero p.lead{font-size:1.18rem;color:var(--bone-2);max-width:40ch;margin:22px 0 30px}
+  .hero .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+  .hero .stats{display:flex;gap:34px;margin-top:44px;padding-top:26px;border-top:1px solid var(--line);flex-wrap:wrap}
+  .hero .stats .n{font-family:'Oswald',sans-serif;font-size:2.1rem;color:var(--tan-2);font-weight:700;line-height:1}
+  .hero .stats .l{font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);margin-top:6px}
+  .machine{position:relative;filter:drop-shadow(0 30px 40px rgba(0,0,0,.55))}
+  .hero-photo{position:relative;z-index:1;width:100%;height:auto;max-height:520px;object-fit:contain;display:block}
+  .badge-usa{position:absolute;top:2px;right:6px;z-index:3;display:flex;flex-direction:column;align-items:flex-end;text-align:right;transform:rotate(-4deg)}
+  .badge-usa b{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:700;font-size:1.9rem;line-height:.9;color:var(--tan);letter-spacing:.01em;text-shadow:0 1px 0 rgba(255,255,255,.6)}
+  .badge-usa span{font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;font-size:.52rem;letter-spacing:.34em;margin-top:5px;color:var(--muted)}
+  .badge-usa i{display:block;width:78px;height:1px;background:linear-gradient(90deg,transparent,var(--tan-2));margin:5px 0 4px auto}
+
+  section{position:relative;padding:104px 0}
+  .sec-head{max-width:660px;margin-bottom:52px}
+  .sec-head h2{font-size:clamp(2rem,4.4vw,3.2rem);margin:14px 0 16px;font-weight:700}
+  .sec-head p{color:var(--muted);font-size:1.1rem}
+  .divider-strip{height:5px;background:repeating-linear-gradient(90deg,var(--grain) 0 26px, var(--ink) 26px 34px);opacity:.5}
+  #crops{padding:60px 0}
+  .crop-marquee{overflow:hidden;margin-top:26px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+  .crop-track{display:flex;gap:14px;width:max-content;animation:cropscroll 46s linear infinite;will-change:transform}
+  .crop-marquee:hover .crop-track{animation-play-state:paused}
+  @keyframes cropscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .crop{flex:none;display:flex;align-items:center;gap:10px;padding:12px 22px;border:1px solid var(--line);border-radius:999px;background:var(--steel);box-shadow:0 2px 10px rgba(70,58,24,.05)}
+  .crop svg{width:20px;height:20px;color:var(--grain);flex:none}
+  .crop span{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.07em;font-size:.82rem;font-weight:600;color:var(--bone);white-space:nowrap}
+  .crop-more{border-style:dashed;background:transparent}
+  .crop-more span{color:var(--tan)}
+  @media (prefers-reduced-motion:reduce){.crop-track{animation:none;flex-wrap:wrap;justify-content:center;width:auto}}
+  .used-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px;margin-top:8px}
+  .used-card{background:var(--steel);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+  .used-thumb{position:relative;aspect-ratio:4/3;background:#f0f3ec;display:flex;align-items:center;justify-content:center}
+  .used-photo{width:100%;height:100%;object-fit:contain;background:#fff;padding:8px;display:block}
+  .used-card.no-photo .used-photo{display:none}
+  .used-card.no-photo .used-thumb::after{content:'Photo coming soon';font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.68rem;color:var(--muted)}
+  .used-badge{position:absolute;top:12px;left:12px;color:#fff;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:.6rem;font-weight:600;padding:5px 12px;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.18)}
+  .used-body{padding:18px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .used-body h3{font-size:1.15rem}
+  .used-body p{color:var(--muted);font-size:.92rem;flex:1}
+  .used-foot{display:flex;align-items:center;justify-content:space-between;margin-top:6px;padding-top:12px;border-top:1px solid var(--line)}
+  .used-price{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.04em;font-size:.78rem;color:var(--bone);font-weight:600}
+  #videos{padding:70px 0}
+  .video-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;margin-top:14px}
+  .video-card{background:var(--steel);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);cursor:pointer;text-align:left;padding:0;font:inherit;color:inherit;display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
+  .video-card:hover{transform:translateY(-3px);box-shadow:0 16px 34px -18px rgba(70,58,24,.4)}
+  .video-thumb{position:relative;aspect-ratio:16/9;background:#1a1a1a;overflow:hidden}
+  .video-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+  .video-thumb::after{content:'';position:absolute;inset:0;background:rgba(20,16,8,.12);transition:background .18s ease}
+  .video-card:hover .video-thumb::after{background:rgba(20,16,8,0)}
+  .video-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:60px;height:60px;border-radius:50%;background:rgba(210,40,30,.92);display:flex;align-items:center;justify-content:center;z-index:2;box-shadow:0 6px 18px rgba(0,0,0,.35);transition:transform .18s ease}
+  .video-card:hover .video-play{transform:translate(-50%,-50%) scale(1.08)}
+  .video-play svg{width:24px;height:24px;fill:#fff;margin-left:3px}
+  .video-cap{padding:16px 18px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.03em;font-size:.92rem;font-weight:600;color:var(--bone)}
+  .vid-lightbox{position:fixed;inset:0;z-index:120;background:rgba(15,12,6,.9);display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;pointer-events:none;transition:opacity .2s ease}
+  .vid-lightbox.open{opacity:1;pointer-events:auto}
+  .vid-frame{position:relative;width:min(960px,100%);aspect-ratio:16/9;background:#000;border-radius:10px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+  .vid-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .vid-close{position:absolute;top:-46px;right:0;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);color:#fff;font-size:1.3rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:3}
+  .vid-close:hover{background:rgba(255,255,255,.26)}
+  #plants{padding:70px 0}
+  .plant-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:26px;margin-top:16px}
+  .plant-card{margin:0;cursor:pointer;background:var(--steel);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);transition:transform .18s ease,box-shadow .18s ease}
+  .plant-card:hover{transform:translateY(-3px);box-shadow:0 16px 34px -18px rgba(45,60,30,.4)}
+  .plant-thumb{position:relative;aspect-ratio:16/10;background:#e9ede2;overflow:hidden}
+  .plant-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
+  .plant-card:hover .plant-thumb img{transform:scale(1.05)}
+  .plant-card.no-photo .plant-thumb::after{content:'Photo coming soon';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.7rem;color:var(--muted)}
+  .plant-zoom{position:absolute;top:12px;right:12px;width:34px;height:34px;border-radius:50%;background:rgba(12,16,8,.55);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .18s ease}
+  .plant-card:hover .plant-zoom{opacity:1}
+  .plant-zoom svg{width:16px;height:16px;fill:none;stroke:#fff;stroke-width:2}
+  .plant-body{padding:18px 20px}
+  .plant-body h3{font-size:1.2rem}
+  .plant-loc{display:inline-flex;align-items:center;gap:5px;margin:5px 0 8px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:.66rem;color:var(--tan)}
+  .plant-role{position:absolute;top:12px;left:12px;z-index:2;background:rgba(12,16,8,.62);color:#fff;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:.62rem;font-weight:600;padding:5px 11px;border-radius:999px}
+  .plant-thumb .used-count{top:auto;bottom:12px}
+  .plant-body p{color:var(--muted);font-size:.92rem}
+  .img-lightbox{position:fixed;inset:0;z-index:120;background:rgba(12,16,8,.93);display:flex;align-items:center;justify-content:center;padding:34px 24px;opacity:0;pointer-events:none;transition:opacity .2s ease}
+  .img-lightbox.open{opacity:1;pointer-events:auto}
+  .img-frame{position:relative;display:flex;flex-direction:column;align-items:center;max-width:min(1100px,100%)}
+  .img-frame img{max-width:100%;max-height:80vh;border-radius:8px;box-shadow:0 30px 80px rgba(0,0,0,.6);display:block}
+  .img-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);color:#fff;font-size:1.8rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center}
+  .img-nav:hover{background:rgba(255,255,255,.28)}
+  .img-nav.prev{left:-64px}
+  .img-nav.next{right:-64px}
+  .img-count{margin-top:8px;font-family:'Oswald',sans-serif;letter-spacing:.08em;font-size:.75rem;color:#cdc6b4}
+  @media(max-width:720px){.img-nav.prev{left:6px}.img-nav.next{right:6px}.img-nav{background:rgba(12,16,8,.55)}}
+  .used-count{position:absolute;top:12px;right:12px;display:inline-flex;align-items:center;gap:5px;background:rgba(12,16,8,.62);color:#fff;font-family:'Oswald',sans-serif;font-size:.68rem;font-weight:600;padding:5px 10px;border-radius:999px}
+  .used-count svg{width:13px;height:13px}
+  .used-card.clickable{cursor:pointer;transition:transform .18s ease,box-shadow .18s ease}
+  .used-card.clickable:hover{transform:translateY(-3px);box-shadow:0 16px 34px -18px rgba(45,60,30,.4)}
+  .img-cap{margin-top:14px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:.85rem;color:#f3ecd9;text-align:center}
+
+  /* PRODUCTS */
+  #products{background:linear-gradient(180deg,#f2ecdd,#ece4d2)}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{background:linear-gradient(180deg,#ffffff,#faf6ec);border:1px solid var(--line);border-radius:4px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s ease, border-color .2s ease, box-shadow .2s}
+  .card:hover{transform:translateY(-6px);border-color:rgba(140,198,63,.5);box-shadow:var(--shadow)}
+  .card .thumb{height:190px;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  .card .thumb .tag{position:absolute;top:12px;left:12px;z-index:2;background:rgba(19,17,14,.82);color:var(--tan-2);font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.66rem;font-weight:600;padding:5px 10px;border:1px solid var(--line)}
+  .card .thumb .thumb-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#ffffff;padding:8px;z-index:1;display:block}
+  .card .body{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1}
+  .card h3{font-size:1.32rem;margin-bottom:8px}
+  .card p{color:var(--muted);font-size:.96rem;flex:1}
+  .card .spec{display:flex;gap:14px;flex-wrap:wrap;margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+  .card .spec div{font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+  .card .spec b{display:block;font-family:'Oswald',sans-serif;color:var(--bone);font-size:1.02rem;letter-spacing:.02em}
+  .card .more{margin-top:16px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.82rem;color:var(--grain);background:none;border:none;padding:0;cursor:pointer;text-align:left;align-self:flex-start}
+  .card:hover .more{color:var(--tan-2)}
+  .features{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:60px}
+  .feat{padding:24px;background:#ffffff;border:1px solid var(--line);border-radius:4px}
+  .feat .ic{width:40px;height:40px;color:var(--grain);margin-bottom:14px}
+  .feat h4{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.04em;font-size:1.05rem;margin-bottom:6px}
+  .feat p{color:var(--muted);font-size:.9rem}
+
+  /* ABOUT */
+  #about{background:var(--ink)}
+  .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+  .about-visual{position:relative;border-radius:6px;overflow:hidden;border:1px solid var(--line);min-height:440px;box-shadow:var(--shadow)}
+  .about-visual .cap{position:absolute;left:0;right:0;bottom:0;padding:44px 22px 20px;background:linear-gradient(0deg,rgba(12,16,8,.9),rgba(12,16,8,.55) 55%,transparent);font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.84rem;color:#fbf7ec;z-index:2;text-shadow:0 1px 4px rgba(0,0,0,.55)}
+  .about-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:1}
+  .story-block{margin-top:54px;border-top:1px solid var(--line);padding-top:38px}
+  .story-head .eyebrow{display:block}
+  .story-head h3{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.02em;font-size:1.5rem;color:var(--bone);margin-top:6px}
+  .story-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:22px}
+  .story-tile{position:relative;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);background:#000;cursor:pointer;transition:transform .2s ease}
+  .story-tile:hover{transform:translateY(-4px)}
+  .story-tile img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;filter:sepia(.28) saturate(.9) contrast(.98) brightness(1.02)}
+  .story-tile figcaption{position:absolute;left:0;right:0;bottom:0;padding:24px 12px 11px;background:linear-gradient(0deg,rgba(12,16,8,.82),transparent);color:#f3ecd9;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.05em;font-size:.66rem}
+  @media(max-width:820px){.story-grid{grid-template-columns:1fr 1fr}}
+  .about-copy h2{font-size:clamp(2rem,4.4vw,3.1rem);margin:14px 0 18px;font-weight:700}
+  .about-copy p{color:var(--bone-2);margin-bottom:16px;font-size:1.06rem}
+  .about-copy .muted{color:var(--muted)}
+  .pillars{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+  .pillar{border-left:2px solid var(--grain);padding-left:16px}
+  .pillar b{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.05em;display:block;font-size:1rem}
+  .pillar span{color:var(--muted);font-size:.9rem}
+
+  /* PROCESS */
+  #process{background:linear-gradient(180deg,#ece4d2,#f2ecdd)}
+  .pends{display:flex;justify-content:space-between;margin-top:34px;margin-bottom:4px}
+  .ppill{display:inline-flex;align-items:center;gap:8px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;font-weight:600;padding:8px 15px;border-radius:999px}
+  .ppill.raw{background:#e7e0cd;color:#7a6b3f}
+  .ppill.clean{background:#dcefc4;color:#3f7d2e}
+  .ppill svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2}
+  .steps{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:12px}
+  .steps::before{content:'';position:absolute;top:33px;left:6%;right:6%;height:4px;border-radius:3px;background:linear-gradient(90deg,var(--grain),var(--tan-2));opacity:.5;z-index:0}
+  .step{position:relative;z-index:1;text-align:center}
+  .step-ic{width:66px;height:66px;border-radius:50%;background:var(--steel);border:3px solid var(--grain);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;color:var(--grain);box-shadow:var(--shadow);transition:transform .18s ease}
+  .step:hover .step-ic{transform:translateY(-3px)}
+  .step-ic svg{width:30px;height:30px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .step .num{font-family:'Oswald',sans-serif;font-size:.72rem;color:var(--tan);opacity:1;letter-spacing:.12em;font-weight:700}
+  .step h4{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.04em;margin:5px 0 7px;font-size:1.05rem;color:var(--bone)}
+  .step p{color:var(--muted);font-size:.84rem;line-height:1.5;padding:0 6px}
+
+  /* CONTACT */
+  #contact{background:radial-gradient(90% 120% at 80% 0%, rgba(95,158,42,.10), transparent 55%),linear-gradient(180deg,#efe8d7,#f2ecdd)}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+  .contact-copy h2{font-size:clamp(2.2rem,4.6vw,3.4rem);font-weight:700;margin:14px 0 16px}
+  .contact-copy p{color:var(--bone-2);font-size:1.1rem;max-width:44ch}
+  .contact-list{margin-top:32px;display:flex;flex-direction:column;gap:18px}
+  .contact-list .row{display:flex;gap:14px;align-items:flex-start}
+  .contact-list .ic{width:26px;height:26px;color:var(--grain);flex:0 0 26px;margin-top:3px}
+  .contact-list b{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:.86rem;color:var(--muted);display:block}
+  .contact-list a,.contact-list span{color:var(--bone);font-size:1.06rem}
+  .contact-list .row a:hover{color:var(--grain)}
+  form{background:#ffffff;border:1px solid var(--line);border-radius:6px;padding:28px}
+  form .fld{margin-bottom:16px}
+  form label{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:.74rem;color:var(--muted);display:block;margin-bottom:7px}
+  form input,form select,form textarea{width:100%;background:#fffdf8;border:1px solid var(--line);border-radius:3px;color:var(--bone);padding:13px 14px;font-family:'Barlow',sans-serif;font-size:1rem;transition:border-color .2s}
+  form input:focus,form select:focus,form textarea:focus{outline:none;border-color:var(--grain)}
+  form textarea{resize:vertical;min-height:110px}
+  form .btn{width:100%;justify-content:center;margin-top:6px}
+  .form-actions{display:flex;gap:12px;flex-wrap:wrap}
+  .form-actions .btn{flex:1;justify-content:center;min-width:180px}
+  .form-note{font-size:.8rem;color:var(--muted);margin-top:12px;text-align:center}
+  .contact-list a.addr{display:block;color:var(--muted);transition:color .18s ease}
+  .contact-list a.addr:hover{color:var(--bone)}
+  .contact-list a.addr .dir{display:flex;margin-top:5px;color:var(--grain);font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:.72rem;font-weight:600}
+  .contact-list a.addr:hover .dir{color:var(--tan-2)}
+  .map-link{position:absolute;bottom:14px;right:14px;z-index:2;display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.94);color:var(--bone);border:1px solid var(--line);border-radius:3px;padding:10px 14px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:.78rem;line-height:1;transition:border-color .2s,color .2s}
+  .map-link:hover{border-color:var(--grain);color:var(--tan-2)}
+  .map-link svg{width:16px;height:16px;color:var(--grain)}
+
+  /* SUBPAGE */
+  .subpage{padding:120px 0 90px;min-height:100vh;background:linear-gradient(180deg,#f2ecdd,#ece4d2)}
+  .backlink{display:inline-flex;align-items:center;gap:8px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:.82rem;color:var(--tan-2);margin-bottom:24px;cursor:pointer}
+  .backlink:hover{color:var(--grain)}
+  .backlink svg{width:16px;height:16px}
+  .subpage-head{margin-bottom:46px;max-width:680px}
+  .subpage-head h2{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:700;margin:12px 0 14px}
+  .subpage-head p{color:var(--muted);font-size:1.1rem}
+  .model-empty{border:1px dashed rgba(35,42,25,.2);border-radius:6px;padding:56px 32px;text-align:center;color:var(--muted);background:#ffffff}
+  .model-empty h3{font-family:'Oswald',sans-serif;text-transform:uppercase;color:var(--bone);font-size:1.4rem;margin-bottom:10px}
+  .model-empty p{max-width:440px;margin:0 auto 22px}
+  .card[data-href]{cursor:pointer}
+  .card .more svg{width:14px;height:14px;vertical-align:-2px;margin-left:3px}
+
+  /* MODEL DETAIL MODAL */
+  .modal-overlay{position:fixed;inset:0;z-index:200;background:rgba(30,26,16,.55);backdrop-filter:blur(3px);display:none;align-items:flex-start;justify-content:center;overflow-y:auto;padding:40px 20px}
+  .modal-overlay.open{display:flex}
+  .modal-card{position:relative;background:var(--ink);width:100%;max-width:940px;border:1px solid var(--line);border-radius:8px;box-shadow:0 30px 80px -20px rgba(30,24,10,.5);padding:34px 34px 30px;margin:auto}
+  .modal-close{position:absolute;top:14px;right:16px;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--bone);font-size:1.5rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:border-color .2s,color .2s}
+  .modal-close:hover{border-color:var(--grain);color:var(--grain)}
+  .modal-head{margin-bottom:22px;padding-right:40px}
+  .modal-head h2{font-size:clamp(1.7rem,3.6vw,2.5rem);font-weight:700;margin-top:6px}
+  .modal-body{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
+  .mg-main{background:#fff;border:1px solid var(--line);border-radius:6px;height:290px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .mg-main img{max-width:100%;max-height:100%;object-fit:contain;padding:10px}
+  .mg-thumbs{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
+  .mg-thumbs img{width:66px;height:66px;object-fit:cover;border:1px solid var(--line);border-radius:4px;cursor:pointer;background:#fff;transition:border-color .2s}
+  .mg-thumbs img:hover{border-color:var(--grain)}
+  .modal-info h3,.modal-features h3{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.05em;font-size:1.05rem;margin-bottom:12px;color:var(--bone)}
+  table.spec-table{width:100%;border-collapse:collapse;margin-bottom:22px}
+  table.spec-table td{padding:9px 0;border-bottom:1px solid var(--line);font-size:.98rem;vertical-align:top}
+  table.spec-table td:first-child{color:var(--muted);text-transform:uppercase;font-family:'Oswald',sans-serif;letter-spacing:.05em;font-size:.8rem;width:46%;padding-right:14px}
+  table.spec-table td:last-child{font-weight:600}
+  .modal-info .spec-group{margin-bottom:15px}
+  .modal-info .spec-group h4{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:.82rem;color:var(--tan-2);margin-bottom:1px}
+  .modal-info .spec-group table.spec-table{margin-bottom:0}
+  .modal-info .spec-group td{padding:6px 0}
+  .modal-cta{display:flex;gap:12px;flex-wrap:wrap}
+  .modal-cta .btn{padding:12px 20px;font-size:.86rem}
+  .modal-features{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:30px;padding-top:26px;border-top:1px solid var(--line)}
+  .modal-features ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+  .modal-features li{position:relative;padding-left:22px;color:var(--bone-2);font-size:.96rem;line-height:1.4}
+  .modal-features li:before{content:"";position:absolute;left:0;top:8px;width:9px;height:9px;background:var(--grain);border-radius:2px}
+  .modal-note{margin-top:22px;font-size:.8rem;color:var(--muted);font-style:italic}
+  @media(max-width:720px){.modal-body{grid-template-columns:1fr}.modal-features{grid-template-columns:1fr;gap:22px}.modal-card{padding:26px 20px}}
+
+  /* FOOTER */
+  footer{background:#eef1e9;border-top:1px solid var(--line);padding:46px 0 30px}
+  .foot-grid{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+  footer .brand .txt{font-size:1.05rem}
+  .foot-links{display:flex;gap:22px;flex-wrap:wrap}
+  .foot-links a{color:var(--muted);font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:.82rem}
+  .foot-links a:hover{color:var(--grain)}
+  .foot-bottom{margin-top:26px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:920px){
+    nav.links{display:none}
+    .navtoggle{display:block}
+    .hero .wrap{grid-template-columns:1fr;gap:40px}
+    .machine{max-width:420px;margin:0 auto}
+    .grid{grid-template-columns:1fr 1fr}
+    .features{grid-template-columns:1fr 1fr}
+    .about-grid{grid-template-columns:1fr;gap:34px}
+    .steps{grid-template-columns:1fr 1fr;gap:30px}
+    .steps::before{display:none}
+    .pends{flex-direction:column;gap:8px;align-items:flex-start}
+    .contact-grid{grid-template-columns:1fr;gap:34px}
+  }
+  @media(max-width:560px){
+    section{padding:74px 0}
+    .grid{grid-template-columns:1fr}
+    .features{grid-template-columns:1fr}
+    .pillars{grid-template-columns:1fr}
+    .steps{grid-template-columns:1fr}
+    .hero .stats{gap:22px}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <a href="#top" class="brand">
+    <!-- LOGO: to use your real logo, place a file named "logo.png" next to this HTML file.
+         It will appear automatically. Until then, the text mark below is shown. -->
+    <img src="logo.png" alt="MFroes Manufacturing" class="brand-logo" onerror="this.remove();var f=document.getElementById('brandFallback');if(f)f.style.display='flex';">
+    <span class="brand-fallback" id="brandFallback">
+      <svg class="mark" viewBox="0 0 48 48" role="img" aria-label="MFroes"><rect x="2" y="2" width="44" height="44" rx="9" fill="#8cc63f"/><text x="24" y="34" text-anchor="middle" font-family="Oswald,sans-serif" font-size="28" font-weight="700" fill="#16240d">M</text></svg>
+      <span class="txt">MFroes<small>Manufacturing</small></span>
+    </span>
+  </a>
+  <div class="navright">
+    <nav class="links">
+      <a href="#products" data-i18n="nav.products">Products</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#process" data-i18n="nav.how">How It Works</a>
+      <a href="#plants" data-i18n="nav.plants">Plants</a>
+      <a href="#videos" data-i18n="nav.videos">Videos</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+      <a href="#contact" class="btn btn-primary" data-i18n="nav.cta">Contact Us</a>
+    </nav>
+    <button class="langtoggle" id="langtoggle" aria-label="Cambiar idioma / Switch language">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg>
+      <span id="langlabel">ES</span>
+    </button>
+    <button class="navtoggle" id="navtoggle" aria-label="Menu">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="view" data-view="home">
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-bg"><div class="layer1"></div><div class="beams"></div></div>
+  <div class="wrap">
+    <div class="hero-copy reveal">
+      <span class="eyebrow" data-i18n="hero.eyebrow">Seed Cleaning, Sizing &amp; Conditioning Machinery</span>
+      <h1 data-i18n="hero.h1">Rooted in Tradition.<span class="accent">Built to Last.</span></h1>
+      <p class="lead" data-i18n="hero.lead">Where seed processing meets unmatched quality and expertise. We supply, fabricate, and refurbish the machinery that cleans, sizes, and conditions your seed — built to run season after season.</p>
+      <div class="cta-row">
+        <a href="#products" class="btn btn-primary"><span data-i18n="hero.btn1">View Our Equipment</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-ghost" data-i18n="hero.btn2">Talk to Us</a>
+      </div>
+      <div class="stats">
+        <div><div class="n" data-i18n="hero.stat1n">Since 1999</div><div class="l" data-i18n="hero.stat1l">Family-owned</div></div>
+        <div><div class="n">25+</div><div class="l" data-i18n="hero.stat2l">Years of experience</div></div>
+        <div><div class="n" data-i18n="hero.stat3n">N. America</div><div class="l" data-i18n="hero.stat3l">Craftsmanship &amp; engineering</div></div>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="machine">
+        <div class="badge-usa"><b>Est. 1999</b><i></i><span data-i18n="hero.badge">Family Owned</span></div>
+        <!-- HERO PHOTO: add images/hero.png (transparent background works best) to replace the illustration.
+             The illustration below stays hidden and only appears if the photo is missing. -->
+        <img class="hero-photo" decoding="async" fetchpriority="high" src="images/hero.png" alt="MFroes seed cleaning machine" onerror="this.style.display='none';var s=this.parentNode.querySelector('svg');if(s)s.style.display=''">
+        <svg viewBox="0 0 460 460" width="100%" style="display:none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Seed cleaning machine illustration">
+          <defs>
+            <linearGradient id="steel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a352c"/><stop offset="1" stop-color="#211d17"/></linearGradient>
+            <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cbe79a"/><stop offset="1" stop-color="#5f9e2a"/></linearGradient>
+            <linearGradient id="hopper" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a4436"/><stop offset="1" stop-color="#2c281f"/></linearGradient>
+          </defs>
+          <ellipse cx="230" cy="424" rx="170" ry="20" fill="#000" opacity=".45"/>
+          <rect x="96" y="300" width="16" height="112" rx="3" fill="#26221b"/>
+          <rect x="348" y="300" width="16" height="112" rx="3" fill="#26221b"/>
+          <rect x="86" y="150" width="288" height="170" rx="10" fill="url(#steel)" stroke="#4a4436"/>
+          <g fill="#5c5647"><circle cx="104" cy="168" r="4"/><circle cx="356" cy="168" r="4"/><circle cx="104" cy="302" r="4"/><circle cx="356" cy="302" r="4"/></g>
+          <rect x="120" y="196" width="220" height="80" rx="4" fill="#14110c" stroke="#4a4436"/>
+          <g stroke="#5f9e2a" stroke-width="2" opacity=".7"><line x1="120" y1="212" x2="340" y2="212"/><line x1="120" y1="228" x2="340" y2="228"/><line x1="120" y1="244" x2="340" y2="244"/><line x1="120" y1="260" x2="340" y2="260"/></g>
+          <g fill="#8cc63f"><circle cx="150" cy="221" r="3"/><circle cx="182" cy="236" r="3"/><circle cx="214" cy="219" r="3"/><circle cx="250" cy="238" r="3"/><circle cx="286" cy="222" r="3"/><circle cx="316" cy="252" r="3"/><circle cx="196" cy="255" r="3"/><circle cx="268" cy="255" r="3"/></g>
+          <path d="M150 150 L180 78 L280 78 L310 150 Z" fill="url(#hopper)" stroke="#4a4436"/>
+          <rect x="176" y="60" width="108" height="20" rx="4" fill="#3a352c" stroke="#4a4436"/>
+          <g fill="url(#gold)" opacity=".9"><rect x="212" y="90" width="6" height="56" rx="3"/><rect x="224" y="90" width="6" height="56" rx="3"/><rect x="236" y="90" width="6" height="56" rx="3"/></g>
+          <path d="M374 250 L420 270 L420 300 L374 288 Z" fill="url(#gold)" stroke="#3f6b1a"/>
+          <rect x="300" y="196" width="34" height="44" rx="3" fill="#14110c" stroke="#4a4436"/>
+          <circle cx="317" cy="210" r="6" fill="#8bbf5a"/><rect x="308" y="224" width="18" height="4" rx="2" fill="#5f9e2a"/><rect x="308" y="231" width="18" height="4" rx="2" fill="#6f6f4b"/>
+          <circle cx="112" cy="240" r="30" fill="#2c281f" stroke="#4a4436"/>
+          <circle cx="112" cy="240" r="9" fill="#5f9e2a"/>
+          <g stroke="#4a4436" stroke-width="3"><line x1="112" y1="216" x2="112" y2="264"/><line x1="88" y1="240" x2="136" y2="240"/><line x1="95" y1="223" x2="129" y2="257"/><line x1="129" y1="223" x2="95" y2="257"/></g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider-strip"></div>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow" data-i18n="prod.eyebrow">Our Products</span>
+      <h2 data-i18n="prod.h2">Equipment That Earns Its Keep</h2>
+      <p data-i18n="prod.p">We supply and fabricate machinery for every stage of seed cleaning, sizing, and conditioning — and we refurbish quality used machines to like-new standards. Choose a single machine or let us build out a full line.</p>
+    </div>
+
+    <div class="grid">
+      <!-- 1 Seed Cleaners -->
+      <article class="card reveal" data-href="#/seed-cleaners">
+        <div class="thumb" style="background:radial-gradient(120% 100% at 30% 20%,#eef1e9,#e2e7d9)">
+          <span class="tag" data-i18n="p1.tag">Air-Screen</span>
+          <img class="thumb-photo" loading="lazy" decoding="async" src="images/seed-cleaners.jpg" alt="MFroes seed cleaner" onerror="this.remove()">
+          <svg viewBox="0 0 300 190" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"><rect x="70" y="55" width="160" height="90" rx="6" fill="#2c281f" stroke="#4a4436"/><g stroke="#5f9e2a" stroke-width="2" opacity=".7"><line x1="80" y1="72" x2="220" y2="72"/><line x1="80" y1="90" x2="220" y2="90"/><line x1="80" y1="108" x2="220" y2="108"/><line x1="80" y1="126" x2="220" y2="126"/></g><g fill="#8cc63f"><circle cx="100" cy="80" r="3"/><circle cx="140" cy="98" r="3"/><circle cx="180" cy="82" r="3"/><circle cx="160" cy="118" r="3"/><circle cx="120" cy="116" r="3"/></g><path d="M150 30 L130 55 L170 55 Z" fill="#4a4436"/></svg>
+        </div>
+        <div class="body">
+          <h3 data-i18n="p1.title">Seed Cleaners</h3>
+          <p data-i18n="p1.desc">Aspiration plus oscillating screens remove chaff, splits, and fines in a single pass. The workhorse of any cleaning line, built or refurbished to your crop.</p>
+          <div class="spec"><div data-i18n="p1.s1l">Stage<b data-i18n="p1.s1v">Cleaning</b></div><div data-i18n="p1.s2l">Build<b data-i18n="p1.s2v">New or Refurb</b></div></div>
+          <span class="more" data-i18n="p.more">View Models →</span>
+        </div>
+      </article>
+      <!-- 3 Destoners -->
+      <article class="card reveal" data-href="#/destoners">
+        <div class="thumb" style="background:radial-gradient(120% 100% at 40% 30%,#eef1e9,#e2e7d9)">
+          <span class="tag" data-i18n="p3.tag">De-Stoning</span>
+          <img class="thumb-photo" loading="lazy" decoding="async" src="images/destoners.jpg" alt="MFroes destoner" onerror="this.remove()">
+          <svg viewBox="0 0 300 190" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"><rect x="80" y="55" width="140" height="90" rx="6" fill="#2c281f" stroke="#4a4436"/><path d="M90 130 L210 130 L200 70 L100 70 Z" fill="#14110c" stroke="#4a4436"/><g fill="#8cc63f"><circle cx="130" cy="90" r="3"/><circle cx="165" cy="86" r="3"/><circle cx="150" cy="108" r="3"/></g><g fill="#8a8a8a"><circle cx="185" cy="118" r="4"/><circle cx="118" cy="118" r="4"/></g></svg>
+        </div>
+        <div class="body">
+          <h3 data-i18n="p3.title">Destoners</h3>
+          <p data-i18n="p3.desc">An air-fluidized deck floats seed while stones, glass, and mud balls walk uphill and out — protecting your product and everything downstream.</p>
+          <div class="spec"><div data-i18n="p3.s1l">Stage<b data-i18n="p3.s1v">De-stoning</b></div><div data-i18n="p3.s2l">Deck<b data-i18n="p3.s2v">Air-fluidized</b></div></div>
+          <span class="more" data-i18n="p.more">View Models →</span>
+        </div>
+      </article>
+      <!-- 4 Bucket Elevators -->
+      <article class="card reveal" data-href="#/bucket-elevators">
+        <div class="thumb" style="background:radial-gradient(120% 100% at 60% 30%,#eef1e9,#e2e7d9)">
+          <span class="tag" data-i18n="p4.tag">Handling</span>
+          <img class="thumb-photo" loading="lazy" decoding="async" src="images/bucket-elevators.jpg" alt="MFroes bucket elevator" onerror="this.remove()">
+          <svg viewBox="0 0 300 190" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"><rect x="120" y="40" width="60" height="120" rx="6" fill="#2c281f" stroke="#4a4436"/><g fill="#5f9e2a" opacity=".85"><rect x="132" y="56" width="36" height="10" rx="2"/><rect x="132" y="76" width="36" height="10" rx="2"/><rect x="132" y="96" width="36" height="10" rx="2"/><rect x="132" y="116" width="36" height="10" rx="2"/></g><g fill="#8cc63f"><circle cx="150" cy="61" r="2.5"/><circle cx="150" cy="81" r="2.5"/><circle cx="150" cy="101" r="2.5"/></g></svg>
+        </div>
+        <div class="body">
+          <h3 data-i18n="p4.title">Bucket Elevators</h3>
+          <p data-i18n="p4.desc">Gentle, high-capacity vertical conveying that ties your line together without cracking seed. Built to the height and throughput your operation needs.</p>
+          <div class="spec"><div data-i18n="p4.s1l">Stage<b data-i18n="p4.s1v">Handling</b></div><div data-i18n="p4.s2l">Build<b data-i18n="p4.s2v">Made to spec</b></div></div>
+          <span class="more" data-i18n="p.more">View Models →</span>
+        </div>
+      </article>
+      <!-- 5 Belt Conveyors -->
+      <article class="card reveal" data-href="#/belt-conveyors">
+        <div class="thumb" style="background:radial-gradient(120% 100% at 30% 40%,#eef1e9,#e2e7d9)">
+          <span class="tag" data-i18n="p5.tag">Transport</span>
+          <img class="thumb-photo" loading="lazy" decoding="async" src="images/belt-conveyors.jpg" alt="MFroes belt conveyor" onerror="this.remove()">
+          <svg viewBox="0 0 300 190" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"><rect x="60" y="120" width="180" height="16" rx="8" fill="#2c281f" stroke="#4a4436" transform="rotate(-18 150 128)"/><circle cx="80" cy="140" r="14" fill="#14110c" stroke="#4a4436"/><circle cx="220" cy="90" r="14" fill="#14110c" stroke="#4a4436"/><g fill="#8cc63f"><circle cx="120" cy="112" r="3"/><circle cx="150" cy="103" r="3"/><circle cx="180" cy="94" r="3"/></g></svg>
+        </div>
+        <div class="body">
+          <h3 data-i18n="p5.title">Belt Conveyors</h3>
+          <p data-i18n="p5.desc">Low-impact horizontal and inclined conveying that moves seed and grain across your facility smoothly, keeping product intact and material flowing.</p>
+          <div class="spec"><div data-i18n="p5.s1l">Stage<b data-i18n="p5.s1v">Transport</b></div><div data-i18n="p5.s2l">Length<b data-i18n="p5.s2v">Made to spec</b></div></div>
+          <span class="more" data-i18n="p.more">View Models →</span>
+        </div>
+      </article>
+      <!-- Magnetic Belt Conveyor -->
+      <article class="card reveal" data-href="#/magnetic-belt">
+        <div class="thumb" style="background:radial-gradient(120% 100% at 55% 30%,#eef1e9,#e2e7d9)">
+          <span class="tag" data-i18n="p8.tag">Separation</span>
+          <img class="thumb-photo" loading="lazy" decoding="async" src="images/magnetic-belt.jpg" alt="MFroes magnetic belt conveyor" onerror="this.remove()">
+          <svg viewBox="0 0 300 190" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+            <rect x="60" y="112" width="180" height="14" rx="7" fill="#2c281f" stroke="#4a4436"/>
+            <circle cx="74" cy="119" r="14" fill="#14110c" stroke="#4a4436"/>
+            <circle cx="226" cy="119" r="14" fill="#3a352c" stroke="#4a4436"/>
+            <g fill="#8cc63f"><circle cx="112" cy="106" r="3"/><circle cx="150" cy="106" r="3"/><circle cx="188" cy="106" r="3"/></g>
+            <g fill="#cbe79a"><circle cx="150" cy="80" r="3"/><circle cx="168" cy="74" r="3"/><circle cx="134" cy="76" r="3"/></g>
+            <path d="M133 44 v10 a17 17 0 0 0 34 0 v-10" fill="none" stroke="#b7db78" stroke-width="7"/>
+            <rect x="126" y="38" width="14" height="8" fill="#a8542b"/>
+            <rect x="160" y="38" width="14" height="8" fill="#5f9e2a"/>
+          </svg>
+        </div>
+        <div class="body">
+          <h3 data-i18n="p8.title">Magnetic Belt Conveyor</h3>
+          <p data-i18n="p8.desc">Separates seeds by surface texture — rough and mucilaginous weed seeds pick up iron powder and lift away on the magnetic belt, leaving your smooth crop seed clean.</p>
+          <div class="spec"><div data-i18n="p8.s1l">Stage<b data-i18n="p8.s1v">Separation</b></div><div data-i18n="p8.s2l">Build<b data-i18n="p8.s2v">New or Refurb</b></div></div>
+          <span class="more" data-i18n="p.more">View Models →</span>
+        </div>
+      </article>
+      <!-- 6 Polishers -->
+      <article class="card reveal" data-href="#/polishers">
+        <div class="thumb" style="background:radial-gradient(120% 100% at 50% 30%,#eef1e9,#e2e7d9)">
+          <span class="tag" data-i18n="p7.tag">Finishing</span>
+          <img class="thumb-photo" loading="lazy" decoding="async" src="images/polishers.jpg" alt="MFroes polisher" onerror="this.remove()">
+          <svg viewBox="0 0 300 190" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+            <rect x="70" y="75" width="160" height="55" rx="27" fill="#2c281f" stroke="#4a4436"/>
+            <ellipse cx="70" cy="102" rx="16" ry="28" fill="#14110c" stroke="#4a4436"/>
+            <ellipse cx="230" cy="102" rx="16" ry="28" fill="#3a352c" stroke="#4a4436"/>
+            <g fill="#8cc63f"><circle cx="110" cy="98" r="4"/><circle cx="150" cy="107" r="4"/><circle cx="190" cy="96" r="4"/></g>
+            <path d="M150 45 L140 68 L160 68 Z" fill="#4a4436"/>
+            <g stroke="#cbe79a" stroke-width="2" stroke-linecap="round" opacity=".85"><line x1="204" y1="60" x2="211" y2="53"/><line x1="213" y1="63" x2="222" y2="56"/></g>
+          </svg>
+        </div>
+        <div class="body">
+          <h3 data-i18n="p7.title">Polishers</h3>
+          <p data-i18n="p7.desc">Seed polishers that buff the coat and remove hairs, awns, and appendages — finishing seed for smooth flow, accurate metering, and clean presentation.</p>
+          <div class="spec"><div data-i18n="p7.s1l">Stage<b data-i18n="p7.s1v">Finishing</b></div><div data-i18n="p7.s2l">Build<b data-i18n="p7.s2v">New or Refurb</b></div></div>
+          <span class="more" data-i18n="p.more">View Models →</span>
+        </div>
+      </article>
+      <!-- 7 Used & Refurbished -->
+      <article class="card reveal" data-href="#/used-equipment">
+        <div class="thumb" style="background:radial-gradient(120% 100% at 70% 40%,#eef1e9,#e2e7d9)">
+          <span class="tag" data-i18n="p6.tag">Value</span>
+          <img class="thumb-photo" loading="lazy" decoding="async" src="images/used-equipment.jpg" alt="MFroes used and refurbished equipment" onerror="this.remove()">
+          <svg viewBox="0 0 300 190" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"><rect x="95" y="55" width="110" height="90" rx="6" fill="#2c281f" stroke="#4a4436"/><path d="M150 45 L120 78 L180 78 Z" fill="#4a4436"/><circle cx="150" cy="105" r="26" fill="none" stroke="#5f9e2a" stroke-width="3"/><path d="M138 105 l8 8 16 -18" fill="none" stroke="#8cc63f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="body">
+          <h3 data-i18n="p6.title">Used &amp; Refurbished Equipment</h3>
+          <p data-i18n="p6.desc">Quality pre-owned machines rebuilt and tested to meet our standards — a proven way to add capacity or complete a line for less.</p>
+          <div class="spec"><div data-i18n="p6.s1l">Condition<b data-i18n="p6.s1v">Shop-tested</b></div><div data-i18n="p6.s2l">Value<b data-i18n="p6.s2v">Cost-smart</b></div></div>
+          <span class="more" data-i18n="p.more">View Models →</span>
+        </div>
+      </article>
+    </div>
+
+    <div class="features">
+      <div class="feat reveal">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l8 4v6c0 5-3.4 8.5-8 10-4.6-1.5-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+        <h4 data-i18n="f1.t">Proven Craftsmanship</h4><p data-i18n="f1.d">More than 25 years perfecting how seed gets cleaned and conditioned.</p>
+      </div>
+      <div class="feat reveal">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg>
+        <h4 data-i18n="f2.t">North American Engineering</h4><p data-i18n="f2.d">Proven craftsmanship combined with modern North American engineering.</p>
+      </div>
+      <div class="feat reveal">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.6 8.5A9 9 0 1 0 22 12"/><path d="M22 4 12 14l-3-3"/></svg>
+        <h4 data-i18n="f3.t">New or Refurbished</h4><p data-i18n="f3.d">Buy new-built machines or quality refurbished equipment we rebuild and test.</p>
+      </div>
+      <div class="feat reveal">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 7h-9M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg>
+        <h4 data-i18n="f4.t">Your Success First</h4><p data-i18n="f4.d">A family business built on hard work, integrity, and your results.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CROPS WE CLEAN -->
+<section id="crops">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow" data-i18n="crops.eyebrow">What We Clean</span>
+      <h2 data-i18n="crops.h2">Built for Your Crop</h2>
+      <p data-i18n="crops.p">From grains and pulses to grass, alfalfa, cotton, coffee, and specialty seeds — if it needs cleaning, sizing, or conditioning, our lines are built for it.</p>
+    </div>
+    <div class="crop-marquee reveal"><div class="crop-track" id="cropTrack"></div></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-visual reveal grain-tex" style="background:radial-gradient(90% 70% at 30% 20%, rgba(95,158,42,.16), transparent 60%),linear-gradient(160deg,#eef1e8,#dbe1cf)">
+        <!-- ABOUT PHOTO: add images/shop-floor.jpg (a real photo of your workshop) to replace the illustration -->
+        <img class="about-photo" loading="lazy" decoding="async" src="images/shop-floor.jpg" alt="MFroes shop floor" onload="var s=this.parentNode.querySelector('svg'); if(s) s.style.display='none'" onerror="this.remove()">
+        <svg viewBox="0 0 480 480" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="480" height="480" fill="none"/>
+          <g opacity=".9">
+            <rect x="60" y="230" width="360" height="150" rx="8" fill="#211d17" stroke="#4a4436"/>
+            <rect x="90" y="180" width="120" height="50" fill="#2c281f" stroke="#4a4436"/>
+            <rect x="270" y="160" width="120" height="70" fill="#2c281f" stroke="#4a4436"/>
+            <g fill="#8cc63f"><circle cx="200" cy="300" r="4"/><circle cx="214" cy="290" r="3"/><circle cx="226" cy="306" r="2.5"/><circle cx="188" cy="312" r="2.5"/></g>
+            <path d="M300 380 q40 -60 90 0 Z" fill="url(#gold2)"/>
+            <defs><linearGradient id="gold2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cbe79a"/><stop offset="1" stop-color="#5f9e2a"/></linearGradient></defs>
+          </g>
+        </svg>
+        <div class="cap" data-i18n="about.cap">Our shop floor — where every machine is built and tested before it ships.</div>
+      </div>
+      <div class="about-copy reveal">
+        <span class="eyebrow" data-i18n="about.eyebrow">About Us</span>
+        <h2 data-i18n="about.h2">Built by People Who Know Seed</h2>
+        <p data-i18n="about.p1">Founded in 1999, MFroes is a family-owned business with over 25 years of experience in the seed and grain industry. Built on hard work and integrity, we've played a key role in enhancing product cleanliness, gaining invaluable insight into efficient, excellent seed processing along the way.</p>
+        <p data-i18n="about.founder">MFroes was started in 1999 by Cornelius Froes and his father, Peter. For much of his life, Peter owned and ran a bean and wheat cleaning facility, and that's where Cornelius, as a kid, first started working and helping out at his side. Peter taught him the trade hands-on, passing down everything he knew about cleaning seed. Together, father and son turned that lifetime of knowledge into MFroes.</p>
+        <p class="muted" data-i18n="about.p2">From our shop in Cuauhtémoc, Chihuahua, we combine proven craftsmanship with North American engineering to supply, fabricate, and refurbish seed processing machinery. We're committed to quality, integrity, and innovation, because your success is our priority.</p>
+        <div class="pillars">
+          <div class="pillar"><b data-i18n="ab1.b">Family-Owned Since 1999</b><span data-i18n="ab1.s">A quarter century in seed and grain.</span></div>
+          <div class="pillar"><b data-i18n="ab2.b">Proven Craftsmanship</b><span data-i18n="ab2.s">Combined with modern North American engineering.</span></div>
+          <div class="pillar"><b data-i18n="ab3.b">New &amp; Refurbished</b><span data-i18n="ab3.s">Machines built and quality used equipment rebuilt.</span></div>
+          <div class="pillar"><b data-i18n="ab4.b">Integrity First</b><span data-i18n="ab4.s">Hard work, honesty, and your success as our priority.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-block" id="storyBlock" style="display:none">
+      <div class="story-head">
+        <span class="eyebrow" data-i18n="story.eyebrow">Our Story</span>
+        <h3 data-i18n="story.h">A Few Moments Along the Way</h3>
+      </div>
+      <div class="story-grid" id="storyGrid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow" data-i18n="proc.eyebrow">How It Works</span>
+      <h2 data-i18n="proc.h2">From Raw Harvest to Clean Seed</h2>
+      <p data-i18n="proc.p">A clean line is a series of simple, deliberate steps. Here's how our equipment turns raw harvest into product you're proud to put your name on.</p>
+    </div>
+    <div class="pends reveal">
+      <span class="ppill raw"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span data-i18n="proc.rawin">Raw harvest in</span></span>
+      <span class="ppill clean"><span data-i18n="proc.cleanout">Clean seed out</span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><span class="step-ic"><svg viewBox="0 0 24 24"><path d="M3 8h11a3 3 0 1 0-3-3"/><path d="M3 12h15a3 3 0 1 1-3 3"/><path d="M3 16h9"/></svg></span><div class="num" data-i18n="proc.step1">Step 01</div><h4 data-i18n="s1.t">Clean &amp; Aspirate</h4><p data-i18n="s1.d">Screens and airflow pull chaff, straw, dust, and light trash off the top.</p></div>
+      <div class="step reveal"><span class="step-ic"><svg viewBox="0 0 24 24"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="M3 12l9 5 9-5"/><path d="M3 16l9 5 9-5"/></svg></span><div class="num" data-i18n="proc.step2">Step 02</div><h4 data-i18n="s2.t">Size &amp; Grade</h4><p data-i18n="s2.d">Multiple decks grade by width and thickness for a uniform sample.</p></div>
+      <div class="step reveal"><span class="step-ic"><svg viewBox="0 0 24 24"><path d="M4 4h16l-6.5 8v6L10.5 21v-9L4 4Z"/></svg></span><div class="num" data-i18n="proc.step3">Step 03</div><h4 data-i18n="s3.t">Separate &amp; De-Stone</h4><p data-i18n="s3.d">Density separation floats out stones, mud balls, and light seed.</p></div>
+      <div class="step reveal"><span class="step-ic"><svg viewBox="0 0 24 24"><path d="M4 17h13M14 20l3-3-3-3"/><path d="M20 7H7M10 4 7 7l3 3"/></svg></span><div class="num" data-i18n="proc.step4">Step 04</div><h4 data-i18n="s4.t">Convey &amp; Handle</h4><p data-i18n="s4.d">Elevators and conveyors move product gently, ready to bag or store.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANTS -->
+<section id="plants">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow" data-i18n="plant.eyebrow">Our Work in the Field</span>
+      <h2 data-i18n="plant.h2">Plants &amp; Lines We've Helped Build</h2>
+      <p data-i18n="plant.p">From complete plants we design, fabricate, and install from the ground up, to operations running our equipment with our input and expertise — here's some of the work we're proud of.</p>
+    </div>
+    <div id="plantGrid"></div>
+  </div>
+</section>
+
+
+<!-- VIDEOS -->
+<section id="videos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow" data-i18n="vid.eyebrow">Watch</span>
+      <h2 data-i18n="vid.h2">See Our Machines Run</h2>
+      <p data-i18n="vid.p">Specs tell part of the story — watching the airflow, the shake, and the separation tells the rest. Here's our equipment doing the work.</p>
+    </div>
+    <div id="videoGrid"></div>
+  </div>
+</section>
+
+<!-- Video lightbox -->
+<div class="vid-lightbox" id="vidLightbox">
+  <div class="vid-frame">
+    <button class="vid-close" id="vidClose" aria-label="Close">&times;</button>
+    <div id="vidFrameInner"></div>
+  </div>
+</div>
+
+<div class="divider-strip"></div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-copy reveal">
+        <span class="eyebrow" data-i18n="c.eyebrow">Contact Us</span>
+        <h2 data-i18n="c.h2">Let's Talk Seed Processing</h2>
+        <p data-i18n="c.p">Tell us about your crops and your operation and we'll put together a machine — or a whole line — that fits your needs and your budget. Reach us by phone, WhatsApp, or email — in Mexico or Texas.</p>
+        <div class="contact-list">
+          <div class="row">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.1a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg>
+            <div><b data-i18n="c.r1">Mexico · Call or WhatsApp</b><a href="https://wa.me/526251069849">+52 (625) 106 9849</a></div>
+          </div>
+          <div class="row">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.1a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg>
+            <div><b data-i18n="c.r2">USA · Sales</b><a href="tel:+18067870418">+1 (806) 787 0418</a></div>
+          </div>
+          <div class="row">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div><b data-i18n="c.r3">Mexico · Visit the Shop</b><a class="addr" href="https://www.google.com/maps/search/?api=1&query=Corredor+Comercial+Km+18.42+Cuauhtemoc+Chihuahua+31500" target="_blank" rel="noopener">Corredor Comercial Km 18.42, Cuauhtémoc, Chihuahua 31500, Mexico<span class="dir" data-i18n="c.dir">Get Directions →</span></a></div>
+          </div>
+          <div class="row">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div><b data-i18n="c.r5">Texas · Office</b><a class="addr" href="https://www.google.com/maps/search/?api=1&query=8509+Valencia+Ave+Lubbock+Texas" target="_blank" rel="noopener">8509 Valencia Ave, Lubbock, Texas<span class="dir" data-i18n="c.dir">Get Directions →</span></a></div>
+          </div>
+          <div class="row">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"/><path d="m3 6 9 7 9-7"/></svg>
+            <div><b data-i18n="c.r6">Email</b><a href="mailto:info@mfroesmfg.com">info@mfroesmfg.com</a></div>
+          </div>
+          <div class="row">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M8 4v16M3 9h5M3 15h5"/></svg>
+            <div><b data-i18n="c.r4">Follow Us</b><span><a href="https://facebook.com/manufacturerafroes">Facebook</a> · <a href="https://instagram.com/mfroesmx/">Instagram</a> · <a href="https://youtube.com/user/Manufacturerafroes">YouTube</a></span></div>
+          </div>
+        </div>
+      </div>
+
+      <form class="reveal" onsubmit="return handleSubmit(event)">
+        <div class="fld"><label for="name" data-i18n="fm.name">Name</label><input id="name" name="cname" type="text" placeholder="Your name" data-i18n-ph="fm.name.ph" required></div>
+        <div class="fld"><label for="email" data-i18n="fm.email">Email or Phone</label><input id="email" name="cemail" type="text" placeholder="you@farm.com" data-i18n-ph="fm.email.ph" required></div>
+        <div class="fld"><label for="crop" data-i18n="fm.crop">Primary Crop</label>
+          <select id="crop" name="crop">
+            <option data-i18n="opt.wheat">Wheat</option><option data-i18n="opt.soy">Soybeans</option><option data-i18n="opt.corn">Corn</option><option data-i18n="opt.pulse">Pulses / Lentils</option><option data-i18n="opt.canola">Canola</option><option data-i18n="opt.grass">Grass / Forage Seed</option><option data-i18n="opt.other">Other</option>
+          </select>
+        </div>
+        <div class="fld"><label for="interest" data-i18n="fm.interest">I'm interested in</label>
+          <select id="interest" name="interest">
+            <option data-i18n="opt.single">A single machine</option><option data-i18n="opt.line">A full cleaning line</option><option data-i18n="opt.upgrade">Upgrading existing equipment</option><option data-i18n="opt.parts">Parts &amp; service</option>
+          </select>
+        </div>
+        <div class="fld"><label for="msg" data-i18n="fm.msg">Tell us about your operation</label><textarea id="msg" name="msg" placeholder="Throughput, crops, current setup, what's giving you trouble…" data-i18n-ph="fm.msg.ph"></textarea></div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary"><span data-i18n="fm.btn">Send via WhatsApp</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          <button type="button" class="btn btn-ghost" onclick="sendEmail()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 4h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"/><path d="m3 6 9 7 9-7"/></svg>
+            <span data-i18n="fm.ebtn">Send via Email</span>
+          </button>
+        </div>
+        <p class="form-note" id="formnote" data-i18n="fm.note">WhatsApp opens with your message ready to send — or use email to reach our shop.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</div><!-- /view home -->
+
+<!-- CATEGORY SUBPAGE (JS-rendered) -->
+<div class="view" data-view="sub" id="subpage" style="display:none"></div>
+
+<!-- MODEL DETAIL MODAL -->
+<div class="modal-overlay" id="modal"><div class="modal-card" id="modalCard"></div></div>
+
+<!-- Image gallery lightbox (top level so it works from any page) -->
+<div class="img-lightbox" id="imgLightbox">
+  <div class="img-frame">
+    <button class="vid-close" id="imgClose" aria-label="Close">&times;</button>
+    <button class="img-nav prev" id="imgPrev" aria-label="Previous">‹</button>
+    <img id="imgLightboxImg" src="" alt="">
+    <button class="img-nav next" id="imgNext" aria-label="Next">›</button>
+    <div class="img-cap" id="imgLightboxCap"></div>
+    <div class="img-count" id="imgLightboxCount"></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <a href="#top" class="brand">
+        <img src="logo.png" alt="MFroes Manufacturing" class="brand-logo" onerror="this.remove();var f=document.getElementById('brandFallbackFoot');if(f)f.style.display='flex';">
+        <span class="brand-fallback" id="brandFallbackFoot">
+          <svg class="mark" viewBox="0 0 48 48" role="img" aria-label="MFroes"><rect x="2" y="2" width="44" height="44" rx="9" fill="#8cc63f"/><text x="24" y="34" text-anchor="middle" font-family="Oswald,sans-serif" font-size="28" font-weight="700" fill="#16240d">M</text></svg>
+          <span class="txt">MFroes<small>Manufacturing</small></span>
+        </span>
+      </a>
+      <div class="foot-links">
+        <a href="#products" data-i18n="nav.products">Products</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#process" data-i18n="nav.how">How It Works</a>
+        <a href="#plants" data-i18n="nav.plants">Plants</a>
+        <a href="#videos" data-i18n="nav.videos">Videos</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+        <a href="https://facebook.com/manufacturerafroes">Facebook</a>
+        <a href="https://instagram.com/mfroesmx/">Instagram</a>
+        <a href="https://youtube.com/user/Manufacturerafroes">YouTube</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span data-i18n="foot.copy">© 2026 MFroes Manufacturing. Cuauhtémoc, Chihuahua, Mexico. All rights reserved.</span>
+      <span data-i18n="foot.tag">Rooted in Tradition. Built to Last.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // sticky nav
+  const nav=document.getElementById('nav');
+  let navScrolled=false;
+  window.addEventListener('scroll',()=>{const s=window.scrollY>40; if(s!==navScrolled){navScrolled=s; nav.classList.toggle('scrolled',s);}},{passive:true});
+
+  // scroll reveal
+  const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // mobile menu
+  document.getElementById('navtoggle').addEventListener('click',()=>{ if(typeof goHome==='function'){goHome('#contact');} });
+
+  /* ---------- i18n (EN source in HTML, ES from dictionary) ---------- */
+  const ES = {
+    'nav.products':'Productos','nav.about':'Nosotros','nav.how':'Cómo Funciona','nav.plants':'Plantas','nav.videos':'Videos','nav.contact':'Contacto','nav.cta':'Contáctanos',
+    'plant.eyebrow':'Nuestro Trabajo en el Campo','plant.h2':'Plantas y Líneas que Hemos Ayudado a Construir','plant.p':'Desde plantas completas que diseñamos, fabricamos e instalamos desde cero, hasta operaciones que funcionan con nuestro equipo y nuestra asesoría — esto es parte del trabajo del que estamos orgullosos.',
+    'vid.eyebrow':'Míralo','vid.h2':'Mira Nuestras Máquinas Trabajar','vid.p':'Las fichas técnicas cuentan parte de la historia — ver el flujo de aire, el sacudido y la separación cuenta el resto. Aquí está nuestro equipo haciendo el trabajo.',
+    'hero.eyebrow':'Maquinaria para Limpieza, Clasificación y Acondicionamiento de Semilla',
+    'hero.h1':'Arraigados en la Tradición.<span class="accent">Hechos para Durar.</span>',
+    'hero.lead':'Donde el procesamiento de semilla se une con calidad y experiencia inigualables. Suministramos, fabricamos y reacondicionamos la maquinaria que limpia, clasifica y acondiciona tu semilla — hecha para trabajar temporada tras temporada.',
+    'hero.btn1':'Ver Nuestro Equipo','hero.btn2':'Contáctanos',
+    'hero.stat1n':'Desde 1999','hero.stat1l':'Empresa familiar','hero.stat2l':'Años de experiencia','hero.stat3n':'N. América','hero.stat3l':'Artesanía e ingeniería','hero.badge':'Empresa Familiar',
+    'prod.eyebrow':'Nuestros Productos','prod.h2':'Equipo que Rinde',
+    'prod.p':'Suministramos y fabricamos maquinaria para cada etapa de limpieza, clasificación y acondicionamiento de semilla — y reacondicionamos maquinaria usada de calidad a estándares como nuevos. Elige una sola máquina o déjanos construir una línea completa.',
+    'p.more':'Ver Modelos →',
+    'p1.tag':'Criba de Aire','p1.title':'Cribadoras de Precisión','p1.desc':'Aspiración más cribas oscilantes eliminan paja, granos partidos y finos en una sola pasada. La máquina de trabajo de cualquier línea, nueva o reacondicionada según tu cultivo.','p1.s1l':'Etapa','p1.s1v':'Limpieza','p1.s2l':'Construcción','p1.s2v':'Nueva o Reacond.',
+    'p2.tag':'Separación','p2.title':'Separadoras por Gravedad','p2.desc':'Separación por densidad que retira semilla ligera, inmadura y de baja calidad de tu buen producto. Mesa y aire ajustables para cortes precisos y repetibles.','p2.s1l':'Etapa','p2.s1v':'Separación','p2.s2l':'Mesa','p2.s2v':'Fluidizada',
+    'p3.tag':'Despedrado','p3.title':'Despedradoras','p3.desc':'Una mesa fluidizada por aire flota la semilla mientras piedras, vidrio y terrones suben y salen — protegiendo tu producto y todo lo que sigue.','p3.s1l':'Etapa','p3.s1v':'Despedrado','p3.s2l':'Mesa','p3.s2v':'Fluidizada por aire',
+    'p4.tag':'Elevación','p4.title':'Elevadores de Cangilones','p4.desc':'Transporte vertical suave y de alta capacidad que une tu línea sin quebrar la semilla. Construidos a la altura y capacidad que tu operación necesita.','p4.s1l':'Etapa','p4.s1v':'Manejo','p4.s2l':'Construcción','p4.s2v':'A la medida',
+    'p5.tag':'Transporte','p5.title':'Bandas Transportadoras','p5.desc':'Transporte horizontal e inclinado de bajo impacto que mueve semilla y grano por tu planta sin dañar el producto y manteniendo el flujo.','p5.s1l':'Etapa','p5.s1v':'Transporte','p5.s2l':'Longitud','p5.s2v':'A la medida',
+    'p6.tag':'Valor','p6.title':'Equipo Usado y Reacondicionado','p6.desc':'Máquinas usadas de calidad reconstruidas y probadas según nuestros estándares — una forma comprobada de sumar capacidad o completar una línea por menos.','p6.s1l':'Estado','p6.s1v':'Probado en taller','p6.s2l':'Valor','p6.s2v':'Económico',
+    'p7.tag':'Acabado','p7.title':'Pulidoras','p7.desc':'Pulidoras de semilla que pulen la cubierta y remueven pelos, aristas y apéndices — dando el acabado para un flujo suave, dosificación precisa y presentación limpia.','p7.s1l':'Etapa','p7.s1v':'Acabado','p7.s2l':'Construcción','p7.s2v':'Nueva o Reacond.',
+    'p8.tag':'Separación','p8.title':'Banda Transportadora Magnética','p8.desc':'Separa las semillas por textura de superficie — las semillas de maleza rugosas y mucilaginosas recogen el polvo de hierro y se elevan en la banda magnética, dejando limpia tu semilla lisa.','p8.s1l':'Etapa','p8.s1v':'Separación','p8.s2l':'Construcción','p8.s2v':'Nueva o Reacond.',
+    'f1.t':'Artesanía Comprobada','f1.d':'Más de 25 años perfeccionando cómo se limpia y acondiciona la semilla.',
+    'f2.t':'Ingeniería Norteamericana','f2.d':'Artesanía comprobada combinada con ingeniería norteamericana moderna.',
+    'f3.t':'Nuevo o Reacondicionado','f3.d':'Compra máquinas nuevas o equipo reacondicionado que reconstruimos y probamos.',
+    'f4.t':'Tu Éxito Primero','f4.d':'Una empresa familiar basada en trabajo duro, integridad y tus resultados.',
+    'about.cap':'Nuestro taller — donde cada máquina se construye y prueba antes de enviarse.',
+    'crops.eyebrow':'Qué Limpiamos','crops.h2':'Hecho para Tu Cultivo',
+    'crops.p':'De los granos y las leguminosas al pasto, la alfalfa, el algodón, el café y las semillas especiales — si necesita limpiarse, clasificarse o acondicionarse, nuestras líneas están hechas para ello.',
+    'crop.wheat':'Trigo','crop.beans':'Frijol','crop.corn':'Maíz','crop.oats':'Avena','crop.barley':'Cebada','crop.sorghum':'Sorgo','crop.chickpeas':'Garbanzo','crop.soybeans':'Soya','crop.canola':'Canola','crop.grass':'Semilla de Pasto','crop.alfalfa':'Semilla de Alfalfa','crop.cotton':'Semilla de Algodón','crop.coffee':'Café','crop.pinenuts':'Piñones','crop.more':'+ Muchos Más',
+    'story.eyebrow':'Nuestra Historia','story.h':'Algunos Momentos del Camino',
+    'about.eyebrow':'Nosotros','about.h2':'Hecho por Gente que Conoce la Semilla',
+    'about.p1':'Fundada en 1999, MFroes es una empresa familiar con más de 25 años de experiencia en la industria de la semilla y el grano. Construida sobre el trabajo duro y la integridad, hemos jugado un papel clave en mejorar la limpieza del producto, obteniendo un conocimiento invaluable sobre el procesamiento de semilla eficiente y de excelencia.',
+    'about.founder':'MFroes fue fundada en 1999 por Cornelius Froes y su padre, Peter. Durante gran parte de su vida, Peter fue dueño y operó una planta de limpieza de frijol y trigo, y ahí fue donde Cornelius, de niño, comenzó a trabajar y a ayudar a su lado. Peter le enseñó el oficio de forma práctica, transmitiéndole todo lo que sabía sobre la limpieza de semilla. Juntos, padre e hijo convirtieron esa vida de conocimiento en MFroes.',
+    'about.p2':'Desde nuestro taller en Cuauhtémoc, Chihuahua, combinamos artesanía comprobada con ingeniería norteamericana para suministrar, fabricar y reacondicionar maquinaria de procesamiento de semilla. Estamos comprometidos con la calidad, la integridad y la innovación, porque tu éxito es nuestra prioridad.',
+    'ab1.b':'Empresa Familiar Desde 1999','ab1.s':'Un cuarto de siglo en semilla y grano.',
+    'ab2.b':'Artesanía Comprobada','ab2.s':'Combinada con ingeniería norteamericana moderna.',
+    'ab3.b':'Nuevo y Reacondicionado','ab3.s':'Máquinas nuevas y equipo usado de calidad reconstruido.',
+    'ab4.b':'Integridad Primero','ab4.s':'Trabajo duro, honestidad y tu éxito como prioridad.',
+    'proc.eyebrow':'Cómo Funciona','proc.h2':'De la Cosecha en Bruto a la Semilla Limpia',
+    'proc.p':'Una línea limpia es una serie de pasos simples y deliberados. Así es como nuestro equipo convierte la cosecha en bruto en un producto del que estarás orgulloso.',
+    'proc.rawin':'Entra la cosecha','proc.cleanout':'Sale semilla limpia',
+    'proc.step1':'Paso 01','proc.step2':'Paso 02','proc.step3':'Paso 03','proc.step4':'Paso 04',
+    's1.t':'Limpiar y Aspirar','s1.d':'Cribas y flujo de aire retiran paja, polvo y basura ligera por arriba.',
+    's2.t':'Clasificar y Calibrar','s2.d':'Varias cubiertas clasifican por ancho y grosor para una muestra uniforme.',
+    's3.t':'Separar y Despedrar','s3.d':'La separación por densidad flota piedras, terrones y semilla ligera.',
+    's4.t':'Transportar y Manejar','s4.d':'Elevadores y bandas mueven el producto suavemente, listo para embolsar o almacenar.',
+    'c.eyebrow':'Contáctanos','c.h2':'Hablemos de Procesamiento de Semilla',
+    'c.p':'Cuéntanos sobre tus cultivos y tu operación y armaremos una máquina — o una línea completa — que se ajuste a tus necesidades y presupuesto. Contáctanos por teléfono, WhatsApp o correo — en México o Texas.',
+    'c.r1':'México · Llamada o WhatsApp','c.r2':'EE. UU. · Ventas','c.r3':'México · Visita el Taller','c.r5':'Texas · Oficina','c.r6':'Correo','c.r4':'Síguenos','c.map':'Abrir en Google Maps','c.dir':'Cómo Llegar →','c.maplbl1':'Cuauhtémoc, México','c.maplbl2':'Lubbock, Texas',
+    'fm.name':'Nombre','fm.name.ph':'Tu nombre','fm.email':'Correo o Teléfono','fm.email.ph':'tu@correo.com','fm.crop':'Cultivo Principal','fm.interest':'Me interesa','fm.msg':'Cuéntanos sobre tu operación','fm.msg.ph':'Capacidad, cultivos, equipo actual, qué te está dando problemas…','fm.btn':'Enviar por WhatsApp','fm.ebtn':'Enviar por Correo','fm.note':'WhatsApp abre con tu mensaje listo para enviar — o usa el correo para contactar a nuestro taller.',
+    'opt.wheat':'Trigo','opt.soy':'Soya','opt.corn':'Maíz','opt.pulse':'Legumbres / Lentejas','opt.canola':'Canola','opt.grass':'Semilla de Pasto / Forraje','opt.other':'Otro',
+    'opt.single':'Una sola máquina','opt.line':'Una línea completa de limpieza','opt.upgrade':'Mejorar equipo existente','opt.parts':'Refacciones y servicio',
+    'foot.copy':'© 2026 MFroes Manufacturing. Cuauhtémoc, Chihuahua, México. Todos los derechos reservados.','foot.tag':'Arraigados en la Tradición. Hechos para Durar.'
+  };
+
+  // capture English source
+  const nodes=[...document.querySelectorAll('[data-i18n]')];
+  const EN={}; nodes.forEach(n=>EN[n.dataset.i18n]=n.innerHTML);
+  const phNodes=[...document.querySelectorAll('[data-i18n-ph]')];
+  const ENph={}; phNodes.forEach(n=>ENph[n.dataset.i18nPh]=n.getAttribute('placeholder'));
+
+  let LANG='en';
+  function setLang(l){
+    LANG=l;
+    nodes.forEach(n=>{const k=n.dataset.i18n; n.innerHTML=(l==='es'?(ES[k]??EN[k]):EN[k])});
+    phNodes.forEach(n=>{const k=n.dataset.i18nPh; n.setAttribute('placeholder', l==='es'?(ES[k]??ENph[k]):ENph[k])});
+    document.documentElement.lang=l;
+    document.getElementById('langlabel').textContent = (l==='es'?'EN':'ES');
+    if(activeSub) renderSubpage(activeSub);
+    if(typeof renderVideos==='function') renderVideos();
+    if(typeof renderPlants==='function') renderPlants();
+    if(typeof renderCrops==='function') renderCrops();
+    if(typeof renderStory==='function') renderStory();
+  }
+  document.getElementById('langtoggle').addEventListener('click',()=>setLang(LANG==='en'?'es':'en'));
+
+  /* ---------- YouTube videos ---------- */
+  function renderVideos(){
+    var grid=document.getElementById('videoGrid'); if(!grid) return;
+    var items=(typeof VIDEOS!=='undefined'&&VIDEOS)?VIDEOS:[];
+    var play='<span class="video-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>';
+    if(items.length){
+      grid.className='video-grid';
+      grid.innerHTML=items.map(function(v){
+        var vid=ytId(v.url);
+        var cap=tr(v.title)||v.title||'';
+        return '<button class="video-card" onclick="openVideo(\''+vid+'\')">'+
+          '<div class="video-thumb"><img src="https://img.youtube.com/vi/'+vid+'/hqdefault.jpg" alt="'+cap+'" loading="lazy" onerror="this.style.display=\'none\'">'+play+'</div>'+
+          '<div class="video-cap">'+cap+'</div></button>';
+      }).join('');
+    } else {
+      grid.className='';
+      var h=LANG==='es'?'Videos en camino':'Videos coming soon';
+      var p=LANG==='es'?'Estamos subiendo videos de nuestro equipo en acción. Vuelve pronto.':"We're uploading videos of our equipment in action. Check back soon.";
+      grid.innerHTML='<div class="model-empty"><h3>'+h+'</h3><p>'+p+'</p></div>';
+    }
+  }
+  function openVideo(vid){
+    if(!vid) return;
+    document.getElementById('vidFrameInner').innerHTML='<iframe src="https://www.youtube.com/embed/'+vid+'?autoplay=1&rel=0" title="MFroes video" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>';
+    document.getElementById('vidLightbox').classList.add('open');
+    document.body.style.overflow='hidden';
+  }
+  function closeVideo(){
+    var lb=document.getElementById('vidLightbox'); if(!lb) return;
+    lb.classList.remove('open');
+    document.getElementById('vidFrameInner').innerHTML='';
+    document.body.style.overflow='';
+  }
+  /* ---------- Turnkey plants ---------- */
+  function renderPlants(){
+    var grid=document.getElementById('plantGrid'); if(!grid) return;
+    var items=(typeof PLANTS!=='undefined'&&PLANTS)?PLANTS:[];
+    var zoom='<span class="plant-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>';
+    if(items.length){
+      grid.className='plant-grid';
+      grid.innerHTML=items.map(function(pl){
+        var title=(tr(pl.title)||pl.title||'').replace(/"/g,'&quot;');
+        var desc=tr(pl.desc)||pl.desc||'';
+        var loc=tr(pl.location)||pl.location||'';
+        var imgs=(pl.imgs&&pl.imgs.length)?pl.imgs:(pl.img?[pl.img]:[]);
+        var esc=title.replace(/'/g,"\\'");
+        var gesc="["+imgs.map(function(s){return "'"+s+"'";}).join(',')+"]";
+        var pin=loc?'<span class="plant-loc"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>'+loc+'</span>':'';
+        var role=(tr(pl.role)||pl.role||'');
+        var roleTag=role?'<span class="plant-role">'+role+'</span>':'';
+        var count=imgs.length>1?'<span class="used-count"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="14" height="14" rx="2"/><path d="M7 21h12a2 2 0 0 0 2-2V9"/></svg>'+imgs.length+'</span>':'';
+        return '<figure class="plant-card"'+(imgs.length?' onclick="openGallery('+gesc+',0,\''+esc+'\')"':'')+'>'+
+          '<div class="plant-thumb">'+(imgs.length?'<img src="'+imgs[0]+'" alt="'+title+'" loading="lazy" decoding="async" onerror="var c=this.closest(\'.plant-card\');if(c)c.classList.add(\'no-photo\')">':'')+roleTag+count+zoom+'</div>'+
+          '<figcaption class="plant-body"><h3>'+title+'</h3>'+pin+'<p>'+desc+'</p></figcaption>'+
+          '</figure>';
+      }).join('');
+    } else {
+      grid.className='';
+      var h=LANG==='es'?'Proyectos en camino':'Projects coming soon';
+      var p=LANG==='es'?'Estamos reuniendo fotos de nuestras plantas y líneas completas. Vuelve pronto.':"We're gathering photos of our complete plants and lines. Check back soon.";
+      grid.innerHTML='<div class="model-empty"><h3>'+h+'</h3><p>'+p+'</p></div>';
+    }
+  }
+  var GAL={imgs:[],i:0,cap:''};
+  function showGal(){
+    if(!GAL.imgs.length) return;
+    document.getElementById('imgLightboxImg').src=GAL.imgs[GAL.i];
+    var cap = Array.isArray(GAL.cap) ? (GAL.cap[GAL.i]||'') : (GAL.cap||'');
+    document.getElementById('imgLightboxCap').textContent=cap;
+    var multi=GAL.imgs.length>1;
+    document.getElementById('imgLightboxCount').textContent=multi?(GAL.i+1)+' / '+GAL.imgs.length:'';
+    document.getElementById('imgPrev').style.display=multi?'':'none';
+    document.getElementById('imgNext').style.display=multi?'':'none';
+  }
+  function openGallery(imgs, i, cap){
+    var lb=document.getElementById('imgLightbox'); if(!lb||!imgs||!imgs.length) return;
+    GAL={imgs:imgs,i:i||0,cap:cap||''}; showGal();
+    lb.classList.add('open'); document.body.style.overflow='hidden';
+  }
+  function openPlantImg(src, cap){ openGallery([src],0,cap); }
+  var STORY_IMGS=[], STORY_CAPS=[];
+  function renderStory(){
+    var block=document.getElementById('storyBlock'), grid=document.getElementById('storyGrid');
+    if(!grid) return;
+    var items=(typeof STORY!=='undefined'&&STORY)?STORY:[];
+    // Stay hidden until at least one photo actually loads (so it never shows an empty heading).
+    if(block) block.style.display='none';
+    grid.innerHTML='';
+    if(!items.length) return;
+    STORY_IMGS=items.map(function(s){return s.img;});
+    STORY_CAPS=items.map(function(s){return tr(s.cap)||s.cap||'';});
+    grid.innerHTML=items.map(function(s,i){
+      var cap=(tr(s.cap)||s.cap||'').replace(/"/g,'&quot;');
+      return '<figure class="story-tile" onclick="openStory('+i+')"><img src="'+s.img+'" alt="'+cap+'" decoding="async" onerror="var f=this.closest(\'.story-tile\');if(f)f.style.display=\'none\'">'+(cap?'<figcaption>'+cap+'</figcaption>':'')+'</figure>';
+    }).join('');
+    // Probe the photos off-DOM: reveal the whole strip only once at least one actually exists.
+    items.forEach(function(s){ var probe=new Image(); probe.onload=function(){ if(block) block.style.display=''; }; probe.src=s.img; });
+  }
+  function openStory(i){ openGallery(STORY_IMGS, i, STORY_CAPS); }
+  function galNext(){ if(GAL.imgs.length){ GAL.i=(GAL.i+1)%GAL.imgs.length; showGal(); } }
+  function galPrev(){ if(GAL.imgs.length){ GAL.i=(GAL.i-1+GAL.imgs.length)%GAL.imgs.length; showGal(); } }
+  function closeImgLb(){
+    var lb=document.getElementById('imgLightbox'); if(!lb) return;
+    lb.classList.remove('open');
+    document.getElementById('imgLightboxImg').src='';
+    GAL={imgs:[],i:0,cap:''};
+    document.body.style.overflow='';
+  }
+  /* ---------- Crops scrolling line ---------- */
+  function renderCrops(){
+    var track=document.getElementById('cropTrack'); if(!track) return;
+    var items=(typeof CROPS!=='undefined'&&CROPS)?CROPS:[];
+    var seed='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21v-6"/><path d="M12 15c0-3.2 2.4-5.6 6-5.6 0 3.6-2.4 5.6-6 5.6Z"/><path d="M12 15c0-3.2-2.4-5.6-6-5.6 0 3.6 2.4 5.6 6 5.6Z"/></svg>';
+    var more=LANG==='es'?'+ Muchos Más':'+ Many More';
+    var one=items.map(function(c){ var name=LANG==='es'?(c[1]||c[0]):c[0]; return '<div class="crop">'+seed+'<span>'+name+'</span></div>'; }).join('')+'<div class="crop crop-more"><span>'+more+'</span></div>';
+    var reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+    track.innerHTML = reduced ? one : one+one;
+    if(!reduced) track.style.animationDuration=(items.length*2.6)+'s';
+  }
+
+  (function(){
+    var lb=document.getElementById('vidLightbox');
+    if(lb){
+      document.getElementById('vidClose').addEventListener('click',closeVideo);
+      lb.addEventListener('click',function(e){ if(e.target===lb) closeVideo(); });
+    }
+    var il=document.getElementById('imgLightbox');
+    if(il){
+      document.getElementById('imgClose').addEventListener('click',closeImgLb);
+      document.getElementById('imgPrev').addEventListener('click',function(e){ e.stopPropagation(); galPrev(); });
+      document.getElementById('imgNext').addEventListener('click',function(e){ e.stopPropagation(); galNext(); });
+      il.addEventListener('click',function(e){ if(e.target===il) closeImgLb(); });
+    }
+    document.addEventListener('keydown',function(e){
+      if(e.key==='Escape'){ closeVideo(); closeImgLb(); }
+      if(il&&il.classList.contains('open')){ if(e.key==='ArrowRight') galNext(); if(e.key==='ArrowLeft') galPrev(); }
+    });
+  })();
+
+  /* ---------- WhatsApp form ---------- */
+  const MF_EMAIL='info@mfroesmfg.com';
+  function _formLines(){
+    const g=id=>document.getElementById(id).value.trim();
+    const es = LANG==='es';
+    const L = es
+      ? {intro:'Hola MFroes, me gustaría solicitar información.',name:'Nombre',contact:'Contacto',crop:'Cultivo',interest:'Interés',msg:'Mensaje'}
+      : {intro:"Hi MFroes, I'd like to request information.",name:'Name',contact:'Contact',crop:'Crop',interest:'Interest',msg:'Message'};
+    const lines=[L.intro,'',
+      `${L.name}: ${g('name')}`,
+      `${L.contact}: ${g('email')}`,
+      `${L.crop}: ${g('crop')}`,
+      `${L.interest}: ${g('interest')}`];
+    if(g('msg')) lines.push(`${L.msg}: ${g('msg')}`);
+    return {lines, es};
+  }
+  function handleSubmit(e){
+    e.preventDefault();
+    const {lines,es}=_formLines();
+    window.open('https://wa.me/526251069849?text='+encodeURIComponent(lines.join('\n')),'_blank');
+    const note=document.getElementById('formnote');
+    note.textContent=es?'Abriendo WhatsApp…':'Opening WhatsApp…'; note.style.color='#8cc63f';
+    return false;
+  }
+  function sendEmail(){
+    const {lines,es}=_formLines();
+    const subject=es?'Solicitud de información — MFroes':'Information request — MFroes';
+    window.location.href='mailto:'+MF_EMAIL+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(lines.join('\n'));
+    const note=document.getElementById('formnote');
+    note.textContent=es?'Abriendo tu correo…':'Opening your email app…'; note.style.color='#8cc63f';
+  }
+
+  /* ---------- Category pages + model lineups ---------- */
+  let activeSub=null;
+
+  const T=(en,es)=>({en,es});
+
+  /* ============================================================
+     USED & REFURBISHED  —  EASY-EDIT INVENTORY LIST
+     ------------------------------------------------------------
+     To add a used machine, copy one { ... } line below, paste it,
+     change the words, and drop a matching photo into the images/
+     folder. That's it — save and re-deploy.
+
+       img    : photo file in images/  (e.g. 'images/used-1.jpg')
+       title  : the machine name / heading
+       desc   : a short description (a sentence or two)
+       status : 'available'  |  'pending'  |  'sold'   (colored badge)
+
+     Price always shows "Contact for price".
+     Leave the list empty ( const USED = []; ) to show "Inventory
+     coming soon" until you're ready.
+     ============================================================ */
+  let USED = [];
+
+  /* ============================================================
+     YOUTUBE VIDEOS  —  EASY-EDIT LIST
+     ------------------------------------------------------------
+     To add a video, copy one { ... } line below and paste your
+     YouTube link. The thumbnail is pulled from YouTube automatically
+     — no photo upload needed. Clicking a video plays it right on
+     the site in a popup.
+
+       url   : the YouTube link (any of these work) —
+                 https://www.youtube.com/watch?v=XXXXXXXXX
+                 https://youtu.be/XXXXXXXXX
+                 https://www.youtube.com/shorts/XXXXXXXXX
+                 or just the ID:  XXXXXXXXX
+       title : the caption shown under the video
+
+     Leave the list empty ( const VIDEOS = []; ) to show
+     "Videos coming soon" until you're ready.
+     ============================================================ */
+  let VIDEOS = [];
+  function ytId(u){
+    if(!u) return '';
+    u=String(u).trim();
+    var m=u.match(/(?:youtu\.be\/|v=|\/embed\/|\/shorts\/)([A-Za-z0-9_-]{6,})/);
+    return m ? m[1] : u.replace(/[^A-Za-z0-9_-]/g,'');
+  }
+
+  /* ============================================================
+     TURNKEY PLANTS & LINES  —  EASY-EDIT LIST
+     ------------------------------------------------------------
+     Complete plants and lines you've designed, built, or equipped.
+     To add one, copy a { ... } line, change the words, and drop a
+     matching photo into the images/ folder.
+
+       img      : photo file in images/  (e.g. 'images/plant-sinaloa.jpg')
+       title    : the project name
+       location : where it is (optional — leave '' to hide)
+       desc     : a short description of the project
+
+     Clicking a photo opens it large so people can see the scale.
+     Leave the list empty ( const PLANTS = []; ) to show
+     "Projects coming soon".
+     ============================================================ */
+  let PLANTS = [];
+
+  /* ============================================================
+     OUR STORY  —  EASY-EDIT HERITAGE PHOTOS
+     ------------------------------------------------------------
+     Old/candid photos shown as a warm strip under the About story.
+     They all get the same warm tone automatically, and clicking one
+     opens it large. To add a photo, copy a line and drop the image
+     into images/. Leave the list empty to hide the strip entirely.
+
+       img : photo file in images/  (e.g. 'images/story-1.jpg')
+       cap : a short caption (use T('English','Español') for both)
+     ============================================================ */
+  let STORY = [];
+
+  /* ============================================================
+     CROPS WE CLEAN  —  EASY-EDIT SCROLLING LIST
+     ------------------------------------------------------------
+     The crops shown in the moving line. To add one, copy a line
+     and type the crop in English and Spanish:  ['English','Español'].
+     The last item ('+ Many More') stays at the end automatically.
+     ============================================================ */
+  let CROPS = [];
+
+  // Reusable thumb illustration (air-screen style) for model cards
+  const THUMB=(grad,img,alt)=>`<div class="thumb" style="background:radial-gradient(120% 100% at ${grad},#eef1e9,#e2e7d9)">${img?`<img class="thumb-photo" loading="lazy" decoding="async" src="${img}" alt="${alt||''}" onerror="this.remove()">`:''}<svg viewBox="0 0 300 190" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"><rect x="70" y="55" width="160" height="90" rx="6" fill="#2c281f" stroke="#4a4436"/><g stroke="#5f9e2a" stroke-width="2" opacity=".7"><line x1="80" y1="72" x2="220" y2="72"/><line x1="80" y1="90" x2="220" y2="90"/><line x1="80" y1="108" x2="220" y2="108"/><line x1="80" y1="126" x2="220" y2="126"/></g><g fill="#8cc63f"><circle cx="100" cy="80" r="3"/><circle cx="140" cy="98" r="3"/><circle cx="180" cy="82" r="3"/><circle cx="160" cy="118" r="3"/><circle cx="120" cy="116" r="3"/></g><path d="M150 30 L130 55 L170 55 Z" fill="#4a4436"/></svg></div>`;
+
+  const CATEGORIES = {
+    'seed-cleaners': {
+      title: T('Seed Cleaners','Cribadoras de Precisión'),
+      type: T('Air-Screen','Criba de Aire'),
+      blurb: T('Our full lineup of air-screen seed cleaners, from compact units to high-capacity flagships. Every model is built or refurbished to your crop and your throughput.',
+               'Nuestra línea completa de cribadoras de precisión, desde unidades compactas hasta modelos insignia de alta capacidad. Cada modelo se construye o reacondiciona según tu cultivo y tu capacidad.'),
+      models: [
+        {name:'Frontier 34-3', img:'images/eclipse-334.jpg', cap:'3 t/h', screens:'3', size:'34×34"', series:T('Frontier Series','Serie Frontier'),
+         desc:T('A versatile air-screen cleaner in the Frontier series — precise cleaning across a wide range of crops.',
+                'Una cribadora de precisión versátil de la serie Frontier — limpieza precisa para una amplia gama de cultivos.')},
+        {name:'Seed Master GV254', img:'images/seed-master-gv254.jpg', cap:'5.2 t/h', screens:'2', size:'54×60"', series:T('Seed Master · GV Series','Seed Master · Serie GV'),
+         desc:T('A Seed Master GV-series cleaner combining screens and aspiration for clean, high-quality output.',
+                'Una cribadora de precisión Seed Master serie GV que combina cribas y aspiración para una salida limpia y de alta calidad.'),
+         specs:[
+           {g:T('Capacity','Capacidad'), rows:[[T('Small seed','Semilla pequeña'),'1.5 t/h'],[T('Medium seed','Semilla mediana'),'4 t/h'],[T('Large seed & wheat','Semilla grande y trigo'),'5.2 t/h']]},
+           {g:T('Screens','Cribas'), rows:[[T('Number of screens','Número de cribas'),'2'],[T('Screen size','Medida de criba'),'54×60"']]},
+           {g:T('Motors','Motores'), rows:[[T('Fan','Ventilador'),'5 HP']]},
+           {g:T('Air','Aire'), rows:[[T('Upper & lower air','Aire superior e inferior'),T('up to 4,500 cfm','hasta 4,500 cfm')]]}
+         ]},
+        {name:'Seed Master GV260', img:'images/seed-master-gv260.jpg', cap:'6 t/h', screens:'5', size:'54×26"', series:T('Seed Master · GV Series','Seed Master · Serie GV'),
+         desc:T('The GV260 steps up capacity in the Seed Master line while keeping the same cleaning precision.',
+                'La GV260 aumenta la capacidad en la línea Seed Master manteniendo la misma precisión de limpieza.'),
+         specs:[
+           {g:T('Capacity','Capacidad'), rows:[[T('Small seed','Semilla pequeña'),'1.8 t/h'],[T('Medium seed','Semilla mediana'),'4.5 t/h'],[T('Large seed & wheat','Semilla grande y trigo'),'6 t/h']]},
+           {g:T('Screens','Cribas'), rows:[[T('Number of screens','Número de cribas'),'5'],[T('Screen size','Medida de criba'),'54×26"']]},
+           {g:T('Motors','Motores'), rows:[[T('Fan','Ventilador'),'5 HP'],[T('Eccentric','Excéntrico'),'1 HP'],[T('Feeder','Alimentador'),'0.5 HP']]},
+           {g:T('Air','Aire'), rows:[[T('Upper & lower air','Aire superior e inferior'),T('up to 7,200 cfm','hasta 7,200 cfm')]]}
+         ]},
+        {name:'GenX 8026', img:'images/genx-8026.jpg', cap:'10 t/h', screens:'8', size:'54×26"', series:T('GenX Series','Serie GenX'),
+         desc:T('A GenX-series cleaner engineered for demanding, higher-volume operations.',
+                'Una cribadora de precisión serie GenX diseñada para operaciones exigentes de mayor volumen.'),
+         specs:[
+           {g:T('Capacity','Capacidad'), rows:[[T('Medium seed','Semilla mediana'),'4.5 t/h'],[T('Large seed & wheat','Semilla grande y trigo'),'10 t/h'],[T('Market cleaning','Limpieza comercial'),'15 t/h']]},
+           {g:T('Screens','Cribas'), rows:[[T('Number of screens','Número de cribas'),'8'],[T('Screen size','Medida de criba'),'54×26"']]},
+           {g:T('Motors','Motores'), rows:[[T('Fan','Ventilador'),'10 HP'],[T('Eccentric','Excéntrico'),'2 HP'],[T('Feeder','Alimentador'),'0.5 HP']]},
+           {g:T('Air','Aire'), rows:[[T('Upper & lower air','Aire superior e inferior'),T('up to 10,000 cfm','hasta 10,000 cfm')]]}
+         ]},
+        {name:'C588', img:'images/c588.jpg', cap:'15 t/h', screens:'10', size:'54×44"', series:T('C-Series','Serie C'),
+         desc:T('An entry in the C-series, balancing throughput and footprint for growing operations.',
+                'Un modelo de la serie C que equilibra capacidad y espacio para operaciones en crecimiento.'),
+         specs:[
+           {g:T('Capacity','Capacidad'), rows:[[T('Large seed & wheat','Semilla grande y trigo'),'15 t/h'],[T('Market cleaning','Limpieza comercial'),'20 t/h']]},
+           {g:T('Screens','Cribas'), rows:[[T('Number of screens','Número de cribas'),'10'],[T('Screen size','Medida de criba'),'54×44"']]},
+           {g:T('Motors','Motores'), rows:[[T('Fan','Ventilador'),'10 HP'],[T('Eccentric','Excéntrico'),'3 HP'],[T('Feeder','Alimentador'),'0.5 HP']]},
+           {g:T('Air','Aire'), rows:[[T('Upper & lower air','Aire superior e inferior'),T('up to 10,000 cfm','hasta 10,000 cfm')]]}
+         ]},
+        {name:'C688', img:'images/c688.jpg', cap:'20 t/h', screens:'12', size:'54×44"', series:T('C-Series','Serie C'),
+         desc:T('A mid-range C-series cleaner offering more capacity for busier lines.',
+                'Una cribadora de precisión de rango medio de la serie C con mayor capacidad para líneas más ocupadas.')},
+        {name:'C788 Highcap', img:'images/c788-highcap.jpg', cap:'25 t/h', screens:'14', size:'54×44"', series:T('C-Series · High-Capacity','Serie C · Alta Capacidad'),
+         desc:T('The high-capacity flagship of the C-series, built for maximum throughput.',
+                'El modelo insignia de alta capacidad de la serie C, hecho para el máximo rendimiento.')}
+      ]
+    },
+    'destoners': {
+      title: T('Destoners','Despedradoras'),
+      type: T('De-Stoner','Despedradora'),
+      blurb: T('Dedicated dry stone separation — an air-fluidized deck floats your good product while stones, glass, and mud balls walk uphill and out. Rugged protection for everything downstream, across the AG line.',
+               'Despedrado en seco dedicado — una mesa fluidizada por aire flota tu buen producto mientras piedras, vidrio y terrones suben y salen. Protección resistente para todo lo que sigue, en toda la línea AG.'),
+      models: [
+        {name:'248 AG', img:'images/248-ag.jpg', feat:'destoner', cap:'2 t/h', series:T('AG Series','Serie AG'),
+         desc:T('The compact AG destoner — dependable stone removal for smaller lines and specialty lots.',
+                'La despedradora AG compacta — remoción de piedras confiable para líneas pequeñas y lotes especiales.')},
+        {name:'448 AG', img:'images/448-ag.jpg', feat:'destoner', cap:'3–4 t/h', series:T('AG Series','Serie AG'),
+         desc:T('A step up in capacity, keeping the same high separation efficiency for growing operations.',
+                'Un aumento en capacidad, manteniendo la misma alta eficiencia de separación para operaciones en crecimiento.')},
+        {name:'648 AG', img:'images/648-ag.jpg', feat:'destonerB', cap:'6 t/h', series:T('AG Series','Serie AG'),
+         desc:T('A higher-capacity AG destoner for busier lines that still demand clean, precise stone removal.',
+                'Una despedradora AG de mayor capacidad para líneas más ocupadas que aún exigen una remoción de piedras limpia y precisa.')},
+        {name:'12048 AG', img:'images/12048-ag.jpg', feat:'destonerB', cap:'12 t/h', series:T('AG Series · High-Capacity','Serie AG · Alta Capacidad'),
+         desc:T('The high-capacity flagship of the AG line, built for maximum throughput in demanding operations.',
+                'El modelo insignia de alta capacidad de la línea AG, hecho para el máximo rendimiento en operaciones exigentes.')}
+      ]
+    },
+    'bucket-elevators': {
+      title: T('Bucket Elevators','Elevadores de Cangilones'),
+      type: T('Bucket Elevator','Elevador de Cangilones'),
+      pdf: 'pdfs/bucket-elevators.pdf',
+      blurb: T('Gentle, high-capacity vertical conveying that ties your line together without cracking seed. Built galvanized and to spec, the range runs from the compact B 300 to the high-capacity DD 4000.',
+               'Transporte vertical suave y de alta capacidad que une tu línea sin quebrar la semilla. Construidos galvanizados y a la medida, el rango va desde el compacto B 300 hasta el DD 4000 de alta capacidad.'),
+      models: [
+        {name:'B 300', img:'images/b-300.jpg', feat:'elevator', cap:'up to 5 t/h', specs:[{rows:[[T('Capacity','Capacidad'),'up to 5 t/h'],[T('Buckets','Cangilones'),'4×3 Maxi-Lift'],[T('Bucket spacing','Espaciado de cangilones'),'4.5"']]}], series:T('B Series','Serie B'),
+         desc:T('The compact entry — a dependable elevator for smaller lines and tight footprints.',
+                'El modelo compacto — un elevador confiable para líneas pequeñas y espacios reducidos.')},
+        {name:'C 600', img:'images/c-600.jpg', feat:'elevator', cap:'10 t/h', specs:[{rows:[[T('Capacity','Capacidad'),'10 t/h'],[T('Buckets','Cangilones'),'6×4 Maxi-Lift']]}], series:T('C Series','Serie C'),
+         desc:T('A step up in capacity for growing operations that need more lift.',
+                'Un aumento en capacidad para operaciones en crecimiento que necesitan más elevación.')},
+        {name:'D 1000', img:'images/d-1000.jpg', feat:'elevator', cap:'20 t/h', specs:[{rows:[[T('Capacity','Capacidad'),'20 t/h'],[T('Buckets','Cangilones'),'9×5 Maxi-Lift']]}], series:T('D Series','Serie D'),
+         desc:T('A higher-capacity elevator for busier lines and taller lifts.',
+                'Un elevador de mayor capacidad para líneas más ocupadas y elevaciones más altas.')},
+        {name:'D 3000', img:'images/d-3000.jpg', feat:'elevator', cap:'70 t/h', specs:[{rows:[[T('Capacity','Capacidad'),'70 t/h'],[T('Buckets','Cangilones'),'9×5 Maxi-Lift']]}], series:T('D Series','Serie D'),
+         desc:T('Serious throughput for high-volume plants, with the same gentle handling.',
+                'Rendimiento serio para plantas de alto volumen, con el mismo manejo suave.')},
+        {name:'ED 3500', img:'images/ed-3500.jpg', feat:'elevator', cap:'96 t/h', specs:[{rows:[[T('Capacity','Capacidad'),'96 t/h'],[T('Buckets','Cangilones'),'11×6 Maxi-Lift']]}], series:T('ED Series','Serie ED'),
+         desc:T('An extended-capacity elevator for demanding, continuous operations.',
+                'Un elevador de capacidad extendida para operaciones exigentes y continuas.')},
+        {name:'DD 4000', img:'images/dd-4000.jpg', feat:'elevator', cap:'120 t/h', specs:[{rows:[[T('Capacity','Capacidad'),'120 t/h'],[T('Buckets','Cangilones'),'9×5 Maxi-Lift'],[T('Configuration','Configuración'),T('Two rows (double)','Dos filas (doble)')]]}], series:T('DD Series · High-Capacity','Serie DD · Alta Capacidad'),
+         desc:T('The high-capacity flagship, built for maximum throughput across the biggest lines.',
+                'El modelo insignia de alta capacidad, hecho para el máximo rendimiento en las líneas más grandes.')}
+      ]
+    },
+    'belt-conveyors': {
+      title: T('Belt Conveyors','Bandas Transportadoras'),
+      type: T('Belt Conveyor','Banda Transportadora'),
+      blurb: T('Low-impact horizontal and inclined conveying that moves seed and grain across your plant smoothly, keeping product intact and material flowing. Built to the length your layout needs.',
+               'Transporte horizontal e inclinado de bajo impacto que mueve semilla y grano por tu planta suavemente, manteniendo el producto intacto y el material fluyendo. Construidas a la longitud que tu planta necesita.'),
+      models: [
+        {name:'Model 12', img:'images/belt-model-12.jpg', feat:'belt', chips:[[T('Belt width','Ancho de banda'),'12"']], specs:[{rows:[[T('Belt width','Ancho de banda'),'12"']]}], series:T('Belt Series','Serie de Banda'),
+         desc:T('A gentle belt conveyor for transferring and feeding across your line, sized to your layout.',
+                'Una banda transportadora suave para transferir y alimentar a lo largo de tu línea, a la medida de tu planta.')},
+        {name:'Model 16', img:'images/belt-model-16.jpg', feat:'belt', chips:[[T('Belt width','Ancho de banda'),'16"']], specs:[{rows:[[T('Belt width','Ancho de banda'),'16"']]}], series:T('Belt Series','Serie de Banda'),
+         desc:T('A wider-belt conveyor for higher throughput while keeping the same low-impact handling.',
+                'Una banda más ancha para mayor rendimiento manteniendo el mismo manejo de bajo impacto.')}
+      ]
+    },
+    'magnetic-belt': {
+      title: T('Magnetic Belt Conveyor','Banda Transportadora Magnética'),
+      type: T('Magnetic Separator','Separador Magnético'),
+      blurb: T('Surface-texture separation for the seeds nothing else can split. Fine iron powder clings to rough, hairy, or mucilaginous seeds, and the magnetic belt lifts them away — pulling stubborn weed seeds out of smooth crop seed.',
+               'Separación por textura de superficie para las semillas que nada más puede separar. El polvo fino de hierro se adhiere a las semillas rugosas, vellosas o mucilaginosas, y la banda magnética las eleva — sacando semillas de maleza difíciles de tu semilla lisa.'),
+      models: [
+        {name:'X10-60', img:'images/x10-60.jpg', series:T('Magnetic Separation','Separación Magnética'),
+         desc:T('Separates seed by surface texture using iron powder and a magnetic belt — ideal for removing dodder, buckhorn, and other rough weed seeds from clover, alfalfa, flax, and grasses.',
+                'Separa la semilla por textura de superficie usando polvo de hierro y una banda magnética — ideal para remover cuscuta, llantén y otras semillas de maleza rugosas del trébol, la alfalfa, el lino y los pastos.')}
+      ]
+    },
+    'polishers': {
+      title: T('Polishers','Pulidoras'),
+      type: T('Polisher','Pulidora'),
+      blurb: T('The finishing stage — gently buffing the seed coat and lifting away hairs, awns, and appendages for a smooth, free-flowing product that meters cleanly and presents sharp in the bag. The MF line finishes what your line started.',
+               'La etapa de acabado — puliendo suavemente la cubierta de la semilla y removiendo pelos, aristas y apéndices para un producto liso y de libre flujo que se dosifica limpio y luce impecable en la bolsa. La línea MF termina lo que tu línea empezó.'),
+      models: [
+        {name:'MF254', img:'images/mf254.jpg', feat:'polisher', cap:'up to 10 t/h',
+         chips:[[T('Capacity','Capacidad'),'up to 10 t/h'],[T('Polishing boxes','Cajas de pulido'),'5']],
+         specs:[{rows:[[T('Capacity','Capacidad'),'up to 10 metric t/h'],[T('Polishing boxes','Cajas de pulido'),'5']]}],
+         series:T('MF Series · High-Capacity','Serie MF · Alta Capacidad'),
+         desc:T('The high-capacity MF polisher — five polishing boxes buff the seed coat and remove hairs and awns for smooth, free-flowing seed.',
+                'La pulidora MF de alta capacidad — cinco cajas de pulido pulen la cubierta de la semilla y remueven pelos y aristas para una semilla lisa y de libre flujo.')},
+        {name:'MF536', img:'images/mf536.jpg', feat:'polisher', cap:'up to 5–6 t/h',
+         chips:[[T('Capacity','Capacidad'),'up to 5–6 t/h'],[T('Polishing boxes','Cajas de pulido'),'2']],
+         specs:[{rows:[[T('Capacity','Capacidad'),'up to 5–6 metric t/h'],[T('Polishing boxes','Cajas de pulido'),'2']]}],
+         series:T('MF Series','Serie MF'),
+         desc:T('A mid-capacity MF polisher with two polishing boxes — clean finishing that improves flow, metering, and bag presentation.',
+                'Una pulidora MF de capacidad media con dos cajas de pulido — un acabado limpio que mejora el flujo, la dosificación y la presentación en la bolsa.')},
+        {name:'MF218', img:'images/mf218.jpg', feat:'polisher', cap:'up to 2 t/h',
+         chips:[[T('Capacity','Capacidad'),'up to 2 t/h'],[T('Polishing boxes','Cajas de pulido'),'1']],
+         specs:[{rows:[[T('Capacity','Capacidad'),'up to 2 metric t/h'],[T('Polishing boxes','Cajas de pulido'),'1']]}],
+         series:T('MF Series · Compact','Serie MF · Compacta'),
+         desc:T('The compact single-box MF polisher — finishes seed to a smooth, uniform coat, ready for treating or bagging.',
+                'La pulidora MF compacta de una caja — da a la semilla un acabado liso y uniforme, lista para tratar o embolsar.')}
+      ]
+    },
+    'used-equipment':     { title:T('Used & Refurbished Equipment','Equipo Usado y Reacondicionado'),
+      blurb:T('Quality pre-owned machines rebuilt and shop-tested to our standards — a proven way to add capacity or complete a line for less. Here\'s what we have available now.',
+              'Máquinas de calidad reacondicionadas y probadas en taller según nuestros estándares — una forma comprobada de agregar capacidad o completar una línea por menos. Esto es lo que tenemos disponible ahora.'),
+      models:[] }
+  };
+
+  function tr(o){ return o ? (o[LANG] ?? o.en) : ''; }
+
+  function renderUsed(c, back){
+    const items = (typeof USED!=='undefined' && USED) ? USED : [];
+    const badge = { available:['Available','Disponible','#3f7d2e'], pending:['Sale Pending','Venta Pendiente','#a8863f'], sold:['Sold','Vendido','#a8542b'] };
+    let body;
+    if(items.length){
+      body = '<div class="used-grid">'+items.map(function(u){
+        const b = badge[u.status]||badge.available;
+        const label = LANG==='es'?b[1]:b[0];
+        const contact = LANG==='es'?'Contactar por precio':'Contact for price';
+        const inquire = LANG==='es'?'Preguntar →':'Inquire →';
+        const title = (tr(u.title)||u.title||'').replace(/"/g,'&quot;');
+        const desc = tr(u.desc)||u.desc||'';
+        const imgs = (u.imgs&&u.imgs.length)?u.imgs : (u.img?[u.img]:[]);
+        const esc = "["+imgs.map(function(s){return "'"+s+"'";}).join(',')+"]";
+        const clickable = imgs.length ? ' onclick="openGallery('+esc+',0,\''+title.replace(/'/g,"\\'")+'\')"' : '';
+        const photo = imgs.length ? '<img class="used-photo" loading="lazy" decoding="async" src="'+imgs[0]+'" alt="'+title+'" onerror="var c=this.closest(\'.used-card\');if(c)c.classList.add(\'no-photo\')">' : '';
+        const count = imgs.length>1 ? '<span class="used-count"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="14" height="14" rx="2"/><path d="M7 21h12a2 2 0 0 0 2-2V9"/></svg>'+imgs.length+'</span>' : '';
+        return '<article class="used-card'+(imgs.length?'':' no-photo')+(imgs.length?' clickable':'')+'"'+clickable+'>'+
+          '<div class="used-thumb">'+photo+'<span class="used-badge" style="background:'+b[2]+'">'+label+'</span>'+count+'</div>'+
+          '<div class="used-body"><h3>'+title+'</h3><p>'+desc+'</p>'+
+          '<div class="used-foot"><span class="used-price">'+contact+'</span><a class="more" href="#contact" onclick="event.stopPropagation()">'+inquire+'</a></div>'+
+          '</div></article>';
+      }).join('')+'</div>';
+    } else {
+      const h = LANG==='es'?'Inventario en camino':'Inventory coming soon';
+      const p = LANG==='es'
+        ? 'Estamos preparando nuestro equipo usado y reacondicionado. Contáctanos para saber qué hay disponible ahora mismo.'
+        : "We're preparing our used and refurbished inventory. Contact us to hear what's available right now.";
+      const cta = LANG==='es'?'Contáctanos →':'Contact Us →';
+      body = '<div class="model-empty"><h3>'+h+'</h3><p>'+p+'</p><a class="btn btn-primary" href="#contact">'+cta+'</a></div>';
+    }
+    document.getElementById('subpage').innerHTML =
+      '<section class="subpage"><div class="wrap">'+
+      '<a class="backlink" href="#products"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>'+back+'</a>'+
+      '<div class="subpage-head"><span class="eyebrow">'+tr(c.title)+'</span><h2>'+tr(c.title)+'</h2>'+(c.blurb?'<p>'+tr(c.blurb)+'</p>':'')+'</div>'+
+      body+'</div></section>';
+  }
+
+  function renderSubpage(cat){
+    const c=CATEGORIES[cat]; if(!c) return;
+    const backL = LANG==='es' ? 'Todos los Productos' : 'All Products';
+    if(cat==='used-equipment'){ renderUsed(c, backL); return; }
+    const back = LANG==='es' ? 'Todos los Productos' : 'All Products';
+    const grads=['30% 20%','70% 20%','40% 30%','60% 30%','30% 40%','70% 40%','50% 25%'];
+    let body;
+    if(c.models.length){
+      const typeL = LANG==='es'?'Tipo':'Type';
+      const typeV = c.type ? tr(c.type) : (LANG==='es'?'Máquina':'Machine');
+      const specL = LANG==='es'?'Ficha':'Specs';
+      const specV = LANG==='es'?'A solicitud':'On request';
+      const capL  = LANG==='es'?'Capacidad':'Capacity';
+      const scrL  = LANG==='es'?'Cribas':'Screens';
+      const szL   = LANG==='es'?'Medida':'Size';
+      const cta   = LANG==='es'?'Solicitar Ficha →':'Request Specs →';
+      body = `<div class="grid">` + c.models.map((m,i)=>{
+        var chips=[];
+        if(m.chips){ chips=m.chips.map(function(c){return [(typeof c[0]==='object'?tr(c[0]):c[0]),(typeof c[1]==='object'?tr(c[1]):c[1])];}); }
+        else {
+          if(m.cap) chips.push([capL,m.cap]);
+          if(m.screens) chips.push([scrL,m.screens]);
+          if(m.size) chips.push([szL,m.size]);
+        }
+        if(!chips.length) chips=[[typeL,typeV],[specL,specV]];
+        const spec = '<div class="spec">'+chips.map(function(c){return '<div>'+c[0]+'<b>'+c[1]+'</b></div>';}).join('')+'</div>';
+        return `
+        <article class="card">
+          ${THUMB(grads[i%grads.length], m.img, m.name)}
+          <div class="body">
+            <span class="eyebrow" style="font-size:.64rem;margin-bottom:8px">${tr(m.series)}</span>
+            <h3>${typeof m.name==='object'?tr(m.name):m.name}</h3>
+            <p>${tr(m.desc)}</p>
+            ${spec}
+            ${(m.cap||m.feat) ? `<button class="more morebtn" data-mi="${i}">${LANG==='es'?'Ver Detalles →':'View Details →'}</button>` : `<a class="more" href="#contact">${cta}</a>`}
+          </div>
+        </article>`;}).join('') + `</div>`;
+    } else {
+      const h = LANG==='es'?'Modelos en camino':'Models coming soon';
+      const p = LANG==='es'
+        ? `Estamos agregando los modelos de ${tr(c.title)} a esta sección. Mientras tanto, contáctanos para fichas técnicas y precios.`
+        : `We're adding the ${tr(c.title)} models to this section. In the meantime, contact us for specs and pricing.`;
+      const cta = LANG==='es'?'Contáctanos →':'Contact Us →';
+      body = `<div class="model-empty"><h3>${h}</h3><p>${p}</p><a class="btn btn-primary" href="#contact">${cta}</a></div>`;
+    }
+    document.getElementById('subpage').innerHTML = `
+      <section class="subpage"><div class="wrap">
+        <a class="backlink" href="#products"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>${back}</a>
+        <div class="subpage-head"><span class="eyebrow">${tr(c.title)}</span><h2>${tr(c.title)}</h2>${c.blurb?`<p>${tr(c.blurb)}</p>`:''}</div>
+        ${body}
+      </div></section>`;
+  }
+
+  /* ---------- State-based navigation (no URL hash — reliable inside preview iframes) ---------- */
+  function showView(name){
+    document.querySelectorAll('[data-view]').forEach(v=>{ v.style.display = (v.dataset.view===name)?'':'none'; });
+  }
+  function openCategory(cat){
+    if(!CATEGORIES[cat]) return;
+    activeSub=cat; renderSubpage(cat); showView('sub'); window.scrollTo(0,0);
+  }
+  function goHome(anchor){
+    activeSub=null; showView('home');
+    if(anchor && anchor.length>1){
+      const el=document.querySelector(anchor);
+      if(el){ setTimeout(()=>el.scrollIntoView({behavior:'smooth'}),30); return; }
+    }
+    window.scrollTo(0,0);
+  }
+
+  // one delegated click handler covers cards, nav links, back link, and CTAs (incl. dynamically rendered ones)
+  document.addEventListener('click', function(e){
+    const mb=e.target.closest('.morebtn');
+    if(mb){ e.preventDefault(); openModel(parseInt(mb.getAttribute('data-mi'),10)); return; }
+    const card=e.target.closest('.card[data-href]');
+    if(card){ e.preventDefault(); openCategory(card.getAttribute('data-href').replace('#/','')); return; }
+    const a=e.target.closest('a[href^="#"]');
+    if(a){
+      const href=a.getAttribute('href');
+      e.preventDefault();
+      if(href.indexOf('#/')===0){ openCategory(href.replace('#/','')); }
+      else { goHome(href); }
+    }
+  });
+
+  /* ---------- Model detail modal ---------- */
+  const WA_NUM='https://wa.me/526251069849';
+  const FEAT = {
+    std:{
+      features:{
+        en:['Heavy-duty construction','Easily portable with pallet-fork inserts — move it without damaging the machine','Independent motors for the fan, eccentric, and feeder','Upper and lower aspiration to remove dust and light material','Adjustable feed and air control for precise, repeatable cleaning','Tool-free screen access for fast screen changes','Interchangeable screens sized to each crop'],
+        es:['Construcción de alta resistencia','Fácilmente transportable con insertos para montacargas — se mueve sin dañar la máquina','Motores independientes para el ventilador, el excéntrico y el alimentador','Aspiración superior e inferior para retirar polvo y material ligero','Control de alimentación y aire ajustable para una limpieza precisa y repetible','Acceso a cribas sin herramientas para cambios rápidos','Cribas intercambiables a la medida de cada cultivo']
+      },
+      options:{
+        en:['Surge bin','Vibratory feed hopper','Grease line package','Ladder and spouting','VFD on air system'],
+        es:['Tolva de sobreflujo (surge bin)','Tolva de alimentación vibratoria','Paquete de línea de engrase','Escalera y ductos','VFD en el sistema de aire']
+      }
+    },
+    c:{
+      features:{
+        en:['Heavy-duty construction','Marine wood shoes','Independent motors for the fan, eccentric, and feeder','Upper and lower aspiration to remove dust and light material','Adjustable feed and air control for precise, repeatable cleaning','Tool-free screen access for fast screen changes','Interchangeable screens sized to each crop'],
+        es:['Construcción de alta resistencia','Zapatas de madera marina','Motores independientes para el ventilador, el excéntrico y el alimentador','Aspiración superior e inferior para retirar polvo y material ligero','Control de alimentación y aire ajustable para una limpieza precisa y repetible','Acceso a cribas sin herramientas para cambios rápidos','Cribas intercambiables a la medida de cada cultivo']
+      },
+      options:{
+        en:['Surge bin','Vibratory feed hopper','Grease line package','Ladder and spouting','VFD on air system'],
+        es:['Tolva de sobreflujo (surge bin)','Tolva de alimentación vibratoria','Paquete de línea de engrase','Escalera y ductos','VFD en el sistema de aire']
+      }
+    },
+    destoner:{
+      features:{
+        en:['Variable-frequency drive on eccentric speed','Manual air-flow adjustment','Heavy-duty steel frame','Adjustable flow feeder','Air gauge and air-flow adjustment wheel','Windows in feeder','Air-flow gauge'],
+        es:['Variador de frecuencia en la velocidad del excéntrico','Ajuste manual del flujo de aire','Estructura de acero de alta resistencia','Alimentador de flujo ajustable','Manómetro de aire y rueda de ajuste de flujo','Ventanas en el alimentador','Manómetro de flujo de aire']
+      },
+      options:{
+        en:['Surge bin','Vibratory feed hopper','Dust hood','Grease line package','Ladder and spouting'],
+        es:['Tolva de sobreflujo (surge bin)','Tolva de alimentación vibratoria','Campana de polvo','Paquete de línea de engrase','Escalera y ductos']
+      }
+    },
+    destonerB:{
+      features:{
+        en:['Variable-frequency drive on eccentric speed','Individual gauge and control for each fan','Active counter-balance system','Heavy-duty steel frame','Adjustable flow feeder','Adjustable flow separators'],
+        es:['Variador de frecuencia en la velocidad del excéntrico','Manómetro y control individual para cada ventilador','Sistema de contrapeso activo','Estructura de acero de alta resistencia','Alimentador de flujo ajustable','Separadores de flujo ajustable']
+      },
+      options:{
+        en:['Surge bin','Vibratory feed hopper','Dust hood','Grease line package','Ladder and spouting'],
+        es:['Tolva de sobreflujo (surge bin)','Tolva de alimentación vibratoria','Campana de polvo','Paquete de línea de engrase','Escalera y ductos']
+      }
+    },
+    elevator:{
+      features:{
+        en:['Maxi-Lift buckets','Sealed, greasable bearings','Head and boot casing in 14-gauge steel','Legging in 16-gauge steel','Easy cleanout door','Inspection section'],
+        es:['Cangilones Maxi-Lift','Baleros sellados y engrasables','Carcasa de cabeza y base en acero calibre 14','Pierna en acero calibre 16','Puerta de limpieza de fácil acceso','Sección de inspección']
+      },
+      options:{
+        en:['Service platform','Ladder and cage','Rest platform','Reducer and brake'],
+        es:['Plataforma de servicio','Escalera con jaula','Plataforma de descanso','Reductor y freno']
+      }
+    },
+    belt:{
+      features:{
+        en:['Inlet hopper','Adjustable belt-cleaning brush','Outlet spout','Adjustable bottom roller'],
+        es:['Tolva de entrada','Cepillo de limpieza de banda ajustable','Boquilla de salida','Rodillo inferior ajustable']
+      },
+      options:{ en:[], es:[] }
+    },
+    polisher:{
+      features:{
+        en:['Polishing boxes that buff the seed coat and lift hairs, awns, and appendages','Bucket elevator that recirculates the corn cob or sawdust polishing media','Shaking separation system that separates the polished seed from the corn cob or sawdust','Integrated aspiration fan','Eccentric drive','Heavy-duty construction'],
+        es:['Cajas de pulido que pulen la cubierta de la semilla y remueven pelos, aristas y apéndices','Elevador de cangilones que recircula el medio de pulido (olote de maíz o aserrín)','Sistema de sacudido que separa la semilla pulida del olote de maíz o aserrín','Ventilador de aspiración integrado','Transmisión excéntrica','Construcción de alta resistencia']
+      },
+      options:{ en:[], es:[] }
+    }
+  };
+  function pickArr(o){ return o ? (o[LANG]||o.en) : []; }
+  function openModel(i){
+    const list=(CATEGORIES[activeSub]&&CATEGORIES[activeSub].models)||[];
+    const m=list[i]; if(!m) return;
+    const slug=(m.img||'').replace('images/','').replace('.jpg','');
+    const pdfHref = m.pdf || (CATEGORIES[activeSub]&&CATEGORIES[activeSub].pdf) || ('pdfs/'+slug+'.pdf');
+    const isC = m.series && m.series.en && m.series.en.indexOf('C-Series')>=0;
+    const set = m.feat ? (FEAT[m.feat]||FEAT.std) : (isC?FEAT.c:FEAT.std);
+    const name = typeof m.name==='object'?tr(m.name):m.name;
+    let specHtml='';
+    if(m.specs && m.specs.length){
+      specHtml = m.specs.map(function(grp){
+        var rws = grp.rows.map(function(r){
+          var lab=(typeof r[0]==='object')?tr(r[0]):r[0];
+          var val=(typeof r[1]==='object')?tr(r[1]):r[1];
+          return '<tr><td>'+lab+'</td><td>'+val+'</td></tr>';
+        }).join('');
+        return '<div class="spec-group">'+(grp.g?'<h4>'+tr(grp.g)+'</h4>':'')+'<table class="spec-table">'+rws+'</table></div>';
+      }).join('');
+    } else if(m.cap){
+      var rows=[]; var R=function(l,v){ if(v) rows.push('<tr><td>'+l+'</td><td>'+v+'</td></tr>'); };
+      R(LANG==='es'?'Capacidad':'Capacity', m.cap);
+      R(LANG==='es'?'Cribas':'Screens', m.screens);
+      R(LANG==='es'?'Medida de criba':'Screen size', m.size);
+      specHtml='<table class="spec-table">'+rows.join('')+'</table>';
+    } else {
+      specHtml='<p style="color:var(--muted);font-size:.95rem">'+(LANG==='es'?'Especificaciones completas disponibles a solicitud.':'Full specifications available on request.')+'</p>';
+    }
+    const extra=[2,3,4,5,6,7,8,9,10,11,12].map(n=>'<img loading="lazy" decoding="async" src="images/'+slug+'-'+n+'.jpg" onerror="this.remove()" onclick="document.getElementById(\''+'mgMain\').src=this.src">').join('');
+    const featLis=pickArr(set.features).map(x=>'<li>'+x+'</li>').join('');
+    const optLis=pickArr(set.options).map(x=>'<li>'+x+'</li>').join('');
+    const L = LANG==='es'
+      ? {spec:'Especificaciones',feat:'Características Estándar',opt:'Opciones',pdf:'Descargar PDF',quote:'Solicitar Cotización',note:'Contenido de ejemplo — se reemplazará con las características y fichas técnicas reales de MFroes.'}
+      : {spec:'Specifications',feat:'Standard Features',opt:'Options',pdf:'Download PDF',quote:'Request a Quote',note:'Placeholder content — to be replaced with your real MFroes features and spec sheets.'};
+    const waMsg = encodeURIComponent((LANG==='es'?'Hola MFroes, me interesa la ':'Hi MFroes, I am interested in the ')+name+'.');
+    document.getElementById('modalCard').innerHTML =
+      '<button class="modal-close" onclick="closeModel()" aria-label="Close">×</button>'+
+      '<div class="modal-head"><span class="eyebrow">'+tr(m.series)+'</span><h2>'+name+'</h2></div>'+
+      '<div class="modal-body">'+
+        '<div class="modal-gallery"><div class="mg-main"><img id="mgMain" decoding="async" src="'+m.img+'" alt="'+name+'" onerror="this.style.display=\'none\'"></div>'+
+        '<div class="mg-thumbs"><img loading="lazy" decoding="async" src="'+m.img+'" onclick="var g=document.getElementById(\'mgMain\');g.src=this.src;g.style.display=\'block\'">'+extra+'</div></div>'+
+        '<div class="modal-info"><h3>'+L.spec+'</h3>'+specHtml+
+          '<div class="modal-cta"><a class="btn btn-primary" href="'+pdfHref+'" target="_blank" rel="noopener">'+L.pdf+' ↓</a>'+
+          '<a class="btn btn-ghost" href="'+WA_NUM+'?text='+waMsg+'" target="_blank" rel="noopener">'+L.quote+'</a></div></div>'+
+      '</div>'+
+      '<div class="modal-features"><div><h3>'+L.feat+'</h3><ul>'+featLis+'</ul></div>'+(optLis?'<div><h3>'+L.opt+'</h3><ul>'+optLis+'</ul></div>':'')+'</div>';
+    document.getElementById('modal').classList.add('open');
+    document.body.style.overflow='hidden';
+  }
+  function closeModel(){ document.getElementById('modal').classList.remove('open'); document.body.style.overflow=''; }
+  document.getElementById('modal').addEventListener('click',function(e){ if(e.target.id==='modal') closeModel(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeModel(); });
+
+  // start on home
+  showView('home');
+  renderVideos();
+  renderPlants();
+  renderCrops();
+  renderStory();
+  // ---- Load editable content from the CMS data files ----
+  function _mfLoad(u){ return fetch(u,{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;}); }
+  Promise.all([_mfLoad('content/used.json'),_mfLoad('content/videos.json'),_mfLoad('content/plants.json'),_mfLoad('content/story.json'),_mfLoad('content/crops.json')]).then(function(res){
+    if(res[0]&&res[0].items) USED=res[0].items;
+    if(res[1]&&res[1].items) VIDEOS=res[1].items;
+    if(res[2]&&res[2].items) PLANTS=res[2].items;
+    if(res[3]&&res[3].items) STORY=res[3].items;
+    if(res[4]&&res[4].items) CROPS=res[4].items.map(function(x){return Array.isArray(x)?x:[x.en,x.es];});
+    renderVideos(); renderPlants(); renderCrops(); renderStory();
+    if(activeSub) renderSubpage(activeSub);
+  });
+  // Pause the crops ticker when it's off-screen (saves CPU/battery)
+  (function(){
+    var m=document.querySelector('.crop-marquee'), t=document.getElementById('cropTrack');
+    if(m&&t&&'IntersectionObserver' in window){
+      new IntersectionObserver(function(entries){
+        entries.forEach(function(en){ t.style.animationPlayState = en.isIntersecting ? 'running' : 'paused'; });
+      },{threshold:0}).observe(m);
+    }
+  })();
+</script>
+</body>
+</html>

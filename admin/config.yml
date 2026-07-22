@@ -1,0 +1,132 @@
+# ============================================================
+#  MFroes admin panel configuration (Sveltia CMS)
+#  --> Change ONE thing before deploying: the "repo:" line below.
+#      Set it to  your-github-username/mfroes-website
+# ============================================================
+
+backend:
+  name: github
+  repo: YOUR-GITHUB-USERNAME/mfroes-website   # <-- CHANGE THIS
+  branch: main
+
+# Photos you upload in the admin are saved here:
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: content
+    label: "Website Content"
+    files:
+
+      # ---------- Used & Refurbished ----------
+      - name: used
+        label: "Used & Refurbished Machines"
+        file: "content/used.json"
+        icon: build
+        fields:
+          - name: items
+            label: "Machines"
+            label_singular: "Machine"
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: title, label: "Name", widget: string }
+              - { name: desc, label: "Description", widget: text }
+              - name: status
+                label: "Status"
+                widget: select
+                options: ["available", "pending", "sold"]
+                default: "available"
+              - name: imgs
+                label: "Photos"
+                label_singular: "Photo"
+                widget: list
+                field: { name: image, label: "Photo", widget: image }
+
+      # ---------- Videos ----------
+      - name: videos
+        label: "Videos"
+        file: "content/videos.json"
+        fields:
+          - name: items
+            label: "Videos"
+            label_singular: "Video"
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: title, label: "Caption", widget: string }
+              - { name: url, label: "YouTube link", widget: string }
+
+      # ---------- Plants & Projects (bilingual) ----------
+      - name: plants
+        label: "Plants & Projects"
+        file: "content/plants.json"
+        fields:
+          - name: items
+            label: "Projects"
+            label_singular: "Project"
+            widget: list
+            summary: "{{fields.title.en}}"
+            fields:
+              - name: title
+                label: "Name"
+                widget: object
+                fields:
+                  - { name: en, label: "English", widget: string }
+                  - { name: es, label: "Spanish", widget: string }
+              - name: location
+                label: "Location"
+                widget: object
+                fields:
+                  - { name: en, label: "English", widget: string, required: false }
+                  - { name: es, label: "Spanish", widget: string, required: false }
+              - name: role
+                label: "Role tag (e.g. Designed & Built)"
+                widget: object
+                fields:
+                  - { name: en, label: "English", widget: string, required: false }
+                  - { name: es, label: "Spanish", widget: string, required: false }
+              - name: desc
+                label: "Description"
+                widget: object
+                fields:
+                  - { name: en, label: "English", widget: text }
+                  - { name: es, label: "Spanish", widget: text }
+              - name: imgs
+                label: "Photos"
+                label_singular: "Photo"
+                widget: list
+                field: { name: image, label: "Photo", widget: image }
+
+      # ---------- Our Story photos (bilingual caption) ----------
+      - name: story
+        label: "Our Story Photos"
+        file: "content/story.json"
+        fields:
+          - name: items
+            label: "Photos"
+            label_singular: "Photo"
+            widget: list
+            summary: "{{fields.cap.en}}"
+            fields:
+              - { name: img, label: "Photo", widget: image }
+              - name: cap
+                label: "Caption"
+                widget: object
+                fields:
+                  - { name: en, label: "English", widget: string }
+                  - { name: es, label: "Spanish", widget: string }
+
+      # ---------- Crops we clean (bilingual) ----------
+      - name: crops
+        label: "Crops We Clean"
+        file: "content/crops.json"
+        fields:
+          - name: items
+            label: "Crops"
+            label_singular: "Crop"
+            widget: list
+            summary: "{{fields.en}}"
+            fields:
+              - { name: en, label: "English", widget: string }
+              - { name: es, label: "Spanish", widget: string }

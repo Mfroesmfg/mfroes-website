@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "title": "Used Cimbria Precision Cleaner",
+      "desc": "High-capacity precision air-screen cleaner rated for up to 40 metric tons per hour.",
+      "status": "available",
+      "imgs": [
+        "images/used-cimbria-1.jpg",
+        "images/used-cimbria-2.jpg",
+        "images/used-cimbria-3.jpg"
+      ]
+    },
+    {
+      "title": "Refurbished Clipper New Gen 668",
+      "desc": "A Clipper New Gen 668 air-screen cleaner, fully refurbished and shop-tested to our standards.",
+      "status": "sold",
+      "imgs": [
+        "images/used-clipper-668.jpg"
+      ]
+    },
+    {
+      "title": "Refurbished LMC Gravity Separator",
+      "desc": "An LMC gravity separator, fully refurbished and shop-tested to our standards.",
+      "status": "sold",
+      "imgs": [
+        "images/used-lmc-gravity.jpg"
+      ]
+    },
+    {
+      "title": "Crippen Dakota 488",
+      "desc": "A Crippen Dakota 488 air-screen seed cleaner, shop-tested to our standards.",
+      "status": "sold",
+      "imgs": [
+        "images/used-crippen-dakota-488.jpg"
+      ]
+    },
+    {
+      "title": "Used Oliver 3600 Gravity Separator",
+      "desc": "An Oliver Model 3600 gravity separator, shop-tested to our standards.",
+      "status": "sold",
+      "imgs": [
+        "images/used-oliver-3600.jpg"
+      ]
+    }
+  ]
+}

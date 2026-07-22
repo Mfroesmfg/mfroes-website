@@ -1,0 +1,73 @@
+{
+  "items": [
+    {
+      "title": {
+        "en": "Complete Seed Processing Plant",
+        "es": "Planta Completa de Procesamiento de Semilla"
+      },
+      "location": {
+        "en": "Zacatlán, Puebla, Mexico",
+        "es": "Zacatlán, Puebla, México"
+      },
+      "role": {
+        "en": "Designed & Supplied",
+        "es": "Diseñada y Suministrada"
+      },
+      "desc": {
+        "en": "A complete seed cleaning and processing plant we designed and supplied — sourcing, installing, and integrating the right equipment into a working line.",
+        "es": "Una planta completa de limpieza y procesamiento de semilla que diseñamos y suministramos, seleccionando, instalando e integrando el equipo adecuado en una línea funcional."
+      },
+      "imgs": [
+        "images/plant-zacatlan-1.jpg",
+        "images/plant-zacatlan-2.jpg",
+        "images/plant-zacatlan-3.jpg"
+      ]
+    },
+    {
+      "title": {
+        "en": "Seed Cleaner & Gravity Separator Line",
+        "es": "Línea de Cribadora y Separadora por Gravedad"
+      },
+      "location": {
+        "en": "United States",
+        "es": "Estados Unidos"
+      },
+      "role": {
+        "en": "Our Equipment",
+        "es": "Nuestro Equipo"
+      },
+      "desc": {
+        "en": "A working line running a seed cleaner and gravity separator we built — MFroes machinery out in the field.",
+        "es": "Una línea en funcionamiento con una cribadora y una separadora por gravedad que construimos: maquinaria MFroes trabajando en el campo."
+      },
+      "imgs": [
+        "images/plant-cleaner-gravity-1.jpg",
+        "images/plant-cleaner-gravity-2.jpg"
+      ]
+    },
+    {
+      "title": {
+        "en": "Mobile Seed Cleaning Unit",
+        "es": "Unidad Móvil de Limpieza de Semilla"
+      },
+      "location": {
+        "en": "North Dakota, USA",
+        "es": "Dakota del Norte, EE. UU."
+      },
+      "role": {
+        "en": "Designed & Built",
+        "es": "Diseñada y Construida"
+      },
+      "desc": {
+        "en": "A self-contained mobile cleaning unit we designed, built, and equipped with our own MFroes machinery — bringing the cleaning line right to the crop.",
+        "es": "Una unidad móvil autónoma de limpieza que diseñamos, construimos y equipamos con nuestra propia maquinaria MFroes, llevando la línea de limpieza directamente al cultivo."
+      },
+      "imgs": [
+        "images/plant-mobile-nd-1.jpg",
+        "images/plant-mobile-nd-2.jpg",
+        "images/plant-mobile-nd-3.jpg",
+        "images/plant-mobile-nd-4.jpg"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "img": "images/story-1.jpg",
+      "cap": {
+        "en": "Peter, early 2000s",
+        "es": "Peter, principios de los 2000"
+      }
+    },
+    {
+      "img": "images/story-2.jpg",
+      "cap": {
+        "en": "Cornelius working on a mobile cleaner, 2001",
+        "es": "Cornelius trabajando en una cribadora móvil, 2001"
+      }
+    },
+    {
+      "img": "images/story-3.jpg",
+      "cap": {
+        "en": "Refurbished equipment headed out",
+        "es": "Equipo reacondicionado en camino"
+      }
+    },
+    {
+      "img": "images/story-4.jpg",
+      "cap": {
+        "en": "Cornelius and his brother Peter with industry legends Herman Hernández (Agri-Co International) and Dean Coffee (Oliver Mfg.). Rocky Ford, Colorado, 2009.",
+        "es": "Cornelius y su hermano Peter con las leyendas de la industria Herman Hernández (Agri-Co International) y Dean Coffee (Oliver Mfg.). Rocky Ford, Colorado, 2009."
+      }
+    }
+  ]
+}
