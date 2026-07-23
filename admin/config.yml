@@ -6,7 +6,7 @@
 
 backend:
   name: github
-  repo: YOUR-GITHUB-USERNAME/mfroes-website   # <-- CHANGE THIS
+  repo: Mfroesmfg/mfroes-website  
   branch: main
 
 # Photos you upload in the admin are saved here:
