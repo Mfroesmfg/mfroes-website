@@ -973,6 +973,8 @@
         "images/248-ag.jpg"
       ],
       "cap": "2 t/h",
+      "screens": "",
+      "size": "",
       "series": {
         "en": "AG Series",
         "es": "Serie AG"
@@ -1113,6 +1115,8 @@
         "images/648-ag.jpg"
       ],
       "cap": "6 t/h",
+      "screens": "",
+      "size": "",
       "series": {
         "en": "AG Series",
         "es": "Serie AG"
@@ -1179,6 +1183,8 @@
         "images/12048-ag.jpg"
       ],
       "cap": "12 t/h",
+      "screens": "",
+      "size": "",
       "series": {
         "en": "AG Series · High-Capacity",
         "es": "Serie AG · Alta Capacidad"
@@ -1245,6 +1251,8 @@
         "images/b-300.jpg"
       ],
       "cap": "up to 5 t/h",
+      "screens": "",
+      "size": "",
       "series": {
         "en": "B Series",
         "es": "Serie B"
@@ -1437,6 +1445,8 @@
         "images/d-1000.jpg"
       ],
       "cap": "20 t/h",
+      "screens": "",
+      "size": "",
       "series": {
         "en": "D Series",
         "es": "Serie D"
@@ -1528,6 +1538,8 @@
         "images/d-3000.jpg"
       ],
       "cap": "70 t/h",
+      "screens": "",
+      "size": "",
       "series": {
         "en": "D Series",
         "es": "Serie D"
@@ -1810,6 +1822,9 @@
       "photos": [
         "images/belt-model-12.jpg"
       ],
+      "cap": "",
+      "screens": "",
+      "size": "",
       "series": {
         "en": "Belt Series",
         "es": "Serie de Banda"
@@ -1918,8 +1933,11 @@
       "category": "magnetic-belt",
       "name": "X10-60",
       "photos": [
-        "images/x10-60.jpg"
+        "/images/248-ag.jpg"
       ],
+      "cap": "",
+      "screens": "",
+      "size": "",
       "series": {
         "en": "Magnetic Separation",
         "es": "Separación Magnética"
@@ -1990,6 +2008,8 @@
         "images/mf254.jpg"
       ],
       "cap": "up to 10 t/h",
+      "screens": "",
+      "size": "",
       "series": {
         "en": "MF Series · High-Capacity",
         "es": "Serie MF · Alta Capacidad"
