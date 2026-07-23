@@ -2,336 +2,1812 @@
   "models": [
     {
       "category": "seed-cleaners",
+      "id": "eclipse-334",
       "name": "Frontier 34-3",
-      "photos": [
-        "images/eclipse-334.jpg"
-      ],
-      "cap": "3 t/h",
-      "screens": "3",
-      "size": "34×34\"",
       "series": {
         "en": "Frontier Series",
         "es": "Serie Frontier"
       },
+      "cap": "3 t/h",
+      "screens": "3",
+      "size": "34×34\"",
       "desc": {
         "en": "A versatile air-screen cleaner in the Frontier series — precise cleaning across a wide range of crops.",
         "es": "Una cribadora de precisión versátil de la serie Frontier — limpieza precisa para una amplia gama de cultivos."
       },
-      "id": "eclipse-334"
+      "photos": [
+        "images/eclipse-334.jpg"
+      ],
+      "specs": [],
+      "features": [
+        {
+          "en": "Heavy-duty construction",
+          "es": "Construcción de alta resistencia"
+        },
+        {
+          "en": "Easily portable with pallet-fork inserts — move it without damaging the machine",
+          "es": "Fácilmente transportable con insertos para montacargas — se mueve sin dañar la máquina"
+        },
+        {
+          "en": "Independent motors for the fan, eccentric, and feeder",
+          "es": "Motores independientes para el ventilador, el excéntrico y el alimentador"
+        },
+        {
+          "en": "Upper and lower aspiration to remove dust and light material",
+          "es": "Aspiración superior e inferior para retirar polvo y material ligero"
+        },
+        {
+          "en": "Adjustable feed and air control for precise, repeatable cleaning",
+          "es": "Control de alimentación y aire ajustable para una limpieza precisa y repetible"
+        },
+        {
+          "en": "Tool-free screen access for fast screen changes",
+          "es": "Acceso a cribas sin herramientas para cambios rápidos"
+        },
+        {
+          "en": "Interchangeable screens sized to each crop",
+          "es": "Cribas intercambiables a la medida de cada cultivo"
+        }
+      ],
+      "options": [
+        {
+          "en": "Surge bin",
+          "es": "Tolva de sobreflujo (surge bin)"
+        },
+        {
+          "en": "Vibratory feed hopper",
+          "es": "Tolva de alimentación vibratoria"
+        },
+        {
+          "en": "Grease line package",
+          "es": "Paquete de línea de engrase"
+        },
+        {
+          "en": "Ladder and spouting",
+          "es": "Escalera y ductos"
+        },
+        {
+          "en": "VFD on air system",
+          "es": "VFD en el sistema de aire"
+        }
+      ]
     },
     {
       "category": "seed-cleaners",
+      "id": "seed-master-gv254",
       "name": "Seed Master GV254",
-      "photos": [
-        "images/seed-master-gv254.jpg"
-      ],
-      "cap": "5.2 t/h",
-      "screens": "2",
-      "size": "54×60\"",
       "series": {
         "en": "Seed Master · GV Series",
         "es": "Seed Master · Serie GV"
       },
+      "cap": "5.2 t/h",
+      "screens": "2",
+      "size": "54×60\"",
       "desc": {
         "en": "A Seed Master GV-series cleaner combining screens and aspiration for clean, high-quality output.",
         "es": "Una cribadora de precisión Seed Master serie GV que combina cribas y aspiración para una salida limpia y de alta calidad."
       },
-      "id": "seed-master-gv254"
+      "photos": [
+        "images/seed-master-gv254.jpg"
+      ],
+      "specs": [
+        {
+          "group": {
+            "en": "Capacity",
+            "es": "Capacidad"
+          },
+          "rows": [
+            {
+              "label": {
+                "en": "Small seed",
+                "es": "Semilla pequeña"
+              },
+              "value": {
+                "en": "1.5 t/h",
+                "es": "1.5 t/h"
+              }
+            },
+            {
+              "label": {
+                "en": "Medium seed",
+                "es": "Semilla mediana"
+              },
+              "value": {
+                "en": "4 t/h",
+                "es": "4 t/h"
+              }
+            },
+            {
+              "label": {
+                "en": "Large seed & wheat",
+                "es": "Semilla grande y trigo"
+              },
+              "value": {
+                "en": "5.2 t/h",
+                "es": "5.2 t/h"
+              }
+            }
+          ]
+        },
+        {
+          "group": {
+            "en": "Screens",
+            "es": "Cribas"
+          },
+          "rows": [
+            {
+              "label": {
+                "en": "Number of screens",
+                "es": "Número de cribas"
+              },
+              "value": {
+                "en": "2",
+                "es": "2"
+              }
+            },
+            {
+              "label": {
+                "en": "Screen size",
+                "es": "Medida de criba"
+              },
+              "value": {
+                "en": "54×60\"",
+                "es": "54×60\""
+              }
+            }
+          ]
+        },
+        {
+          "group": {
+            "en": "Motors",
+            "es": "Motores"
+          },
+          "rows": [
+            {
+              "label": {
+                "en": "Fan",
+                "es": "Ventilador"
+              },
+              "value": {
+                "en": "5 HP",
+                "es": "5 HP"
+              }
+            }
+          ]
+        },
+        {
+          "group": {
+            "en": "Air",
+            "es": "Aire"
+          },
+          "rows": [
+            {
+              "label": {
+                "en": "Upper & lower air",
+                "es": "Aire superior e inferior"
+              },
+              "value": {
+                "en": "up to 4,500 cfm",
+                "es": "hasta 4,500 cfm"
+              }
+            }
+          ]
+        }
+      ],
+      "features": [
+        {
+          "en": "Heavy-duty construction",
+          "es": "Construcción de alta resistencia"
+        },
+        {
+          "en": "Easily portable with pallet-fork inserts — move it without damaging the machine",
+          "es": "Fácilmente transportable con insertos para montacargas — se mueve sin dañar la máquina"
+        },
+        {
+          "en": "Independent motors for the fan, eccentric, and feeder",
+          "es": "Motores independientes para el ventilador, el excéntrico y el alimentador"
+        },
+        {
+          "en": "Upper and lower aspiration to remove dust and light material",
+          "es": "Aspiración superior e inferior para retirar polvo y material ligero"
+        },
+        {
+          "en": "Adjustable feed and air control for precise, repeatable cleaning",
+          "es": "Control de alimentación y aire ajustable para una limpieza precisa y repetible"
+        },
+        {
+          "en": "Tool-free screen access for fast screen changes",
+          "es": "Acceso a cribas sin herramientas para cambios rápidos"
+        },
+        {
+          "en": "Interchangeable screens sized to each crop",
+          "es": "Cribas intercambiables a la medida de cada cultivo"
+        }
+      ],
+      "options": [
+        {
+          "en": "Surge bin",
+          "es": "Tolva de sobreflujo (surge bin)"
+        },
+        {
+          "en": "Vibratory feed hopper",
+          "es": "Tolva de alimentación vibratoria"
+        },
+        {
+          "en": "Grease line package",
+          "es": "Paquete de línea de engrase"
+        },
+        {
+          "en": "Ladder and spouting",
+          "es": "Escalera y ductos"
+        },
+        {
+          "en": "VFD on air system",
+          "es": "VFD en el sistema de aire"
+        }
+      ]
     },
     {
       "category": "seed-cleaners",
+      "id": "seed-master-gv260",
       "name": "Seed Master GV260",
-      "photos": [
-        "images/seed-master-gv260.jpg"
-      ],
-      "cap": "6 t/h",
-      "screens": "5",
-      "size": "54×26\"",
       "series": {
         "en": "Seed Master · GV Series",
         "es": "Seed Master · Serie GV"
       },
+      "cap": "6 t/h",
+      "screens": "5",
+      "size": "54×26\"",
       "desc": {
         "en": "The GV260 steps up capacity in the Seed Master line while keeping the same cleaning precision.",
         "es": "La GV260 aumenta la capacidad en la línea Seed Master manteniendo la misma precisión de limpieza."
       },
-      "id": "seed-master-gv260"
+      "photos": [
+        "images/seed-master-gv260.jpg"
+      ],
+      "specs": [
+        {
+          "group": {
+            "en": "Capacity",
+            "es": "Capacidad"
+          },
+          "rows": [
+            {
+              "label": {
+                "en": "Small seed",
+                "es": "Semilla pequeña"
+              },
+              "value": {
+                "en": "1.8 t/h",
+                "es": "1.8 t/h"
+              }
+            },
+            {
+              "label": {
+                "en": "Medium seed",
+                "es": "Semilla mediana"
+              },
+              "value": {
+                "en": "4.5 t/h",
+                "es": "4.5 t/h"
+              }
+            },
+            {
+              "label": {
+                "en": "Large seed & wheat",
+                "es": "Semilla grande y trigo"
+              },
+              "value": {
+                "en": "6 t/h",
+                "es": "6 t/h"
+              }
+            }
+          ]
+        },
+        {
+          "group": {
+            "en": "Screens",
+            "es": "Cribas"
+          },
+          "rows": [
+            {
+              "label": {
+                "en": "Number of screens",
+                "es": "Número de cribas"
+              },
+              "value": {
+                "en": "5",
+                "es": "5"
+              }
+            },
+            {
+              "label": {
+                "en": "Screen size",
+                "es": "Medida de criba"
+              },
+              "value": {
+                "en": "54×26\"",
+                "es": "54×26\""
+              }
+            }
+          ]
+        },
+        {
+          "group": {
+            "en": "Motors",
+            "es": "Motores"
+          },
+          "rows": [
+            {
+              "label": {
+                "en": "Fan",
+                "es": "Ventilador"
+              },
+              "value": {
+                "en": "5 HP",
+                "es": "5 HP"
+              }
+            },
+            {
+              "label": {
+                "en": "Eccentric",
+                "es": "Excéntrico"
+              },
+              "value": {
+                "en": "1 HP",
+                "es": "1 HP"
+              }
+            },
+            {
+              "label": {
+                "en": "Feeder",
+                "es": "Alimentador"
+              },
+              "value": {
+                "en": "0.5 HP",
+                "es": "0.5 HP"
+              }
+            }
+          ]
+        },
+        {
+          "group": {
+            "en": "Air",
+            "es": "Aire"
+          },
+          "rows": [
+            {
+              "label": {
+                "en": "Upper & lower air",
+                "es": "Aire superior e inferior"
+              },
+              "value": {
+                "en": "up to 7,200 cfm",
+                "es": "hasta 7,200 cfm"
+              }
+            }
+          ]
+        }
+      ],
+      "features": [
+        {
+          "en": "Heavy-duty construction",
+          "es": "Construcción de alta resistencia"
+        },
+        {
+          "en": "Easily portable with pallet-fork inserts — move it without damaging the machine",
+          "es": "Fácilmente transportable con insertos para montacargas — se mueve sin dañar la máquina"
+        },
+        {
+          "en": "Independent motors for the fan, eccentric, and feeder",
+          "es": "Motores independientes para el ventilador, el excéntrico y el alimentador"
+        },
+        {
+          "en": "Upper and lower aspiration to remove dust and light material",
+          "es": "Aspiración superior e inferior para retirar polvo y material ligero"
+        },
+        {
+          "en": "Adjustable feed and air control for precise, repeatable cleaning",
+          "es": "Control de alimentación y aire ajustable para una limpieza precisa y repetible"
+        },
+        {
+          "en": "Tool-free screen access for fast screen changes",
+          "es": "Acceso a cribas sin herramientas para cambios rápidos"
+        },
+        {
+          "en": "Interchangeable screens sized to each crop",
+          "es": "Cribas intercambiables a la medida de cada cultivo"
+        }
+      ],
+      "options": [
+        {
+          "en": "Surge bin",
+          "es": "Tolva de sobreflujo (surge bin)"
+        },
+        {
+          "en": "Vibratory feed hopper",
+          "es": "Tolva de alimentación vibratoria"
+        },
+        {
+          "en": "Grease line package",
+          "es": "Paquete de línea de engrase"
+        },
+        {
+          "en": "Ladder and spouting",
+          "es": "Escalera y ductos"
+        },
+        {
+          "en": "VFD on air system",
+          "es": "VFD en el sistema de aire"
+        }
+      ]
     },
     {
       "category": "seed-cleaners",
+      "id": "genx-8026",
       "name": "GenX 8026",
-      "photos": [
-        "images/genx-8026.jpg"
-      ],
-      "cap": "10 t/h",
-      "screens": "8",
-      "size": "54×26\"",
       "series": {
         "en": "GenX Series",
         "es": "Serie GenX"
       },
+      "cap": "10 t/h",
+      "screens": "8",
+      "size": "54×26\"",
       "desc": {
         "en": "A GenX-series cleaner engineered for demanding, higher-volume operations.",
         "es": "Una cribadora de precisión serie GenX diseñada para operaciones exigentes de mayor volumen."
       },
-      "id": "genx-8026"
+      "photos": [
+        "images/genx-8026.jpg"
+      ],
+      "specs": [
+        {
+          "group": {
+            "en": "Capacity",
+            "es": "Capacidad"
+          },
+          "rows": [
+            {
+              "label": {
+                "en": "Medium seed",
+                "es": "Semilla mediana"
+              },
+              "value": {
+                "en": "4.5 t/h",
+                "es": "4.5 t/h"
+              }
+            },
+            {
+              "label": {
+                "en": "Large seed & wheat",
+                "es": "Semilla grande y trigo"
+              },
+              "value": {
+                "en": "10 t/h",
+                "es": "10 t/h"
+              }
+            },
+            {
+              "label": {
+                "en": "Market cleaning",
+                "es": "Limpieza comercial"
+              },
+              "value": {
+                "en": "15 t/h",
+                "es": "15 t/h"
+              }
+            }
+          ]
+        },
+        {
+          "group": {
+            "en": "Screens",
+            "es": "Cribas"
+          },
+          "rows": [
+            {
+              "label": {
+                "en": "Number of screens",
+                "es": "Número de cribas"
+              },
+              "value": {
+                "en": "8",
+                "es": "8"
+              }
+            },
+            {
+              "label": {
+                "en": "Screen size",
+                "es": "Medida de criba"
+              },
+              "value": {
+                "en": "54×26\"",
+                "es": "54×26\""
+              }
+            }
+          ]
+        },
+        {
+          "group": {
+            "en": "Motors",
+            "es": "Motores"
+          },
+          "rows": [
+            {
+              "label": {
+                "en": "Fan",
+                "es": "Ventilador"
+              },
+              "value": {
+                "en": "10 HP",
+                "es": "10 HP"
+              }
+            },
+            {
+              "label": {
+                "en": "Eccentric",
+                "es": "Excéntrico"
+              },
+              "value": {
+                "en": "2 HP",
+                "es": "2 HP"
+              }
+            },
+            {
+              "label": {
+                "en": "Feeder",
+                "es": "Alimentador"
+              },
+              "value": {
+                "en": "0.5 HP",
+                "es": "0.5 HP"
+              }
+            }
+          ]
+        },
+        {
+          "group": {
+            "en": "Air",
+            "es": "Aire"
+          },
+          "rows": [
+            {
+              "label": {
+                "en": "Upper & lower air",
+                "es": "Aire superior e inferior"
+              },
+              "value": {
+                "en": "up to 10,000 cfm",
+                "es": "hasta 10,000 cfm"
+              }
+            }
+          ]
+        }
+      ],
+      "features": [
+        {
+          "en": "Heavy-duty construction",
+          "es": "Construcción de alta resistencia"
+        },
+        {
+          "en": "Easily portable with pallet-fork inserts — move it without damaging the machine",
+          "es": "Fácilmente transportable con insertos para montacargas — se mueve sin dañar la máquina"
+        },
+        {
+          "en": "Independent motors for the fan, eccentric, and feeder",
+          "es": "Motores independientes para el ventilador, el excéntrico y el alimentador"
+        },
+        {
+          "en": "Upper and lower aspiration to remove dust and light material",
+          "es": "Aspiración superior e inferior para retirar polvo y material ligero"
+        },
+        {
+          "en": "Adjustable feed and air control for precise, repeatable cleaning",
+          "es": "Control de alimentación y aire ajustable para una limpieza precisa y repetible"
+        },
+        {
+          "en": "Tool-free screen access for fast screen changes",
+          "es": "Acceso a cribas sin herramientas para cambios rápidos"
+        },
+        {
+          "en": "Interchangeable screens sized to each crop",
+          "es": "Cribas intercambiables a la medida de cada cultivo"
+        }
+      ],
+      "options": [
+        {
+          "en": "Surge bin",
+          "es": "Tolva de sobreflujo (surge bin)"
+        },
+        {
+          "en": "Vibratory feed hopper",
+          "es": "Tolva de alimentación vibratoria"
+        },
+        {
+          "en": "Grease line package",
+          "es": "Paquete de línea de engrase"
+        },
+        {
+          "en": "Ladder and spouting",
+          "es": "Escalera y ductos"
+        },
+        {
+          "en": "VFD on air system",
+          "es": "VFD en el sistema de aire"
+        }
+      ]
     },
     {
       "category": "seed-cleaners",
+      "id": "c588",
       "name": "C588",
-      "photos": [
-        "images/c588.jpg"
-      ],
-      "cap": "15 t/h",
-      "screens": "10",
-      "size": "54×44\"",
       "series": {
         "en": "C-Series",
         "es": "Serie C"
       },
+      "cap": "15 t/h",
+      "screens": "10",
+      "size": "54×44\"",
       "desc": {
         "en": "An entry in the C-series, balancing throughput and footprint for growing operations.",
         "es": "Un modelo de la serie C que equilibra capacidad y espacio para operaciones en crecimiento."
       },
-      "id": "c588"
+      "photos": [
+        "images/c588.jpg"
+      ],
+      "specs": [
+        {
+          "group": {
+            "en": "Capacity",
+            "es": "Capacidad"
+          },
+          "rows": [
+            {
+              "label": {
+                "en": "Large seed & wheat",
+                "es": "Semilla grande y trigo"
+              },
+              "value": {
+                "en": "15 t/h",
+                "es": "15 t/h"
+              }
+            },
+            {
+              "label": {
+                "en": "Market cleaning",
+                "es": "Limpieza comercial"
+              },
+              "value": {
+                "en": "20 t/h",
+                "es": "20 t/h"
+              }
+            }
+          ]
+        },
+        {
+          "group": {
+            "en": "Screens",
+            "es": "Cribas"
+          },
+          "rows": [
+            {
+              "label": {
+                "en": "Number of screens",
+                "es": "Número de cribas"
+              },
+              "value": {
+                "en": "10",
+                "es": "10"
+              }
+            },
+            {
+              "label": {
+                "en": "Screen size",
+                "es": "Medida de criba"
+              },
+              "value": {
+                "en": "54×44\"",
+                "es": "54×44\""
+              }
+            }
+          ]
+        },
+        {
+          "group": {
+            "en": "Motors",
+            "es": "Motores"
+          },
+          "rows": [
+            {
+              "label": {
+                "en": "Fan",
+                "es": "Ventilador"
+              },
+              "value": {
+                "en": "10 HP",
+                "es": "10 HP"
+              }
+            },
+            {
+              "label": {
+                "en": "Eccentric",
+                "es": "Excéntrico"
+              },
+              "value": {
+                "en": "3 HP",
+                "es": "3 HP"
+              }
+            },
+            {
+              "label": {
+                "en": "Feeder",
+                "es": "Alimentador"
+              },
+              "value": {
+                "en": "0.5 HP",
+                "es": "0.5 HP"
+              }
+            }
+          ]
+        },
+        {
+          "group": {
+            "en": "Air",
+            "es": "Aire"
+          },
+          "rows": [
+            {
+              "label": {
+                "en": "Upper & lower air",
+                "es": "Aire superior e inferior"
+              },
+              "value": {
+                "en": "up to 10,000 cfm",
+                "es": "hasta 10,000 cfm"
+              }
+            }
+          ]
+        }
+      ],
+      "features": [
+        {
+          "en": "Heavy-duty construction",
+          "es": "Construcción de alta resistencia"
+        },
+        {
+          "en": "Marine wood shoes",
+          "es": "Zapatas de madera marina"
+        },
+        {
+          "en": "Independent motors for the fan, eccentric, and feeder",
+          "es": "Motores independientes para el ventilador, el excéntrico y el alimentador"
+        },
+        {
+          "en": "Upper and lower aspiration to remove dust and light material",
+          "es": "Aspiración superior e inferior para retirar polvo y material ligero"
+        },
+        {
+          "en": "Adjustable feed and air control for precise, repeatable cleaning",
+          "es": "Control de alimentación y aire ajustable para una limpieza precisa y repetible"
+        },
+        {
+          "en": "Tool-free screen access for fast screen changes",
+          "es": "Acceso a cribas sin herramientas para cambios rápidos"
+        },
+        {
+          "en": "Interchangeable screens sized to each crop",
+          "es": "Cribas intercambiables a la medida de cada cultivo"
+        }
+      ],
+      "options": [
+        {
+          "en": "Surge bin",
+          "es": "Tolva de sobreflujo (surge bin)"
+        },
+        {
+          "en": "Vibratory feed hopper",
+          "es": "Tolva de alimentación vibratoria"
+        },
+        {
+          "en": "Grease line package",
+          "es": "Paquete de línea de engrase"
+        },
+        {
+          "en": "Ladder and spouting",
+          "es": "Escalera y ductos"
+        },
+        {
+          "en": "VFD on air system",
+          "es": "VFD en el sistema de aire"
+        }
+      ]
     },
     {
       "category": "seed-cleaners",
+      "id": "c688",
       "name": "C688",
-      "photos": [
-        "images/c688.jpg"
-      ],
-      "cap": "20 t/h",
-      "screens": "12",
-      "size": "54×44\"",
       "series": {
         "en": "C-Series",
         "es": "Serie C"
       },
+      "cap": "20 t/h",
+      "screens": "12",
+      "size": "54×44\"",
       "desc": {
         "en": "A mid-range C-series cleaner offering more capacity for busier lines.",
         "es": "Una cribadora de precisión de rango medio de la serie C con mayor capacidad para líneas más ocupadas."
       },
-      "id": "c688"
+      "photos": [
+        "images/c688.jpg"
+      ],
+      "specs": [],
+      "features": [
+        {
+          "en": "Heavy-duty construction",
+          "es": "Construcción de alta resistencia"
+        },
+        {
+          "en": "Marine wood shoes",
+          "es": "Zapatas de madera marina"
+        },
+        {
+          "en": "Independent motors for the fan, eccentric, and feeder",
+          "es": "Motores independientes para el ventilador, el excéntrico y el alimentador"
+        },
+        {
+          "en": "Upper and lower aspiration to remove dust and light material",
+          "es": "Aspiración superior e inferior para retirar polvo y material ligero"
+        },
+        {
+          "en": "Adjustable feed and air control for precise, repeatable cleaning",
+          "es": "Control de alimentación y aire ajustable para una limpieza precisa y repetible"
+        },
+        {
+          "en": "Tool-free screen access for fast screen changes",
+          "es": "Acceso a cribas sin herramientas para cambios rápidos"
+        },
+        {
+          "en": "Interchangeable screens sized to each crop",
+          "es": "Cribas intercambiables a la medida de cada cultivo"
+        }
+      ],
+      "options": [
+        {
+          "en": "Surge bin",
+          "es": "Tolva de sobreflujo (surge bin)"
+        },
+        {
+          "en": "Vibratory feed hopper",
+          "es": "Tolva de alimentación vibratoria"
+        },
+        {
+          "en": "Grease line package",
+          "es": "Paquete de línea de engrase"
+        },
+        {
+          "en": "Ladder and spouting",
+          "es": "Escalera y ductos"
+        },
+        {
+          "en": "VFD on air system",
+          "es": "VFD en el sistema de aire"
+        }
+      ]
     },
     {
       "category": "seed-cleaners",
+      "id": "c788-highcap",
       "name": "C788 Highcap",
-      "photos": [
-        "images/c788-highcap.jpg"
-      ],
-      "cap": "25 t/h",
-      "screens": "14",
-      "size": "54×44\"",
       "series": {
         "en": "C-Series · High-Capacity",
         "es": "Serie C · Alta Capacidad"
       },
+      "cap": "25 t/h",
+      "screens": "14",
+      "size": "54×44\"",
       "desc": {
         "en": "The high-capacity flagship of the C-series, built for maximum throughput.",
         "es": "El modelo insignia de alta capacidad de la serie C, hecho para el máximo rendimiento."
       },
-      "id": "c788-highcap"
+      "photos": [
+        "images/c788-highcap.jpg"
+      ],
+      "specs": [],
+      "features": [
+        {
+          "en": "Heavy-duty construction",
+          "es": "Construcción de alta resistencia"
+        },
+        {
+          "en": "Marine wood shoes",
+          "es": "Zapatas de madera marina"
+        },
+        {
+          "en": "Independent motors for the fan, eccentric, and feeder",
+          "es": "Motores independientes para el ventilador, el excéntrico y el alimentador"
+        },
+        {
+          "en": "Upper and lower aspiration to remove dust and light material",
+          "es": "Aspiración superior e inferior para retirar polvo y material ligero"
+        },
+        {
+          "en": "Adjustable feed and air control for precise, repeatable cleaning",
+          "es": "Control de alimentación y aire ajustable para una limpieza precisa y repetible"
+        },
+        {
+          "en": "Tool-free screen access for fast screen changes",
+          "es": "Acceso a cribas sin herramientas para cambios rápidos"
+        },
+        {
+          "en": "Interchangeable screens sized to each crop",
+          "es": "Cribas intercambiables a la medida de cada cultivo"
+        }
+      ],
+      "options": [
+        {
+          "en": "Surge bin",
+          "es": "Tolva de sobreflujo (surge bin)"
+        },
+        {
+          "en": "Vibratory feed hopper",
+          "es": "Tolva de alimentación vibratoria"
+        },
+        {
+          "en": "Grease line package",
+          "es": "Paquete de línea de engrase"
+        },
+        {
+          "en": "Ladder and spouting",
+          "es": "Escalera y ductos"
+        },
+        {
+          "en": "VFD on air system",
+          "es": "VFD en el sistema de aire"
+        }
+      ]
     },
     {
       "category": "destoners",
+      "id": "248-ag",
       "name": "248 AG",
-      "photos": [
-        "images/248-ag.jpg"
-      ],
-      "cap": "2 t/h",
-      "screens": "",
-      "size": "",
       "series": {
         "en": "AG Series",
         "es": "Serie AG"
       },
+      "cap": "2 t/h",
       "desc": {
         "en": "The compact AG destoner — dependable stone removal for smaller lines and specialty lots.",
         "es": "La despedradora AG compacta — remoción de piedras confiable para líneas pequeñas y lotes especiales."
       },
-      "id": "248-ag"
+      "photos": [
+        "images/248-ag.jpg"
+      ],
+      "specs": [],
+      "features": [
+        {
+          "en": "Variable-frequency drive on eccentric speed",
+          "es": "Variador de frecuencia en la velocidad del excéntrico"
+        },
+        {
+          "en": "Manual air-flow adjustment",
+          "es": "Ajuste manual del flujo de aire"
+        },
+        {
+          "en": "Heavy-duty steel frame",
+          "es": "Estructura de acero de alta resistencia"
+        },
+        {
+          "en": "Adjustable flow feeder",
+          "es": "Alimentador de flujo ajustable"
+        },
+        {
+          "en": "Air gauge and air-flow adjustment wheel",
+          "es": "Manómetro de aire y rueda de ajuste de flujo"
+        },
+        {
+          "en": "Windows in feeder",
+          "es": "Ventanas en el alimentador"
+        },
+        {
+          "en": "Air-flow gauge",
+          "es": "Manómetro de flujo de aire"
+        }
+      ],
+      "options": [
+        {
+          "en": "Surge bin",
+          "es": "Tolva de sobreflujo (surge bin)"
+        },
+        {
+          "en": "Vibratory feed hopper",
+          "es": "Tolva de alimentación vibratoria"
+        },
+        {
+          "en": "Dust hood",
+          "es": "Campana de polvo"
+        },
+        {
+          "en": "Grease line package",
+          "es": "Paquete de línea de engrase"
+        },
+        {
+          "en": "Ladder and spouting",
+          "es": "Escalera y ductos"
+        }
+      ]
     },
     {
       "category": "destoners",
+      "id": "448-ag",
       "name": "448 AG",
-      "photos": [
-        "images/448-ag.jpg"
-      ],
-      "cap": "3–4 t/h",
-      "screens": "",
-      "size": "",
       "series": {
         "en": "AG Series",
         "es": "Serie AG"
       },
+      "cap": "3–4 t/h",
       "desc": {
         "en": "A step up in capacity, keeping the same high separation efficiency for growing operations.",
         "es": "Un aumento en capacidad, manteniendo la misma alta eficiencia de separación para operaciones en crecimiento."
       },
-      "id": "448-ag"
+      "photos": [
+        "images/448-ag.jpg"
+      ],
+      "specs": [],
+      "features": [
+        {
+          "en": "Variable-frequency drive on eccentric speed",
+          "es": "Variador de frecuencia en la velocidad del excéntrico"
+        },
+        {
+          "en": "Manual air-flow adjustment",
+          "es": "Ajuste manual del flujo de aire"
+        },
+        {
+          "en": "Heavy-duty steel frame",
+          "es": "Estructura de acero de alta resistencia"
+        },
+        {
+          "en": "Adjustable flow feeder",
+          "es": "Alimentador de flujo ajustable"
+        },
+        {
+          "en": "Air gauge and air-flow adjustment wheel",
+          "es": "Manómetro de aire y rueda de ajuste de flujo"
+        },
+        {
+          "en": "Windows in feeder",
+          "es": "Ventanas en el alimentador"
+        },
+        {
+          "en": "Air-flow gauge",
+          "es": "Manómetro de flujo de aire"
+        }
+      ],
+      "options": [
+        {
+          "en": "Surge bin",
+          "es": "Tolva de sobreflujo (surge bin)"
+        },
+        {
+          "en": "Vibratory feed hopper",
+          "es": "Tolva de alimentación vibratoria"
+        },
+        {
+          "en": "Dust hood",
+          "es": "Campana de polvo"
+        },
+        {
+          "en": "Grease line package",
+          "es": "Paquete de línea de engrase"
+        },
+        {
+          "en": "Ladder and spouting",
+          "es": "Escalera y ductos"
+        }
+      ]
     },
     {
       "category": "destoners",
+      "id": "648-ag",
       "name": "648 AG",
-      "photos": [
-        "images/648-ag.jpg"
-      ],
-      "cap": "6 t/h",
-      "screens": "",
-      "size": "",
       "series": {
         "en": "AG Series",
         "es": "Serie AG"
       },
+      "cap": "6 t/h",
       "desc": {
         "en": "A higher-capacity AG destoner for busier lines that still demand clean, precise stone removal.",
         "es": "Una despedradora AG de mayor capacidad para líneas más ocupadas que aún exigen una remoción de piedras limpia y precisa."
       },
-      "id": "648-ag"
+      "photos": [
+        "images/648-ag.jpg"
+      ],
+      "specs": [],
+      "features": [
+        {
+          "en": "Variable-frequency drive on eccentric speed",
+          "es": "Variador de frecuencia en la velocidad del excéntrico"
+        },
+        {
+          "en": "Individual gauge and control for each fan",
+          "es": "Manómetro y control individual para cada ventilador"
+        },
+        {
+          "en": "Active counter-balance system",
+          "es": "Sistema de contrapeso activo"
+        },
+        {
+          "en": "Heavy-duty steel frame",
+          "es": "Estructura de acero de alta resistencia"
+        },
+        {
+          "en": "Adjustable flow feeder",
+          "es": "Alimentador de flujo ajustable"
+        },
+        {
+          "en": "Adjustable flow separators",
+          "es": "Separadores de flujo ajustable"
+        }
+      ],
+      "options": [
+        {
+          "en": "Surge bin",
+          "es": "Tolva de sobreflujo (surge bin)"
+        },
+        {
+          "en": "Vibratory feed hopper",
+          "es": "Tolva de alimentación vibratoria"
+        },
+        {
+          "en": "Dust hood",
+          "es": "Campana de polvo"
+        },
+        {
+          "en": "Grease line package",
+          "es": "Paquete de línea de engrase"
+        },
+        {
+          "en": "Ladder and spouting",
+          "es": "Escalera y ductos"
+        }
+      ]
     },
     {
       "category": "destoners",
+      "id": "12048-ag",
       "name": "12048 AG",
-      "photos": [
-        "images/12048-ag.jpg"
-      ],
-      "cap": "12 t/h",
-      "screens": "",
-      "size": "",
       "series": {
         "en": "AG Series · High-Capacity",
         "es": "Serie AG · Alta Capacidad"
       },
+      "cap": "12 t/h",
       "desc": {
         "en": "The high-capacity flagship of the AG line, built for maximum throughput in demanding operations.",
         "es": "El modelo insignia de alta capacidad de la línea AG, hecho para el máximo rendimiento en operaciones exigentes."
       },
-      "id": "12048-ag"
+      "photos": [
+        "images/12048-ag.jpg"
+      ],
+      "specs": [],
+      "features": [
+        {
+          "en": "Variable-frequency drive on eccentric speed",
+          "es": "Variador de frecuencia en la velocidad del excéntrico"
+        },
+        {
+          "en": "Individual gauge and control for each fan",
+          "es": "Manómetro y control individual para cada ventilador"
+        },
+        {
+          "en": "Active counter-balance system",
+          "es": "Sistema de contrapeso activo"
+        },
+        {
+          "en": "Heavy-duty steel frame",
+          "es": "Estructura de acero de alta resistencia"
+        },
+        {
+          "en": "Adjustable flow feeder",
+          "es": "Alimentador de flujo ajustable"
+        },
+        {
+          "en": "Adjustable flow separators",
+          "es": "Separadores de flujo ajustable"
+        }
+      ],
+      "options": [
+        {
+          "en": "Surge bin",
+          "es": "Tolva de sobreflujo (surge bin)"
+        },
+        {
+          "en": "Vibratory feed hopper",
+          "es": "Tolva de alimentación vibratoria"
+        },
+        {
+          "en": "Dust hood",
+          "es": "Campana de polvo"
+        },
+        {
+          "en": "Grease line package",
+          "es": "Paquete de línea de engrase"
+        },
+        {
+          "en": "Ladder and spouting",
+          "es": "Escalera y ductos"
+        }
+      ]
     },
     {
       "category": "bucket-elevators",
+      "id": "b-300",
       "name": "B 300",
-      "photos": [
-        "images/b-300.jpg"
-      ],
-      "cap": "up to 5 t/h",
-      "screens": "",
-      "size": "",
       "series": {
         "en": "B Series",
         "es": "Serie B"
       },
+      "cap": "up to 5 t/h",
       "desc": {
         "en": "The compact entry — a dependable elevator for smaller lines and tight footprints.",
         "es": "El modelo compacto — un elevador confiable para líneas pequeñas y espacios reducidos."
       },
-      "id": "b-300"
+      "photos": [
+        "images/b-300.jpg"
+      ],
+      "specs": [
+        {
+          "group": {
+            "en": "",
+            "es": ""
+          },
+          "rows": [
+            {
+              "label": {
+                "en": "Capacity",
+                "es": "Capacidad"
+              },
+              "value": {
+                "en": "up to 5 t/h",
+                "es": "up to 5 t/h"
+              }
+            },
+            {
+              "label": {
+                "en": "Buckets",
+                "es": "Cangilones"
+              },
+              "value": {
+                "en": "4×3 Maxi-Lift",
+                "es": "4×3 Maxi-Lift"
+              }
+            },
+            {
+              "label": {
+                "en": "Bucket spacing",
+                "es": "Espaciado de cangilones"
+              },
+              "value": {
+                "en": "4.5\"",
+                "es": "4.5\""
+              }
+            }
+          ]
+        }
+      ],
+      "features": [
+        {
+          "en": "Maxi-Lift buckets",
+          "es": "Cangilones Maxi-Lift"
+        },
+        {
+          "en": "Sealed, greasable bearings",
+          "es": "Baleros sellados y engrasables"
+        },
+        {
+          "en": "Head and boot casing in 14-gauge steel",
+          "es": "Carcasa de cabeza y base en acero calibre 14"
+        },
+        {
+          "en": "Legging in 16-gauge steel",
+          "es": "Pierna en acero calibre 16"
+        },
+        {
+          "en": "Easy cleanout door",
+          "es": "Puerta de limpieza de fácil acceso"
+        },
+        {
+          "en": "Inspection section",
+          "es": "Sección de inspección"
+        }
+      ],
+      "options": [
+        {
+          "en": "Service platform",
+          "es": "Plataforma de servicio"
+        },
+        {
+          "en": "Ladder and cage",
+          "es": "Escalera con jaula"
+        },
+        {
+          "en": "Rest platform",
+          "es": "Plataforma de descanso"
+        },
+        {
+          "en": "Reducer and brake",
+          "es": "Reductor y freno"
+        }
+      ]
     },
     {
       "category": "bucket-elevators",
+      "id": "c-600",
       "name": "C 600",
-      "photos": [
-        "images/c-600.jpg"
-      ],
-      "cap": "10 t/h",
-      "screens": "",
-      "size": "",
       "series": {
         "en": "C Series",
         "es": "Serie C"
       },
+      "cap": "10 t/h",
       "desc": {
         "en": "A step up in capacity for growing operations that need more lift.",
         "es": "Un aumento en capacidad para operaciones en crecimiento que necesitan más elevación."
       },
-      "id": "c-600"
+      "photos": [
+        "images/c-600.jpg"
+      ],
+      "specs": [
+        {
+          "group": {
+            "en": "",
+            "es": ""
+          },
+          "rows": [
+            {
+              "label": {
+                "en": "Capacity",
+                "es": "Capacidad"
+              },
+              "value": {
+                "en": "10 t/h",
+                "es": "10 t/h"
+              }
+            },
+            {
+              "label": {
+                "en": "Buckets",
+                "es": "Cangilones"
+              },
+              "value": {
+                "en": "6×4 Maxi-Lift",
+                "es": "6×4 Maxi-Lift"
+              }
+            }
+          ]
+        }
+      ],
+      "features": [
+        {
+          "en": "Maxi-Lift buckets",
+          "es": "Cangilones Maxi-Lift"
+        },
+        {
+          "en": "Sealed, greasable bearings",
+          "es": "Baleros sellados y engrasables"
+        },
+        {
+          "en": "Head and boot casing in 14-gauge steel",
+          "es": "Carcasa de cabeza y base en acero calibre 14"
+        },
+        {
+          "en": "Legging in 16-gauge steel",
+          "es": "Pierna en acero calibre 16"
+        },
+        {
+          "en": "Easy cleanout door",
+          "es": "Puerta de limpieza de fácil acceso"
+        },
+        {
+          "en": "Inspection section",
+          "es": "Sección de inspección"
+        }
+      ],
+      "options": [
+        {
+          "en": "Service platform",
+          "es": "Plataforma de servicio"
+        },
+        {
+          "en": "Ladder and cage",
+          "es": "Escalera con jaula"
+        },
+        {
+          "en": "Rest platform",
+          "es": "Plataforma de descanso"
+        },
+        {
+          "en": "Reducer and brake",
+          "es": "Reductor y freno"
+        }
+      ]
     },
     {
       "category": "bucket-elevators",
+      "id": "d-1000",
       "name": "D 1000",
-      "photos": [
-        "images/d-1000.jpg"
-      ],
-      "cap": "20 t/h",
-      "screens": "",
-      "size": "",
       "series": {
         "en": "D Series",
         "es": "Serie D"
       },
+      "cap": "20 t/h",
       "desc": {
         "en": "A higher-capacity elevator for busier lines and taller lifts.",
         "es": "Un elevador de mayor capacidad para líneas más ocupadas y elevaciones más altas."
       },
-      "id": "d-1000"
+      "photos": [
+        "images/d-1000.jpg"
+      ],
+      "specs": [
+        {
+          "group": {
+            "en": "",
+            "es": ""
+          },
+          "rows": [
+            {
+              "label": {
+                "en": "Capacity",
+                "es": "Capacidad"
+              },
+              "value": {
+                "en": "20 t/h",
+                "es": "20 t/h"
+              }
+            },
+            {
+              "label": {
+                "en": "Buckets",
+                "es": "Cangilones"
+              },
+              "value": {
+                "en": "9×5 Maxi-Lift",
+                "es": "9×5 Maxi-Lift"
+              }
+            }
+          ]
+        }
+      ],
+      "features": [
+        {
+          "en": "Maxi-Lift buckets",
+          "es": "Cangilones Maxi-Lift"
+        },
+        {
+          "en": "Sealed, greasable bearings",
+          "es": "Baleros sellados y engrasables"
+        },
+        {
+          "en": "Head and boot casing in 14-gauge steel",
+          "es": "Carcasa de cabeza y base en acero calibre 14"
+        },
+        {
+          "en": "Legging in 16-gauge steel",
+          "es": "Pierna en acero calibre 16"
+        },
+        {
+          "en": "Easy cleanout door",
+          "es": "Puerta de limpieza de fácil acceso"
+        },
+        {
+          "en": "Inspection section",
+          "es": "Sección de inspección"
+        }
+      ],
+      "options": [
+        {
+          "en": "Service platform",
+          "es": "Plataforma de servicio"
+        },
+        {
+          "en": "Ladder and cage",
+          "es": "Escalera con jaula"
+        },
+        {
+          "en": "Rest platform",
+          "es": "Plataforma de descanso"
+        },
+        {
+          "en": "Reducer and brake",
+          "es": "Reductor y freno"
+        }
+      ]
     },
     {
       "category": "bucket-elevators",
+      "id": "d-3000",
       "name": "D 3000",
-      "photos": [
-        "images/d-3000.jpg"
-      ],
-      "cap": "70 t/h",
-      "screens": "",
-      "size": "",
       "series": {
         "en": "D Series",
         "es": "Serie D"
       },
+      "cap": "70 t/h",
       "desc": {
         "en": "Serious throughput for high-volume plants, with the same gentle handling.",
         "es": "Rendimiento serio para plantas de alto volumen, con el mismo manejo suave."
       },
-      "id": "d-3000"
+      "photos": [
+        "images/d-3000.jpg"
+      ],
+      "specs": [
+        {
+          "group": {
+            "en": "",
+            "es": ""
+          },
+          "rows": [
+            {
+              "label": {
+                "en": "Capacity",
+                "es": "Capacidad"
+              },
+              "value": {
+                "en": "70 t/h",
+                "es": "70 t/h"
+              }
+            },
+            {
+              "label": {
+                "en": "Buckets",
+                "es": "Cangilones"
+              },
+              "value": {
+                "en": "9×5 Maxi-Lift",
+                "es": "9×5 Maxi-Lift"
+              }
+            }
+          ]
+        }
+      ],
+      "features": [
+        {
+          "en": "Maxi-Lift buckets",
+          "es": "Cangilones Maxi-Lift"
+        },
+        {
+          "en": "Sealed, greasable bearings",
+          "es": "Baleros sellados y engrasables"
+        },
+        {
+          "en": "Head and boot casing in 14-gauge steel",
+          "es": "Carcasa de cabeza y base en acero calibre 14"
+        },
+        {
+          "en": "Legging in 16-gauge steel",
+          "es": "Pierna en acero calibre 16"
+        },
+        {
+          "en": "Easy cleanout door",
+          "es": "Puerta de limpieza de fácil acceso"
+        },
+        {
+          "en": "Inspection section",
+          "es": "Sección de inspección"
+        }
+      ],
+      "options": [
+        {
+          "en": "Service platform",
+          "es": "Plataforma de servicio"
+        },
+        {
+          "en": "Ladder and cage",
+          "es": "Escalera con jaula"
+        },
+        {
+          "en": "Rest platform",
+          "es": "Plataforma de descanso"
+        },
+        {
+          "en": "Reducer and brake",
+          "es": "Reductor y freno"
+        }
+      ]
     },
     {
       "category": "bucket-elevators",
+      "id": "ed-3500",
       "name": "ED 3500",
-      "photos": [
-        "images/ed-3500.jpg"
-      ],
-      "cap": "96 t/h",
-      "screens": "",
-      "size": "",
       "series": {
         "en": "ED Series",
         "es": "Serie ED"
       },
+      "cap": "96 t/h",
       "desc": {
         "en": "An extended-capacity elevator for demanding, continuous operations.",
         "es": "Un elevador de capacidad extendida para operaciones exigentes y continuas."
       },
-      "id": "ed-3500"
+      "photos": [
+        "images/ed-3500.jpg"
+      ],
+      "specs": [
+        {
+          "group": {
+            "en": "",
+            "es": ""
+          },
+          "rows": [
+            {
+              "label": {
+                "en": "Capacity",
+                "es": "Capacidad"
+              },
+              "value": {
+                "en": "96 t/h",
+                "es": "96 t/h"
+              }
+            },
+            {
+              "label": {
+                "en": "Buckets",
+                "es": "Cangilones"
+              },
+              "value": {
+                "en": "11×6 Maxi-Lift",
+                "es": "11×6 Maxi-Lift"
+              }
+            }
+          ]
+        }
+      ],
+      "features": [
+        {
+          "en": "Maxi-Lift buckets",
+          "es": "Cangilones Maxi-Lift"
+        },
+        {
+          "en": "Sealed, greasable bearings",
+          "es": "Baleros sellados y engrasables"
+        },
+        {
+          "en": "Head and boot casing in 14-gauge steel",
+          "es": "Carcasa de cabeza y base en acero calibre 14"
+        },
+        {
+          "en": "Legging in 16-gauge steel",
+          "es": "Pierna en acero calibre 16"
+        },
+        {
+          "en": "Easy cleanout door",
+          "es": "Puerta de limpieza de fácil acceso"
+        },
+        {
+          "en": "Inspection section",
+          "es": "Sección de inspección"
+        }
+      ],
+      "options": [
+        {
+          "en": "Service platform",
+          "es": "Plataforma de servicio"
+        },
+        {
+          "en": "Ladder and cage",
+          "es": "Escalera con jaula"
+        },
+        {
+          "en": "Rest platform",
+          "es": "Plataforma de descanso"
+        },
+        {
+          "en": "Reducer and brake",
+          "es": "Reductor y freno"
+        }
+      ]
     },
     {
       "category": "bucket-elevators",
+      "id": "dd-4000",
       "name": "DD 4000",
-      "photos": [
-        "images/dd-4000.jpg"
-      ],
-      "cap": "120 t/h",
-      "screens": "",
-      "size": "",
       "series": {
         "en": "DD Series · High-Capacity",
         "es": "Serie DD · Alta Capacidad"
       },
+      "cap": "120 t/h",
       "desc": {
         "en": "The high-capacity flagship, built for maximum throughput across the biggest lines.",
         "es": "El modelo insignia de alta capacidad, hecho para el máximo rendimiento en las líneas más grandes."
       },
-      "id": "dd-4000"
+      "photos": [
+        "images/dd-4000.jpg"
+      ],
+      "specs": [
+        {
+          "group": {
+            "en": "",
+            "es": ""
+          },
+          "rows": [
+            {
+              "label": {
+                "en": "Capacity",
+                "es": "Capacidad"
+              },
+              "value": {
+                "en": "120 t/h",
+                "es": "120 t/h"
+              }
+            },
+            {
+              "label": {
+                "en": "Buckets",
+                "es": "Cangilones"
+              },
+              "value": {
+                "en": "9×5 Maxi-Lift",
+                "es": "9×5 Maxi-Lift"
+              }
+            },
+            {
+              "label": {
+                "en": "Configuration",
+                "es": "Configuración"
+              },
+              "value": {
+                "en": "Two rows (double)",
+                "es": "Dos filas (doble)"
+              }
+            }
+          ]
+        }
+      ],
+      "features": [
+        {
+          "en": "Maxi-Lift buckets",
+          "es": "Cangilones Maxi-Lift"
+        },
+        {
+          "en": "Sealed, greasable bearings",
+          "es": "Baleros sellados y engrasables"
+        },
+        {
+          "en": "Head and boot casing in 14-gauge steel",
+          "es": "Carcasa de cabeza y base en acero calibre 14"
+        },
+        {
+          "en": "Legging in 16-gauge steel",
+          "es": "Pierna en acero calibre 16"
+        },
+        {
+          "en": "Easy cleanout door",
+          "es": "Puerta de limpieza de fácil acceso"
+        },
+        {
+          "en": "Inspection section",
+          "es": "Sección de inspección"
+        }
+      ],
+      "options": [
+        {
+          "en": "Service platform",
+          "es": "Plataforma de servicio"
+        },
+        {
+          "en": "Ladder and cage",
+          "es": "Escalera con jaula"
+        },
+        {
+          "en": "Rest platform",
+          "es": "Plataforma de descanso"
+        },
+        {
+          "en": "Reducer and brake",
+          "es": "Reductor y freno"
+        }
+      ]
     },
     {
       "category": "belt-conveyors",
+      "id": "belt-model-12",
       "name": "Model 12",
-      "photos": [
-        "images/belt-model-12.jpg"
-      ],
-      "cap": "",
-      "screens": "",
-      "size": "",
       "series": {
         "en": "Belt Series",
         "es": "Serie de Banda"
@@ -340,17 +1816,53 @@
         "en": "A gentle belt conveyor for transferring and feeding across your line, sized to your layout.",
         "es": "Una banda transportadora suave para transferir y alimentar a lo largo de tu línea, a la medida de tu planta."
       },
-      "id": "belt-model-12"
+      "photos": [
+        "images/belt-model-12.jpg"
+      ],
+      "specs": [
+        {
+          "group": {
+            "en": "",
+            "es": ""
+          },
+          "rows": [
+            {
+              "label": {
+                "en": "Belt width",
+                "es": "Ancho de banda"
+              },
+              "value": {
+                "en": "12\"",
+                "es": "12\""
+              }
+            }
+          ]
+        }
+      ],
+      "features": [
+        {
+          "en": "Inlet hopper",
+          "es": "Tolva de entrada"
+        },
+        {
+          "en": "Adjustable belt-cleaning brush",
+          "es": "Cepillo de limpieza de banda ajustable"
+        },
+        {
+          "en": "Outlet spout",
+          "es": "Boquilla de salida"
+        },
+        {
+          "en": "Adjustable bottom roller",
+          "es": "Rodillo inferior ajustable"
+        }
+      ],
+      "options": []
     },
     {
       "category": "belt-conveyors",
+      "id": "belt-model-16",
       "name": "Model 16",
-      "photos": [
-        "images/belt-model-16.jpg"
-      ],
-      "cap": "",
-      "screens": "",
-      "size": "",
       "series": {
         "en": "Belt Series",
         "es": "Serie de Banda"
@@ -359,18 +1871,53 @@
         "en": "A wider-belt conveyor for higher throughput while keeping the same low-impact handling.",
         "es": "Una banda más ancha para mayor rendimiento manteniendo el mismo manejo de bajo impacto."
       },
-      "id": "belt-model-16"
+      "photos": [
+        "images/belt-model-16.jpg"
+      ],
+      "specs": [
+        {
+          "group": {
+            "en": "",
+            "es": ""
+          },
+          "rows": [
+            {
+              "label": {
+                "en": "Belt width",
+                "es": "Ancho de banda"
+              },
+              "value": {
+                "en": "16\"",
+                "es": "16\""
+              }
+            }
+          ]
+        }
+      ],
+      "features": [
+        {
+          "en": "Inlet hopper",
+          "es": "Tolva de entrada"
+        },
+        {
+          "en": "Adjustable belt-cleaning brush",
+          "es": "Cepillo de limpieza de banda ajustable"
+        },
+        {
+          "en": "Outlet spout",
+          "es": "Boquilla de salida"
+        },
+        {
+          "en": "Adjustable bottom roller",
+          "es": "Rodillo inferior ajustable"
+        }
+      ],
+      "options": []
     },
     {
       "category": "magnetic-belt",
+      "id": "x10-60",
       "name": "X10-60",
-      "photos": [
-        "/images/248-ag.jpg",
-        "/images/248-ag.jpg"
-      ],
-      "cap": "",
-      "screens": "",
-      "size": "",
       "series": {
         "en": "Magnetic Separation",
         "es": "Separación Magnética"
@@ -379,60 +1926,284 @@
         "en": "Separates seed by surface texture using iron powder and a magnetic belt — ideal for removing dodder, buckhorn, and other rough weed seeds from clover, alfalfa, flax, and grasses.",
         "es": "Separa la semilla por textura de superficie usando polvo de hierro y una banda magnética — ideal para remover cuscuta, llantén y otras semillas de maleza rugosas del trébol, la alfalfa, el lino y los pastos."
       },
-      "id": "x10-60"
+      "photos": [
+        "images/x10-60.jpg"
+      ],
+      "specs": [],
+      "features": [
+        {
+          "en": "Heavy-duty construction",
+          "es": "Construcción de alta resistencia"
+        },
+        {
+          "en": "Easily portable with pallet-fork inserts — move it without damaging the machine",
+          "es": "Fácilmente transportable con insertos para montacargas — se mueve sin dañar la máquina"
+        },
+        {
+          "en": "Independent motors for the fan, eccentric, and feeder",
+          "es": "Motores independientes para el ventilador, el excéntrico y el alimentador"
+        },
+        {
+          "en": "Upper and lower aspiration to remove dust and light material",
+          "es": "Aspiración superior e inferior para retirar polvo y material ligero"
+        },
+        {
+          "en": "Adjustable feed and air control for precise, repeatable cleaning",
+          "es": "Control de alimentación y aire ajustable para una limpieza precisa y repetible"
+        },
+        {
+          "en": "Tool-free screen access for fast screen changes",
+          "es": "Acceso a cribas sin herramientas para cambios rápidos"
+        },
+        {
+          "en": "Interchangeable screens sized to each crop",
+          "es": "Cribas intercambiables a la medida de cada cultivo"
+        }
+      ],
+      "options": [
+        {
+          "en": "Surge bin",
+          "es": "Tolva de sobreflujo (surge bin)"
+        },
+        {
+          "en": "Vibratory feed hopper",
+          "es": "Tolva de alimentación vibratoria"
+        },
+        {
+          "en": "Grease line package",
+          "es": "Paquete de línea de engrase"
+        },
+        {
+          "en": "Ladder and spouting",
+          "es": "Escalera y ductos"
+        },
+        {
+          "en": "VFD on air system",
+          "es": "VFD en el sistema de aire"
+        }
+      ]
     },
     {
       "category": "polishers",
+      "id": "mf254",
       "name": "MF254",
-      "photos": [
-        "images/mf254.jpg"
-      ],
-      "cap": "up to 10 t/h",
-      "screens": "",
-      "size": "",
       "series": {
         "en": "MF Series · High-Capacity",
         "es": "Serie MF · Alta Capacidad"
       },
+      "cap": "up to 10 t/h",
       "desc": {
         "en": "The high-capacity MF polisher — five polishing boxes buff the seed coat and remove hairs and awns for smooth, free-flowing seed.",
         "es": "La pulidora MF de alta capacidad — cinco cajas de pulido pulen la cubierta de la semilla y remueven pelos y aristas para una semilla lisa y de libre flujo."
       },
-      "id": "mf254"
+      "photos": [
+        "images/mf254.jpg"
+      ],
+      "specs": [
+        {
+          "group": {
+            "en": "",
+            "es": ""
+          },
+          "rows": [
+            {
+              "label": {
+                "en": "Capacity",
+                "es": "Capacidad"
+              },
+              "value": {
+                "en": "up to 10 metric t/h",
+                "es": "up to 10 metric t/h"
+              }
+            },
+            {
+              "label": {
+                "en": "Polishing boxes",
+                "es": "Cajas de pulido"
+              },
+              "value": {
+                "en": "5",
+                "es": "5"
+              }
+            }
+          ]
+        }
+      ],
+      "features": [
+        {
+          "en": "Polishing boxes that buff the seed coat and lift hairs, awns, and appendages",
+          "es": "Cajas de pulido que pulen la cubierta de la semilla y remueven pelos, aristas y apéndices"
+        },
+        {
+          "en": "Bucket elevator that recirculates the corn cob or sawdust polishing media",
+          "es": "Elevador de cangilones que recircula el medio de pulido (olote de maíz o aserrín)"
+        },
+        {
+          "en": "Shaking separation system that separates the polished seed from the corn cob or sawdust",
+          "es": "Sistema de sacudido que separa la semilla pulida del olote de maíz o aserrín"
+        },
+        {
+          "en": "Integrated aspiration fan",
+          "es": "Ventilador de aspiración integrado"
+        },
+        {
+          "en": "Eccentric drive",
+          "es": "Transmisión excéntrica"
+        },
+        {
+          "en": "Heavy-duty construction",
+          "es": "Construcción de alta resistencia"
+        }
+      ],
+      "options": []
     },
     {
       "category": "polishers",
+      "id": "mf536",
       "name": "MF536",
-      "photos": [
-        "images/mf536.jpg"
-      ],
-      "cap": "up to 5–6 t/h",
       "series": {
         "en": "MF Series",
         "es": "Serie MF"
       },
+      "cap": "up to 5–6 t/h",
       "desc": {
         "en": "A mid-capacity MF polisher with two polishing boxes — clean finishing that improves flow, metering, and bag presentation.",
         "es": "Una pulidora MF de capacidad media con dos cajas de pulido — un acabado limpio que mejora el flujo, la dosificación y la presentación en la bolsa."
       },
-      "id": "mf536"
+      "photos": [
+        "images/mf536.jpg"
+      ],
+      "specs": [
+        {
+          "group": {
+            "en": "",
+            "es": ""
+          },
+          "rows": [
+            {
+              "label": {
+                "en": "Capacity",
+                "es": "Capacidad"
+              },
+              "value": {
+                "en": "up to 5–6 metric t/h",
+                "es": "up to 5–6 metric t/h"
+              }
+            },
+            {
+              "label": {
+                "en": "Polishing boxes",
+                "es": "Cajas de pulido"
+              },
+              "value": {
+                "en": "2",
+                "es": "2"
+              }
+            }
+          ]
+        }
+      ],
+      "features": [
+        {
+          "en": "Polishing boxes that buff the seed coat and lift hairs, awns, and appendages",
+          "es": "Cajas de pulido que pulen la cubierta de la semilla y remueven pelos, aristas y apéndices"
+        },
+        {
+          "en": "Bucket elevator that recirculates the corn cob or sawdust polishing media",
+          "es": "Elevador de cangilones que recircula el medio de pulido (olote de maíz o aserrín)"
+        },
+        {
+          "en": "Shaking separation system that separates the polished seed from the corn cob or sawdust",
+          "es": "Sistema de sacudido que separa la semilla pulida del olote de maíz o aserrín"
+        },
+        {
+          "en": "Integrated aspiration fan",
+          "es": "Ventilador de aspiración integrado"
+        },
+        {
+          "en": "Eccentric drive",
+          "es": "Transmisión excéntrica"
+        },
+        {
+          "en": "Heavy-duty construction",
+          "es": "Construcción de alta resistencia"
+        }
+      ],
+      "options": []
     },
     {
       "category": "polishers",
+      "id": "mf218",
       "name": "MF218",
-      "photos": [
-        "images/mf218.jpg"
-      ],
-      "cap": "up to 2 t/h",
       "series": {
         "en": "MF Series · Compact",
         "es": "Serie MF · Compacta"
       },
+      "cap": "up to 2 t/h",
       "desc": {
         "en": "The compact single-box MF polisher — finishes seed to a smooth, uniform coat, ready for treating or bagging.",
         "es": "La pulidora MF compacta de una caja — da a la semilla un acabado liso y uniforme, lista para tratar o embolsar."
       },
-      "id": "mf218"
+      "photos": [
+        "images/mf218.jpg"
+      ],
+      "specs": [
+        {
+          "group": {
+            "en": "",
+            "es": ""
+          },
+          "rows": [
+            {
+              "label": {
+                "en": "Capacity",
+                "es": "Capacidad"
+              },
+              "value": {
+                "en": "up to 2 metric t/h",
+                "es": "up to 2 metric t/h"
+              }
+            },
+            {
+              "label": {
+                "en": "Polishing boxes",
+                "es": "Cajas de pulido"
+              },
+              "value": {
+                "en": "1",
+                "es": "1"
+              }
+            }
+          ]
+        }
+      ],
+      "features": [
+        {
+          "en": "Polishing boxes that buff the seed coat and lift hairs, awns, and appendages",
+          "es": "Cajas de pulido que pulen la cubierta de la semilla y remueven pelos, aristas y apéndices"
+        },
+        {
+          "en": "Bucket elevator that recirculates the corn cob or sawdust polishing media",
+          "es": "Elevador de cangilones que recircula el medio de pulido (olote de maíz o aserrín)"
+        },
+        {
+          "en": "Shaking separation system that separates the polished seed from the corn cob or sawdust",
+          "es": "Sistema de sacudido que separa la semilla pulida del olote de maíz o aserrín"
+        },
+        {
+          "en": "Integrated aspiration fan",
+          "es": "Ventilador de aspiración integrado"
+        },
+        {
+          "en": "Eccentric drive",
+          "es": "Transmisión excéntrica"
+        },
+        {
+          "en": "Heavy-duty construction",
+          "es": "Construcción de alta resistencia"
+        }
+      ],
+      "options": []
     }
   ]
 }

@@ -6,7 +6,7 @@
 
 backend:
   name: github
-  repo: YOUR-GITHUB-USERNAME/mfroes-website   # <-- CHANGE THIS
+  repo: Mfroesmfg/mfroes-website
   branch: main
 
 # Photos you upload in the admin are saved here:
@@ -131,6 +131,21 @@ collections:
               - { name: en, label: "English", widget: string }
               - { name: es, label: "Spanish", widget: string }
 
+      # ---------- Brands we distribute (Spanish page only) ----------
+      - name: brands
+        label: "Brands We Distribute (Spanish page)"
+        file: "content/brands.json"
+        icon: sell
+        fields:
+          - name: items
+            label: "Brands"
+            label_singular: "Brand"
+            widget: list
+            summary: "{{fields.es}}"
+            fields:
+              - { name: es, label: "Brand line — Spanish (this is what shows on the site)", widget: string }
+              - { name: en, label: "English version (optional)", widget: string, required: false }
+
       # ---------- New Equipment catalog (models, photos, key info) ----------
       - name: catalog
         label: "New Equipment (models & photos)"
@@ -176,6 +191,60 @@ collections:
                   - { name: en, label: "English", widget: text, required: false }
                   - { name: es, label: "Spanish", widget: text, required: false }
               - { name: pdf, label: "Spec sheet PDF (optional)", widget: file, required: false }
+              - name: specs
+                label: "Spec table (Capacity, Screens, Motors, Air…)"
+                label_singular: "Spec group"
+                widget: list
+                required: false
+                collapsed: true
+                summary: "{{fields.group.en}}"
+                fields:
+                  - name: group
+                    label: "Group heading (leave blank for no heading)"
+                    widget: object
+                    required: false
+                    fields:
+                      - { name: en, label: "English", widget: string, required: false }
+                      - { name: es, label: "Spanish", widget: string, required: false }
+                  - name: rows
+                    label: "Rows"
+                    label_singular: "Row"
+                    widget: list
+                    required: false
+                    summary: "{{fields.label.en}}: {{fields.value.en}}"
+                    fields:
+                      - name: label
+                        label: "Label (left column)"
+                        widget: object
+                        fields:
+                          - { name: en, label: "English", widget: string, required: false }
+                          - { name: es, label: "Spanish", widget: string, required: false }
+                      - name: value
+                        label: "Value (right column)"
+                        widget: object
+                        fields:
+                          - { name: en, label: "English", widget: string, required: false }
+                          - { name: es, label: "Spanish", widget: string, required: false }
+              - name: features
+                label: "Standard Features"
+                label_singular: "Feature"
+                widget: list
+                required: false
+                collapsed: true
+                summary: "{{fields.en}}"
+                fields:
+                  - { name: en, label: "English", widget: string, required: false }
+                  - { name: es, label: "Spanish", widget: string, required: false }
+              - name: options
+                label: "Options"
+                label_singular: "Option"
+                widget: list
+                required: false
+                collapsed: true
+                summary: "{{fields.en}}"
+                fields:
+                  - { name: en, label: "English", widget: string, required: false }
+                  - { name: es, label: "Spanish", widget: string, required: false }
               - { name: id, label: "Internal ID — leave blank when adding a new model; do not change on existing ones", widget: string, required: false }
 
       # ---------- Home page category card photos ----------

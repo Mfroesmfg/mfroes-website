@@ -687,6 +687,18 @@
   </div>
 </section>
 
+<!-- BRANDS WE DISTRIBUTE (shows on the Spanish site only) -->
+<section id="brands" style="display:none;padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">En México</span>
+      <h2>Marcas que también distribuimos</h2>
+      <p>Además de nuestros equipos MFroes, distribuimos y damos servicio a marcas líderes de la industria en México.</p>
+    </div>
+    <div class="crop-marquee"><div class="crop-track" id="brandTrack"></div></div>
+  </div>
+</section>
+
 <!-- ABOUT -->
 <section id="about">
   <div class="wrap">
@@ -989,6 +1001,9 @@
     if(typeof renderPlants==='function') renderPlants();
     if(typeof renderCrops==='function') renderCrops();
     if(typeof renderStory==='function') renderStory();
+    var _bsec=document.getElementById('brands');
+    if(_bsec) _bsec.style.display=(l==='es')?'':'none';
+    if(typeof renderBrands==='function') renderBrands();
   }
   document.getElementById('langtoggle').addEventListener('click',()=>setLang(LANG==='en'?'es':'en'));
 
@@ -1110,6 +1125,16 @@
     var reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
     track.innerHTML = reduced ? one : one+one;
     if(!reduced) track.style.animationDuration=(items.length*2.6)+'s';
+  }
+
+  function renderBrands(){
+    var track=document.getElementById('brandTrack'); if(!track) return;
+    var items=(typeof BRANDS!=='undefined'&&BRANDS)?BRANDS:[];
+    var mark='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 8 12 3 3 8v8l9 5 9-5V8Z"/><path d="m3 8 9 5 9-5"/><path d="M12 13v8"/></svg>';
+    var one=items.map(function(b){ var name=(b&&typeof b==='object')?(b.es||b.en||''):b; return '<div class="crop">'+mark+'<span>'+name+'</span></div>'; }).join('');
+    var reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+    track.innerHTML = reduced ? one : one+one;
+    if(!reduced) track.style.animationDuration=(Math.max(items.length,4)*4)+'s';
   }
 
   (function(){
@@ -1251,6 +1276,19 @@
      The last item ('+ Many More') stays at the end automatically.
      ============================================================ */
   let CROPS = [];
+
+  /* ============================================================
+     BRANDS WE DISTRIBUTE  —  shows on the SPANISH site only.
+     Editable in the admin under "Brands We Distribute".
+     ============================================================ */
+  let BRANDS = [
+    {es:'Oliver — Separadoras por Gravedad', en:'Oliver — Gravity Separators'},
+    {es:'Clipper — Cribadoras', en:'Clipper — Cleaners'},
+    {es:'AMVT — Clasificadoras por Color', en:'AMVT — Color Sorters'},
+    {es:'QSAGE — Cribadoras', en:'QSAGE — Cleaners'},
+    {es:'LMC — Separadoras por Gravedad', en:'LMC — Gravity Separators'},
+    {es:'A.T. Ferrell — Molinos y Rodillos', en:'A.T. Ferrell — Feed Mills & Rollers'}
+  ];
 
   // Reusable thumb illustration (air-screen style) for model cards
   const THUMB=(grad,img,alt)=>`<div class="thumb" style="background:radial-gradient(120% 100% at ${grad},#eef1e9,#e2e7d9)">${img?`<img class="thumb-photo" loading="lazy" decoding="async" src="${img}" alt="${alt||''}" onerror="this.remove()">`:''}<svg viewBox="0 0 300 190" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"><rect x="70" y="55" width="160" height="90" rx="6" fill="#2c281f" stroke="#4a4436"/><g stroke="#5f9e2a" stroke-width="2" opacity=".7"><line x1="80" y1="72" x2="220" y2="72"/><line x1="80" y1="90" x2="220" y2="90"/><line x1="80" y1="108" x2="220" y2="108"/><line x1="80" y1="126" x2="220" y2="126"/></g><g fill="#8cc63f"><circle cx="100" cy="80" r="3"/><circle cx="140" cy="98" r="3"/><circle cx="180" cy="82" r="3"/><circle cx="160" cy="118" r="3"/><circle cx="120" cy="116" r="3"/></g><path d="M150 30 L130 55 L170 55 Z" fill="#4a4436"/></svg></div>`;
@@ -1613,7 +1651,12 @@
     const slug=(m.img||'').replace(/^\/?images\//,'').replace(/\.[a-z0-9]+$/i,'');
     const pdfHref = m.pdf || (CATEGORIES[activeSub]&&CATEGORIES[activeSub].pdf) || ('pdfs/'+slug+'.pdf');
     const isC = m.series && m.series.en && m.series.en.indexOf('C-Series')>=0;
-    const set = m.feat ? (FEAT[m.feat]||FEAT.std) : (isC?FEAT.c:FEAT.std);
+    var set;
+    if(m.features && ((m.features.en&&m.features.en.length)||(m.features.es&&m.features.es.length))){
+      set = {features:m.features, options:(m.options||{en:[],es:[]})};
+    } else {
+      set = m.feat ? (FEAT[m.feat]||FEAT.std) : (isC?FEAT.c:FEAT.std);
+    }
     const name = typeof m.name==='object'?tr(m.name):m.name;
     let specHtml='';
     if(m.specs && m.specs.length){
@@ -1667,6 +1710,7 @@
   renderVideos();
   renderPlants();
   renderCrops();
+  renderBrands();
   renderStory();
   // ---- Load editable content from the CMS data files ----
   function _mfLoad(u){ return fetch(u,{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;}); }
@@ -1689,6 +1733,22 @@
     });
   }
   var _mfDefFeat={'seed-cleaners':'std','destoners':'destoner','bucket-elevators':'elevator','belt-conveyors':'belt','polishers':'polisher'};
+  function _mfSpecsIn(specs){                 // CMS spec shape -> internal render shape
+    if(!specs||!specs.length) return null;
+    return specs.map(function(g){
+      var grp = (g.group && (g.group.en||g.group.es)) ? g.group : undefined;
+      return { g: grp, rows: (g.rows||[]).map(function(r){ return [r.label, r.value]; }) };
+    });
+  }
+  function _mfLangArr(list){                  // [{en,es}] -> {en:[...],es:[...]}
+    if(!list||!list.length) return null;
+    var o={en:[],es:[]};
+    list.forEach(function(it){
+      if(it&&typeof it==='object'){ o.en.push(it.en||it.es||''); o.es.push(it.es||it.en||''); }
+      else if(it!=null){ o.en.push(it); o.es.push(it); }
+    });
+    return o;
+  }
   function _mfMergeCatalog(cat){
     if(!cat || !cat.models) return;
     var byCat={};
@@ -1712,12 +1772,15 @@
         out.img = img;
         out.photos = photos;
         if(jm.pdf) out.pdf = jm.pdf;
+        var _sp=_mfSpecsIn(jm.specs);  if(_sp) out.specs=_sp;
+        var _ft=_mfLangArr(jm.features); if(_ft) out.features=_ft;
+        var _op=_mfLangArr(jm.options);  if(_op) out.options=_op;
         if(!bm.img){ out.feat = out.feat || _mfDefFeat[k]; }  // new models get the category's default feature set
         return out;
       });
     });
   }
-  Promise.all([_mfLoad('content/used.json'),_mfLoad('content/videos.json'),_mfLoad('content/plants.json'),_mfLoad('content/story.json'),_mfLoad('content/crops.json'),_mfLoad('content/catalog.json'),_mfLoad('content/home-tiles.json')]).then(function(res){
+  Promise.all([_mfLoad('content/used.json'),_mfLoad('content/videos.json'),_mfLoad('content/plants.json'),_mfLoad('content/story.json'),_mfLoad('content/crops.json'),_mfLoad('content/catalog.json'),_mfLoad('content/home-tiles.json'),_mfLoad('content/brands.json')]).then(function(res){
     if(res[0]&&res[0].items) USED=res[0].items;
     if(res[1]&&res[1].items) VIDEOS=res[1].items;
     if(res[2]&&res[2].items) PLANTS=res[2].items;
@@ -1725,7 +1788,8 @@
     if(res[4]&&res[4].items) CROPS=res[4].items.map(function(x){return Array.isArray(x)?x:[x.en,x.es];});
     if(res[5]) _mfMergeCatalog(res[5]);
     if(res[6]) _mfApplyTiles(res[6]);
-    renderVideos(); renderPlants(); renderCrops(); renderStory();
+    if(res[7]&&res[7].items) BRANDS=res[7].items;
+    renderVideos(); renderPlants(); renderCrops(); renderBrands(); renderStory();
     if(activeSub) renderSubpage(activeSub);
   });
   // Pause the crops ticker when it's off-screen (saves CPU/battery)
