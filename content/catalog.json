@@ -826,7 +826,8 @@
       "category": "seed-cleaners",
       "name": "C688",
       "photos": [
-        "images/c688.jpg"
+        "/images/C688 Cleaner-2.jpeg",
+        "/images/C688 Cleaner-5.jpeg"
       ],
       "cap": "20 t/h",
       "screens": "12",
@@ -1049,6 +1050,8 @@
         "images/448-ag.jpg"
       ],
       "cap": "3–4 t/h",
+      "screens": "",
+      "size": "",
       "series": {
         "en": "AG Series",
         "es": "Serie AG"
