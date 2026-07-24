@@ -248,7 +248,7 @@
   .plant-role{position:absolute;top:12px;left:12px;z-index:2;background:rgba(12,16,8,.62);color:#fff;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:.62rem;font-weight:600;padding:5px 11px;border-radius:999px}
   .plant-thumb .used-count{top:auto;bottom:12px}
   .plant-body p{color:var(--muted);font-size:.92rem}
-  .img-lightbox{position:fixed;inset:0;z-index:120;background:rgba(12,16,8,.93);display:flex;align-items:center;justify-content:center;padding:34px 24px;opacity:0;pointer-events:none;transition:opacity .2s ease}
+  .img-lightbox{position:fixed;inset:0;z-index:320;background:rgba(12,16,8,.93);display:flex;align-items:center;justify-content:center;padding:34px 24px;opacity:0;pointer-events:none;transition:opacity .2s ease}
   .img-lightbox.open{opacity:1;pointer-events:auto}
   .img-frame{position:relative;display:flex;flex-direction:column;align-items:center;max-width:min(1100px,100%)}
   .img-frame img{max-width:100%;max-height:80vh;border-radius:8px;box-shadow:0 30px 80px rgba(0,0,0,.6);display:block}
@@ -378,8 +378,11 @@
   .modal-head{margin-bottom:22px;padding-right:40px}
   .modal-head h2{font-size:clamp(1.7rem,3.6vw,2.5rem);font-weight:700;margin-top:6px}
   .modal-body{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
-  .mg-main{background:#fff;border:1px solid var(--line);border-radius:6px;height:290px;display:flex;align-items:center;justify-content:center;overflow:hidden}
-  .mg-main img{max-width:100%;max-height:100%;object-fit:contain;padding:10px}
+  .mg-main{position:relative;background:#fff;border:1px solid var(--line);border-radius:6px;height:290px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .mg-main img{max-width:100%;max-height:100%;object-fit:contain;padding:10px;cursor:zoom-in}
+  .mg-zoom{position:absolute;bottom:10px;right:10px;display:inline-flex;align-items:center;gap:6px;background:rgba(19,17,14,.82);color:#fff;border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:7px 13px 7px 11px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:.7rem;font-weight:600;cursor:zoom-in;transition:background .18s ease}
+  .mg-zoom:hover{background:var(--grain);color:var(--ink)}
+  .mg-zoom svg{width:15px;height:15px}
   .mg-thumbs{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
   .mg-thumbs img{width:66px;height:66px;object-fit:cover;border:1px solid var(--line);border-radius:4px;cursor:pointer;background:#fff;transition:border-color .2s}
   .mg-thumbs img:hover{border-color:var(--grain)}
@@ -1113,7 +1116,21 @@
     lb.classList.remove('open');
     document.getElementById('imgLightboxImg').src='';
     GAL={imgs:[],i:0,cap:''};
-    document.body.style.overflow='';
+    // keep scroll locked if the equipment detail modal is still open behind the lightbox
+    var md=document.getElementById('modal');
+    document.body.style.overflow=(md&&md.classList.contains('open'))?'hidden':'';
+  }
+  // Enlarge the equipment detail photos: gather the gallery images that actually loaded
+  // (broken ones remove themselves) and open the shared full-screen lightbox.
+  function mfEnlarge(cap){
+    var main=document.getElementById('mgMain'); if(!main) return;
+    var thumbs=[].slice.call(document.querySelectorAll('#modalCard .mg-thumbs img'));
+    var seen={}, list=[];
+    thumbs.forEach(function(t){ var s=t.getAttribute('src'); if(s&&!seen[s]){ seen[s]=1; list.push(s); } });
+    if(!list.length){ var ms=main.getAttribute('src'); if(ms) list=[ms]; }
+    if(!list.length) return;
+    var cur=main.getAttribute('src'); var idx=list.indexOf(cur); if(idx<0) idx=0;
+    openGallery(list, idx, cap||'');
   }
   /* ---------- Crops scrolling line ---------- */
   function renderCrops(){
@@ -1151,7 +1168,11 @@
       il.addEventListener('click',function(e){ if(e.target===il) closeImgLb(); });
     }
     document.addEventListener('keydown',function(e){
-      if(e.key==='Escape'){ closeVideo(); closeImgLb(); }
+      if(e.key==='Escape'){
+        var lbOpen=il&&il.classList.contains('open');
+        closeVideo(); closeImgLb();
+        if(lbOpen){ e.stopImmediatePropagation(); }  // close only the enlarged photo, keep the detail card open
+      }
       if(il&&il.classList.contains('open')){ if(e.key==='ArrowRight') galNext(); if(e.key==='ArrowLeft') galPrev(); }
     });
   })();
@@ -1684,14 +1705,16 @@
     const featLis=pickArr(set.features).map(x=>'<li>'+x+'</li>').join('');
     const optLis=pickArr(set.options).map(x=>'<li>'+x+'</li>').join('');
     const L = LANG==='es'
-      ? {spec:'Especificaciones',feat:'Características Estándar',opt:'Opciones',pdf:'Descargar PDF',quote:'Solicitar Cotización',note:'Contenido de ejemplo — se reemplazará con las características y fichas técnicas reales de MFroes.'}
-      : {spec:'Specifications',feat:'Standard Features',opt:'Options',pdf:'Download PDF',quote:'Request a Quote',note:'Placeholder content — to be replaced with your real MFroes features and spec sheets.'};
+      ? {spec:'Especificaciones',feat:'Características Estándar',opt:'Opciones',pdf:'Descargar PDF',quote:'Solicitar Cotización',zoom:'Ampliar',note:'Contenido de ejemplo — se reemplazará con las características y fichas técnicas reales de MFroes.'}
+      : {spec:'Specifications',feat:'Standard Features',opt:'Options',pdf:'Download PDF',quote:'Request a Quote',zoom:'Enlarge',note:'Placeholder content — to be replaced with your real MFroes features and spec sheets.'};
+    const zoomIco='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6M8 11h6"/></svg>';
     const waMsg = encodeURIComponent((LANG==='es'?'Hola MFroes, me interesa la ':'Hi MFroes, I am interested in the ')+name+'.');
     document.getElementById('modalCard').innerHTML =
       '<button class="modal-close" onclick="closeModel()" aria-label="Close">×</button>'+
       '<div class="modal-head"><span class="eyebrow">'+tr(m.series)+'</span><h2>'+name+'</h2></div>'+
       '<div class="modal-body">'+
-        '<div class="modal-gallery"><div class="mg-main"><img id="mgMain" decoding="async" src="'+mainSrc+'" alt="'+name+'" onerror="this.style.display=\'none\'"></div>'+
+        '<div class="modal-gallery"><div class="mg-main"><img id="mgMain" decoding="async" src="'+mainSrc+'" alt="'+name+'" onclick="mfEnlarge(this.alt)" onerror="this.style.display=\'none\'">'+
+        '<button type="button" class="mg-zoom" onclick="mfEnlarge(\''+name.replace(/'/g,"\\'").replace(/"/g,'&quot;')+'\')">'+zoomIco+L.zoom+'</button></div>'+
         '<div class="mg-thumbs">'+photoThumbs+extra+'</div></div>'+
         '<div class="modal-info"><h3>'+L.spec+'</h3>'+specHtml+
           '<div class="modal-cta"><a class="btn btn-primary" href="'+pdfHref+'" target="_blank" rel="noopener">'+L.pdf+' ↓</a>'+
