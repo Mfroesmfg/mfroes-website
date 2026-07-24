@@ -145,6 +145,7 @@ collections:
             fields:
               - { name: es, label: "Brand line — Spanish (this is what shows on the site)", widget: string }
               - { name: en, label: "English version (optional)", widget: string, required: false }
+              - { name: logo, label: "Logo (optional — upload a PNG; shows next to the name)", widget: image, required: false }
 
       # ---------- New Equipment catalog (models, photos, key info) ----------
       - name: catalog

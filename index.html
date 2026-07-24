@@ -196,6 +196,7 @@
   .crop-marquee:hover .crop-track{animation-play-state:paused}
   @keyframes cropscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
   .crop{flex:none;display:flex;align-items:center;gap:10px;padding:12px 22px;border:1px solid var(--line);border-radius:999px;background:var(--steel);box-shadow:0 2px 10px rgba(70,58,24,.05)}
+  .brand-logo{height:30px;width:auto;max-width:74px;object-fit:contain;display:block}
   .crop svg{width:20px;height:20px;color:var(--grain);flex:none}
   .crop span{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.07em;font-size:.82rem;font-weight:600;color:var(--bone);white-space:nowrap}
   .crop-more{border-style:dashed;background:transparent}
@@ -1148,7 +1149,13 @@
     var track=document.getElementById('brandTrack'); if(!track) return;
     var items=(typeof BRANDS!=='undefined'&&BRANDS)?BRANDS:[];
     var mark='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 8 12 3 3 8v8l9 5 9-5V8Z"/><path d="m3 8 9 5 9-5"/><path d="M12 13v8"/></svg>';
-    var one=items.map(function(b){ var name=(b&&typeof b==='object')?(b.es||b.en||''):b; return '<div class="crop">'+mark+'<span>'+name+'</span></div>'; }).join('');
+    var one=items.map(function(b){
+      var isObj=(b&&typeof b==='object');
+      var name=isObj?(b.es||b.en||''):b;
+      var logo=isObj?(b.logo||''):'';
+      var mk=logo?('<img class="brand-logo" src="'+logo+'" alt="'+String(name).replace(/"/g,'&quot;')+'" loading="lazy" decoding="async" onerror="this.style.display=\'none\'">'):mark;
+      return '<div class="crop">'+mk+'<span>'+name+'</span></div>';
+    }).join('');
     var reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
     track.innerHTML = reduced ? one : one+one;
     if(!reduced) track.style.animationDuration=(Math.max(items.length,4)*4)+'s';
