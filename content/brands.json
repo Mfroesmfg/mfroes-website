@@ -1,9 +1,9 @@
 {
   "items": [
-    { "es": "Oliver — Separadoras por Gravedad", "en": "Oliver — Gravity Separators", "logo": "/images/oliver.png" },
-    { "es": "Clipper — Cribadoras", "en": "Clipper — Cleaners", "logo": "/images/clipper.png" },
-    { "es": "AMVT — Clasificadoras por Color", "en": "AMVT — Color Sorters", "logo": "/images/amvt.png" },
-    { "es": "LMC — Separadoras por Gravedad", "en": "LMC — Gravity Separators", "logo": "/images/lmc.png" },
-    { "es": "Ferrel-Ross — Molinos y Rodillos", "en": "Ferrell-Ross — Feed Mills & Rollers", "logo": "/images/ferrell.png" }
+    { "es": "— Separadoras por Gravedad", "en": "Oliver — Gravity Separators", "logo": "/images/oliver.png" },
+    { "es": "— Cribadoras", "en": "Clipper — Cleaners", "logo": "/images/clipper.png" },
+    { "es": "— Clasificadoras por Color", "en": "AMVT — Color Sorters", "logo": "/images/amvt.png" },
+    { "es": "— Separadoras por Gravedad", "en": "LMC — Gravity Separators", "logo": "/images/lmc.png" },
+    { "es": "— Molinos y Rodillos", "en": "Ferrell-Ross — Feed Mills & Rollers", "logo": "/images/ferrell.png" }
   ]
 }
