@@ -898,9 +898,13 @@
       "category": "seed-cleaners",
       "name": "C788 Highcap",
       "photos": [
-        "images/c788-highcap.jpg"
+        "/images/MFroes C788 Highcap no background.jpg",
+        "/images/C788 Highcap 3.jpeg",
+        "/images/C788 Highcap 1.jpeg",
+        "/images/C788 Highcap 4.jpeg",
+        "/images/C788 Highcap.jpeg"
       ],
-      "cap": "25 t/h",
+      "cap": "30 t/h",
       "screens": "14",
       "size": "54×44\"",
       "series": {
