@@ -1,9 +1,29 @@
 {
   "items": [
-    { "es": "— Separadoras por Gravedad", "en": "Oliver — Gravity Separators", "logo": "/images/oliver.png" },
-    { "es": "— Cribadoras", "en": "Clipper — Cleaners", "logo": "/images/clipper.png" },
-    { "es": "— Clasificadoras por Color", "en": "AMVT — Color Sorters", "logo": "/images/amvt.png" },
-    { "es": "— Separadoras por Gravedad", "en": "LMC — Gravity Separators", "logo": "/images/lmc.png" },
-    { "es": "— Molinos y Rodillos", "en": "Ferrell-Ross — Feed Mills & Rollers", "logo": "/images/ferrell.png" }
+    {
+      "es": "Separadoras por Gravedad",
+      "en": "Gravity Separators",
+      "logo": "/images/logo oliver.png"
+    },
+    {
+      "es": "Cribadoras",
+      "en": "Cleaners",
+      "logo": ""
+    },
+    {
+      "es": "Clasificadoras por Color",
+      "en": "Color Sorters",
+      "logo": "/images/ChatGPT Image Jul 24, 2026 at 01_52_58 PM.png"
+    },
+    {
+      "es": "Separadoras por Gravedad",
+      "en": "Gravity Separators",
+      "logo": "/images/ChatGPT Image Jul 24, 2026 at 02_40_19 PM.png"
+    },
+    {
+      "es": "Molinos y Rodillos",
+      "en": "Feed Mills & Rollers",
+      "logo": "/images/ChatGPT Image Jul 24, 2026 at 01_56_18 PM.png"
+    }
   ]
 }
