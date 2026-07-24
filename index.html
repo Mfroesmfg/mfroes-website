@@ -1145,20 +1145,24 @@
     if(!reduced) track.style.animationDuration=(items.length*2.6)+'s';
   }
 
+  // Brands we distribute — logos are locked into the site here so admin edits can't wipe them.
+  // To change a brand, edit this list (logo file lives in /images).
+  var BRAND_LINE=[
+    { logo:'/images/oliver.png',  es:'Oliver — Separadoras por Gravedad',  en:'Oliver — Gravity Separators' },
+    { logo:'/images/clipper.png', es:'Clipper — Cribadoras',               en:'Clipper — Cleaners' },
+    { logo:'/images/amvt.png',    es:'AMVT — Clasificadoras por Color',    en:'AMVT — Color Sorters' },
+    { logo:'/images/lmc.png',     es:'LMC — Separadoras por Gravedad',     en:'LMC — Gravity Separators' },
+    { logo:'/images/ferrell.png', es:'Ferrel-Ross — Molinos y Rodillos',   en:'Ferrell-Ross — Feed Mills & Rollers' }
+  ];
   function renderBrands(){
     var track=document.getElementById('brandTrack'); if(!track) return;
-    var items=(typeof BRANDS!=='undefined'&&BRANDS)?BRANDS:[];
-    var mark='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 8 12 3 3 8v8l9 5 9-5V8Z"/><path d="m3 8 9 5 9-5"/><path d="M12 13v8"/></svg>';
-    var one=items.map(function(b){
-      var isObj=(b&&typeof b==='object');
-      var name=isObj?(b.es||b.en||''):b;
-      var logo=isObj?(b.logo||''):'';
-      var mk=logo?('<img class="brand-logo" src="'+logo+'" alt="'+String(name).replace(/"/g,'&quot;')+'" loading="lazy" decoding="async" onerror="this.style.display=\'none\'">'):mark;
-      return '<div class="crop">'+mk+'<span>'+name+'</span></div>';
+    var one=BRAND_LINE.map(function(b){
+      var name=(LANG==='es')?b.es:(b.en||b.es);
+      return '<div class="crop"><img class="brand-logo" src="'+b.logo+'" alt="'+String(name).replace(/"/g,'&quot;')+'" loading="lazy" decoding="async" onerror="this.style.display=\'none\'"><span>'+name+'</span></div>';
     }).join('');
     var reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
     track.innerHTML = reduced ? one : one+one;
-    if(!reduced) track.style.animationDuration=(Math.max(items.length,4)*4)+'s';
+    if(!reduced) track.style.animationDuration=(Math.max(BRAND_LINE.length,4)*4)+'s';
   }
 
   (function(){
