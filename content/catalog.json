@@ -826,7 +826,10 @@
       "category": "seed-cleaners",
       "name": "C688",
       "photos": [
-        "images/c688.jpg"
+        "/images/ChatGPT Image Jul 27, 2026 at 10_29_23 AM.png",
+        "/images/C688 Cleaner-5.jpeg",
+        "/images/C688 Cleaner-2.jpeg",
+        "/images/C688 Cleaner-6.jpeg"
       ],
       "cap": "20 t/h",
       "screens": "12",
@@ -898,7 +901,7 @@
       "category": "seed-cleaners",
       "name": "C788 Highcap",
       "photos": [
-        "/images/MFroes C788 Highcap no background.jpg",
+        "/images/C788 Highcap no background.png",
         "/images/C788 Highcap 3.jpeg",
         "/images/C788 Highcap 1.jpeg",
         "/images/C788 Highcap 4.jpeg",
@@ -1049,6 +1052,8 @@
         "images/448-ag.jpg"
       ],
       "cap": "3–4 t/h",
+      "screens": "",
+      "size": "",
       "series": {
         "en": "AG Series",
         "es": "Serie AG"
