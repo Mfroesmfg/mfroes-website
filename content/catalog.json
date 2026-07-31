@@ -842,6 +842,7 @@
         "en": "A mid-range C-series cleaner offering more capacity for busier lines.",
         "es": "Una cribadora de precisión de rango medio de la serie C con mayor capacidad para líneas más ocupadas."
       },
+      "pdf": "/images/C688 Cleaner 2026.pdf",
       "specs": [],
       "features": [
         {
@@ -918,6 +919,7 @@
         "en": "The high-capacity flagship of the C-series, built for maximum throughput.",
         "es": "El modelo insignia de alta capacidad de la serie C, hecho para el máximo rendimiento."
       },
+      "pdf": "/images/C788 Highcap Cleaner 2026.pdf",
       "specs": [],
       "features": [
         {
@@ -1640,6 +1642,8 @@
         "images/ed-3500.jpg"
       ],
       "cap": "96 t/h",
+      "screens": "",
+      "size": "",
       "series": {
         "en": "ED Series",
         "es": "Serie ED"
@@ -1731,6 +1735,8 @@
         "images/dd-4000.jpg"
       ],
       "cap": "120 t/h",
+      "screens": "",
+      "size": "",
       "series": {
         "en": "DD Series · High-Capacity",
         "es": "Serie DD · Alta Capacidad"
@@ -1829,7 +1835,7 @@
       "category": "belt-conveyors",
       "name": "Model 12",
       "photos": [
-        "images/belt-model-12.jpg"
+        "/images/belt-conveyors.jpg"
       ],
       "cap": "",
       "screens": "",
@@ -1887,8 +1893,10 @@
       "category": "belt-conveyors",
       "name": "Model 16",
       "photos": [
-        "images/belt-model-16.jpg"
+        "/images/belt-conveyors.jpg"
       ],
+      "cap": "",
+      "screens": "",
       "series": {
         "en": "Belt Series",
         "es": "Serie de Banda"
