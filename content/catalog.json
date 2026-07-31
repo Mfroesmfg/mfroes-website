@@ -1640,6 +1640,8 @@
         "images/ed-3500.jpg"
       ],
       "cap": "96 t/h",
+      "screens": "",
+      "size": "",
       "series": {
         "en": "ED Series",
         "es": "Serie ED"
@@ -1731,6 +1733,8 @@
         "images/dd-4000.jpg"
       ],
       "cap": "120 t/h",
+      "screens": "",
+      "size": "",
       "series": {
         "en": "DD Series · High-Capacity",
         "es": "Serie DD · Alta Capacidad"
@@ -1829,7 +1833,7 @@
       "category": "belt-conveyors",
       "name": "Model 12",
       "photos": [
-        "images/belt-model-12.jpg"
+        "/images/belt-conveyors.jpg"
       ],
       "cap": "",
       "screens": "",
@@ -1887,8 +1891,10 @@
       "category": "belt-conveyors",
       "name": "Model 16",
       "photos": [
-        "images/belt-model-16.jpg"
+        "/images/belt-conveyors.jpg"
       ],
+      "cap": "",
+      "screens": "",
       "series": {
         "en": "Belt Series",
         "es": "Serie de Banda"
