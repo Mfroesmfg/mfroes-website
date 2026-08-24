@@ -850,7 +850,11 @@
         </div>
       </div>
 
-      <form class="reveal" onsubmit="return handleSubmit(event)">
+      <form class="reveal" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="return handleSubmit(event)">
+        <input type="hidden" name="form-name" value="contact">
+        <input type="hidden" name="channel" id="fld-channel">
+        <input type="hidden" name="lang" id="fld-lang">
+        <p hidden aria-hidden="true"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
         <div class="fld"><label for="name" data-i18n="fm.name">Name</label><input id="name" name="cname" type="text" placeholder="Your name" data-i18n-ph="fm.name.ph" required></div>
         <div class="fld"><label for="email" data-i18n="fm.email">Email or Phone</label><input id="email" name="cemail" type="text" placeholder="you@farm.com" data-i18n-ph="fm.email.ph" required></div>
         <div class="fld"><label for="crop" data-i18n="fm.crop">Primary Crop</label>
@@ -1218,20 +1222,40 @@
     if(g('msg')) lines.push(`${L.msg}: ${g('msg')}`);
     return {lines, es};
   }
+  // Record every submission to Netlify (works on any device, even if WhatsApp/email won't open)
+  function captureLead(channel){
+    try{
+      var ch=document.getElementById('fld-channel'); if(ch) ch.value=channel;
+      var lg=document.getElementById('fld-lang'); if(lg) lg.value=LANG;
+      var g=function(id){var el=document.getElementById(id);return el?el.value.trim():'';};
+      var body=new URLSearchParams();
+      body.append('form-name','contact');
+      body.append('cname', g('name')); body.append('cemail', g('email'));
+      body.append('crop', g('crop')); body.append('interest', g('interest'));
+      body.append('msg', g('msg')); body.append('channel', channel); body.append('lang', LANG);
+      fetch('/', {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:body.toString(), keepalive:true}).catch(function(){});
+    }catch(_){}
+  }
+  function _sentNote(){
+    var note=document.getElementById('formnote'); if(!note) return;
+    note.textContent=(LANG==='es')?'✓ Mensaje enviado — te contactaremos pronto.':'✓ Message sent — we’ll get back to you soon.';
+    note.style.color='#3f6b1a';
+  }
   function handleSubmit(e){
     e.preventDefault();
-    const {lines,es}=_formLines();
+    var form=e.target; if(form && form.reportValidity && !form.reportValidity()) return false;
+    captureLead('whatsapp'); _sentNote();
+    const {lines}=_formLines();
     window.open('https://wa.me/18067870418?text='+encodeURIComponent(lines.join('\n')),'_blank');
-    const note=document.getElementById('formnote');
-    note.textContent=es?'Abriendo WhatsApp…':'Opening WhatsApp…'; note.style.color='#8cc63f';
     return false;
   }
   function sendEmail(){
+    var form=document.querySelector('form[name="contact"]');
+    if(form && form.reportValidity && !form.reportValidity()) return;
+    captureLead('email'); _sentNote();
     const {lines,es}=_formLines();
     const subject=es?'Solicitud de información — MFroes':'Information request — MFroes';
     window.location.href='mailto:'+MF_EMAIL+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(lines.join('\n'));
-    const note=document.getElementById('formnote');
-    note.textContent=es?'Abriendo tu correo…':'Opening your email app…'; note.style.color='#8cc63f';
   }
 
   /* ---------- Category pages + model lineups ---------- */
