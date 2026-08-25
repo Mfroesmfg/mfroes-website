@@ -9,3 +9,31 @@
   for = "/content/*"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
+
+# --- Old-website URL cleanup ---------------------------------------------
+# The previous mfroesmfg.com site had pages like /categories/seed-cleaning
+# that Google still lists. Those addresses no longer exist on the new site,
+# so send anyone who lands on them (visitors AND Google) to the homepage
+# instead of a "Page not found." 301 = permanent, which tells Google to
+# replace the old link with the new site. These paths are not used by the
+# current site, so /admin, /images, /content and real files are untouched.
+[[redirects]]
+  from = "/categories/*"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/collections/*"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/products/*"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/product/*"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/pages/*"
+  to = "/"
+  status = 301
