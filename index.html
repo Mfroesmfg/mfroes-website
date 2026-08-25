@@ -888,15 +888,14 @@
         </div>
         <div class="fld"><label for="msg" data-i18n="fm.msg">Tell us about your operation</label><textarea id="msg" name="msg" placeholder="Throughput, crops, current setup, what's giving you trouble…" data-i18n-ph="fm.msg.ph"></textarea></div>
         <div class="form-actions">
-          <button type="submit" id="waBtn" class="btn btn-ghost"><span data-i18n="fm.btn">Send via WhatsApp</span>
+          <button type="submit" id="sendBtn" class="btn btn-primary"><span data-i18n="fm.btn">Send</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </button>
-          <button type="button" id="emailBtn" class="btn btn-primary" onclick="sendEmail()">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 4h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"/><path d="m3 6 9 7 9-7"/></svg>
-            <span data-i18n="fm.ebtn">Send via Email</span>
+          <button type="button" id="waBtn" class="btn btn-ghost" onclick="sendWhatsApp()"><span data-i18n="fm.wabtn">Send via WhatsApp</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </button>
         </div>
-        <p class="form-note" id="formnote" data-i18n="fm.note">WhatsApp opens with your message ready to send — or use email to reach our shop.</p>
+        <p class="form-note" id="formnote" data-i18n="fm.note">Hit Send and we’ll get right back to you — or tap WhatsApp to chat with us now.</p>
       </form>
     </div>
   </div>
@@ -1014,7 +1013,7 @@
     'c.eyebrow':'Contáctanos','c.h2':'Hablemos de Procesamiento de Semilla',
     'c.p':'Cuéntanos sobre tus cultivos y tu operación y armaremos una máquina — o una línea completa — que se ajuste a tus necesidades y presupuesto. Contáctanos por teléfono, WhatsApp o correo — en México o Texas.',
     'c.r1':'México · Llamada o WhatsApp','c.r2':'EE. UU. · Ventas','c.r3':'México · Visita el Taller','c.r5':'Texas · Oficina','c.r6':'Correo','c.r4':'Síguenos','c.map':'Abrir en Google Maps','c.dir':'Cómo Llegar →','c.maplbl1':'Cuauhtémoc, México','c.maplbl2':'Lubbock, Texas',
-    'fm.name':'Nombre','fm.name.ph':'Tu nombre','fm.email':'Correo o Teléfono','fm.email.ph':'tu@correo.com','fm.crop':'Cultivo Principal','fm.interest':'Me interesa','fm.msg':'Cuéntanos sobre tu operación','fm.msg.ph':'Capacidad, cultivos, equipo actual, qué te está dando problemas…','fm.btn':'Enviar por WhatsApp','fm.ebtn':'Enviar por Correo','fm.note':'WhatsApp abre con tu mensaje listo para enviar — o usa el correo para contactar a nuestro taller.',
+    'fm.name':'Nombre','fm.name.ph':'Tu nombre','fm.email':'Correo o Teléfono','fm.email.ph':'tu@correo.com','fm.crop':'Cultivo Principal','fm.interest':'Me interesa','fm.msg':'Cuéntanos sobre tu operación','fm.msg.ph':'Capacidad, cultivos, equipo actual, qué te está dando problemas…','fm.btn':'Enviar','fm.wabtn':'Enviar por WhatsApp','fm.ebtn':'Enviar por Correo','fm.note':'Presiona Enviar y te responderemos enseguida — o toca WhatsApp para escribirnos ahora.',
     'opt.wheat':'Trigo','opt.soy':'Soya','opt.corn':'Maíz','opt.pulse':'Legumbres / Lentejas','opt.canola':'Canola','opt.grass':'Semilla de Pasto / Forraje','opt.other':'Otro',
     'opt.single':'Una sola máquina','opt.line':'Una línea completa de limpieza','opt.upgrade':'Mejorar equipo existente','opt.parts':'Refacciones y servicio',
     'foot.copy':'© 2026 MFroes Manufacturing. Cuauhtémoc, Chihuahua, México. Todos los derechos reservados.','foot.tag':'Arraigados en la Tradición. Hechos para Durar.'
@@ -1033,9 +1032,9 @@
     phNodes.forEach(n=>{const k=n.dataset.i18nPh; n.setAttribute('placeholder', l==='es'?(ES[k]??ENph[k]):ENph[k])});
     document.documentElement.lang=l;
     document.getElementById('langlabel').textContent = (l==='es'?'EN':'ES');
-    // Contact CTA priority is language-dependent: ES → WhatsApp primary; EN → Email primary
-    var waB=document.getElementById('waBtn'), emB=document.getElementById('emailBtn');
-    if(waB&&emB){ waB.className=(l==='es')?'btn btn-primary':'btn btn-ghost'; emB.className=(l==='es')?'btn btn-ghost':'btn btn-primary'; }
+    // Contact CTA priority is language-dependent: ES → WhatsApp primary; EN → Send primary
+    var waB=document.getElementById('waBtn'), snB=document.getElementById('sendBtn');
+    if(waB&&snB){ waB.className=(l==='es')?'btn btn-primary':'btn btn-ghost'; snB.className=(l==='es')?'btn btn-ghost':'btn btn-primary'; }
     var _tu=document.getElementById('usTextUs'); if(_tu) _tu.style.display=(l==='es')?'none':'';
     if(activeSub) renderSubpage(activeSub);
     if(typeof renderVideos==='function') renderVideos();
@@ -1260,21 +1259,21 @@
     note.textContent=(LANG==='es')?'✓ Mensaje enviado — te contactaremos pronto.':'✓ Message sent — we’ll get back to you soon.';
     note.style.color='#3f6b1a';
   }
+  // Plain "Send" — records the lead to Netlify and confirms. No redirect.
   function handleSubmit(e){
     e.preventDefault();
     var form=e.target; if(form && form.reportValidity && !form.reportValidity()) return false;
+    captureLead('form'); _sentNote();
+    try{ if(form && form.reset) form.reset(); }catch(_){}
+    return false;
+  }
+  // Optional WhatsApp shortcut — records the lead AND opens WhatsApp with the message.
+  function sendWhatsApp(){
+    var form=document.querySelector('form[name="contact"]');
+    if(form && form.reportValidity && !form.reportValidity()) return;
     captureLead('whatsapp'); _sentNote();
     const {lines}=_formLines();
     window.open('https://wa.me/18067870418?text='+encodeURIComponent(lines.join('\n')),'_blank');
-    return false;
-  }
-  function sendEmail(){
-    var form=document.querySelector('form[name="contact"]');
-    if(form && form.reportValidity && !form.reportValidity()) return;
-    captureLead('email'); _sentNote();
-    const {lines,es}=_formLines();
-    const subject=es?'Solicitud de información — MFroes':'Information request — MFroes';
-    window.location.href='mailto:'+MF_EMAIL+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(lines.join('\n'));
   }
 
   /* ---------- Category pages + model lineups ---------- */
