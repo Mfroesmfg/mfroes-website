@@ -1,8 +1,14 @@
 {
   "items": [
     {
-      "title": "Used Cimbria Precision Cleaner",
-      "desc": "High-capacity precision air-screen cleaner rated for up to 40 metric tons per hour.",
+      "title": {
+        "en": "Used Cimbria Precision Cleaner",
+        "es": "Cribadora de Precisión Cimbria (Usada)"
+      },
+      "desc": {
+        "en": "High-capacity precision air-screen cleaner rated for up to 40 metric tons per hour.",
+        "es": "Cribadora de precisión de aire y criba de alta capacidad, con capacidad de hasta 40 toneladas métricas por hora."
+      },
       "status": "available",
       "imgs": [
         "images/used-cimbria-1.jpg",
@@ -11,32 +17,56 @@
       ]
     },
     {
-      "title": "Refurbished Clipper New Gen 668",
-      "desc": "A Clipper New Gen 668 air-screen cleaner, fully refurbished and shop-tested to our standards.",
+      "title": {
+        "en": "Refurbished Clipper New Gen 668",
+        "es": "Clipper New Gen 668 (Reacondicionada)"
+      },
+      "desc": {
+        "en": "A Clipper New Gen 668 air-screen cleaner, fully refurbished and shop-tested to our standards.",
+        "es": "Cribadora de aire y criba Clipper New Gen 668, completamente reacondicionada y probada en taller según nuestros estándares."
+      },
       "status": "sold",
       "imgs": [
         "images/used-clipper-668.jpg"
       ]
     },
     {
-      "title": "Refurbished LMC Gravity Separator",
-      "desc": "An LMC gravity separator, fully refurbished and shop-tested to our standards.",
+      "title": {
+        "en": "Refurbished LMC Gravity Separator",
+        "es": "Separadora por Gravedad LMC (Reacondicionada)"
+      },
+      "desc": {
+        "en": "An LMC gravity separator, fully refurbished and shop-tested to our standards.",
+        "es": "Separadora por gravedad (mesa densimétrica) LMC, completamente reacondicionada y probada en taller según nuestros estándares."
+      },
       "status": "sold",
       "imgs": [
         "images/used-lmc-gravity.jpg"
       ]
     },
     {
-      "title": "Crippen Dakota 488",
-      "desc": "A Crippen Dakota 488 air-screen seed cleaner, shop-tested to our standards.",
+      "title": {
+        "en": "Crippen Dakota 488",
+        "es": "Crippen Dakota 488"
+      },
+      "desc": {
+        "en": "A Crippen Dakota 488 air-screen seed cleaner, shop-tested to our standards.",
+        "es": "Cribadora de semillas de aire y criba Crippen Dakota 488, probada en taller según nuestros estándares."
+      },
       "status": "sold",
       "imgs": [
         "images/used-crippen-dakota-488.jpg"
       ]
     },
     {
-      "title": "Used Oliver 3600 Gravity Separator",
-      "desc": "An Oliver Model 3600 gravity separator, shop-tested to our standards.",
+      "title": {
+        "en": "Used Oliver 3600 Gravity Separator",
+        "es": "Separadora por Gravedad Oliver 3600 (Usada)"
+      },
+      "desc": {
+        "en": "An Oliver Model 3600 gravity separator, shop-tested to our standards.",
+        "es": "Separadora por gravedad (mesa densimétrica) Oliver Modelo 3600, probada en taller según nuestros estándares."
+      },
       "status": "sold",
       "imgs": [
         "images/used-oliver-3600.jpg"

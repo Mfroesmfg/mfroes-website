@@ -28,10 +28,20 @@ collections:
             label: "Machines"
             label_singular: "Machine"
             widget: list
-            summary: "{{fields.title}}"
+            summary: "{{fields.title.en}}"
             fields:
-              - { name: title, label: "Name", widget: string }
-              - { name: desc, label: "Description", widget: text }
+              - name: title
+                label: "Name"
+                widget: object
+                fields:
+                  - { name: en, label: "English", widget: string }
+                  - { name: es, label: "Spanish (shows on the Spanish page)", widget: string, required: false }
+              - name: desc
+                label: "Description"
+                widget: object
+                fields:
+                  - { name: en, label: "English", widget: text }
+                  - { name: es, label: "Spanish (shows on the Spanish page)", widget: text, required: false }
               - name: status
                 label: "Status"
                 widget: select
