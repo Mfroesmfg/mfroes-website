@@ -1561,7 +1561,7 @@
         return '<article class="used-card'+(imgs.length?'':' no-photo')+(imgs.length?' clickable':'')+'"'+clickable+'>'+
           '<div class="used-thumb">'+photo+'<span class="used-badge" style="background:'+b[2]+'">'+label+'</span>'+count+'</div>'+
           '<div class="used-body"><h3>'+title+'</h3><p>'+desc+'</p>'+
-          '<div class="used-foot"><span class="used-price">'+contact+'</span><a class="more" href="#contact" onclick="event.stopPropagation()">'+inquire+'</a></div>'+
+          '<div class="used-foot"><span class="used-price">'+contact+'</span><a class="more" href="#contact" onclick="event.stopPropagation();goHome(\'#contact\');return false;">'+inquire+'</a></div>'+
           '</div></article>';
       }).join('')+'</div>';
     } else {
