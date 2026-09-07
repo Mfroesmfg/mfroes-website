@@ -145,7 +145,7 @@
 </script>
 <style>
   :root{
-    --ink:#f6f7f1; --ink-2:#eef1e9; --steel:#ffffff;
+    --ink:#F7F7F7; --ink-2:#F7F7F7; --steel:#ffffff;
     --bone:#1f2a17; --bone-2:#3c4632; --muted:#66705c;
     --tan:#9a7a26; --tan-2:#b9922e; --grain:#4e9d2d; --green-deep:#35771f;
     --olive:#6b6f47; --rust:#a8542b;
@@ -195,7 +195,7 @@
   /* HERO */
   .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;overflow:hidden}
   .hero-bg{position:absolute;inset:0;z-index:0}
-  .hero-bg .layer1{position:absolute;inset:0;background:radial-gradient(120% 90% at 78% 15%, rgba(95,158,42,.12), transparent 55%),radial-gradient(90% 80% at 15% 90%, rgba(168,134,63,.12), transparent 60%),linear-gradient(160deg,#f7f9f3 0%, #eef1ea 55%, #e9ede2 100%)}
+  .hero-bg .layer1{position:absolute;inset:0;background:radial-gradient(120% 90% at 78% 15%, rgba(95,158,42,.12), transparent 55%),radial-gradient(90% 80% at 15% 90%, rgba(168,134,63,.12), transparent 60%),linear-gradient(160deg,#F7F7F7 0%, #F7F7F7 55%, #F7F7F7 100%)}
   .hero-bg .beams{position:absolute;inset:0;opacity:.4;background:repeating-linear-gradient(115deg, transparent 0 46px, rgba(35,42,25,.045) 46px 48px);mask-image:linear-gradient(90deg,transparent,black 40%,black 60%,transparent)}
   .hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center;width:100%}
   .hero h1{font-size:clamp(2.9rem,6.4vw,5.4rem);font-weight:700}
@@ -233,7 +233,7 @@
   @media (prefers-reduced-motion:reduce){.crop-track{animation:none;flex-wrap:wrap;justify-content:center;width:auto}}
   .used-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px;margin-top:8px}
   .used-card{background:var(--steel);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
-  .used-thumb{position:relative;aspect-ratio:4/3;background:#f0f3ec;display:flex;align-items:center;justify-content:center}
+  .used-thumb{position:relative;aspect-ratio:4/3;background:#F7F7F7;display:flex;align-items:center;justify-content:center}
   .used-photo{width:100%;height:100%;object-fit:contain;background:#fff;padding:8px;display:block}
   .used-card.no-photo .used-photo{display:none}
   .used-card.no-photo .used-thumb::after{content:'Photo coming soon';font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.68rem;color:var(--muted)}
@@ -265,7 +265,7 @@
   .plant-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:26px;margin-top:16px}
   .plant-card{margin:0;cursor:pointer;background:var(--steel);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);transition:transform .18s ease,box-shadow .18s ease}
   .plant-card:hover{transform:translateY(-3px);box-shadow:0 16px 34px -18px rgba(45,60,30,.4)}
-  .plant-thumb{position:relative;aspect-ratio:16/10;background:#e9ede2;overflow:hidden}
+  .plant-thumb{position:relative;aspect-ratio:16/10;background:#F7F7F7;overflow:hidden}
   .plant-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
   .plant-card:hover .plant-thumb img{transform:scale(1.05)}
   .plant-card.no-photo .plant-thumb::after{content:'Photo coming soon';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.7rem;color:var(--muted)}
@@ -295,9 +295,9 @@
   .img-cap{margin-top:14px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:.85rem;color:#f3ecd9;text-align:center}
 
   /* PRODUCTS */
-  #products{background:linear-gradient(180deg,#f2ecdd,#ece4d2)}
+  #products{background:linear-gradient(180deg,#F7F7F7,#F7F7F7)}
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .card{background:linear-gradient(180deg,#ffffff,#faf6ec);border:1px solid var(--line);border-radius:4px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s ease, border-color .2s ease, box-shadow .2s}
+  .card{background:#ffffff;border:1px solid var(--line);border-radius:4px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s ease, border-color .2s ease, box-shadow .2s}
   .card:hover{transform:translateY(-6px);border-color:rgba(140,198,63,.5);box-shadow:var(--shadow)}
   .card .thumb{height:190px;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
   .card .thumb .tag{position:absolute;top:12px;left:12px;z-index:2;background:rgba(19,17,14,.82);color:var(--tan-2);font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.66rem;font-weight:600;padding:5px 10px;border:1px solid var(--line)}
@@ -340,7 +340,7 @@
   .pillar span{color:var(--muted);font-size:.9rem}
 
   /* PROCESS */
-  #process{background:linear-gradient(180deg,#ece4d2,#f2ecdd)}
+  #process{background:linear-gradient(180deg,#F7F7F7,#F7F7F7)}
   .pends{display:flex;justify-content:space-between;margin-top:34px;margin-bottom:4px}
   .ppill{display:inline-flex;align-items:center;gap:8px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;font-weight:600;padding:8px 15px;border-radius:999px}
   .ppill.raw{background:#e7e0cd;color:#7a6b3f}
@@ -357,7 +357,7 @@
   .step p{color:var(--muted);font-size:.84rem;line-height:1.5;padding:0 6px}
 
   /* CONTACT */
-  #contact{background:radial-gradient(90% 120% at 80% 0%, rgba(95,158,42,.10), transparent 55%),linear-gradient(180deg,#efe8d7,#f2ecdd)}
+  #contact{background:radial-gradient(90% 120% at 80% 0%, rgba(95,158,42,.10), transparent 55%),linear-gradient(180deg,#F7F7F7,#F7F7F7)}
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
   .contact-copy h2{font-size:clamp(2.2rem,4.6vw,3.4rem);font-weight:700;margin:14px 0 16px}
   .contact-copy p{color:var(--bone-2);font-size:1.1rem;max-width:44ch}
@@ -386,7 +386,7 @@
   .map-link svg{width:16px;height:16px;color:var(--grain)}
 
   /* SUBPAGE */
-  .subpage{padding:120px 0 90px;min-height:100vh;background:linear-gradient(180deg,#f2ecdd,#ece4d2)}
+  .subpage{padding:120px 0 90px;min-height:100vh;background:linear-gradient(180deg,#F7F7F7,#F7F7F7)}
   .backlink{display:inline-flex;align-items:center;gap:8px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:.82rem;color:var(--tan-2);margin-bottom:24px;cursor:pointer}
   .backlink:hover{color:var(--grain)}
   .backlink svg{width:16px;height:16px}
@@ -435,7 +435,7 @@
   @media(max-width:720px){.modal-body{grid-template-columns:1fr}.modal-features{grid-template-columns:1fr;gap:22px}.modal-card{padding:26px 20px}}
 
   /* FOOTER */
-  footer{background:#eef1e9;border-top:1px solid var(--line);padding:46px 0 30px}
+  footer{background:#F7F7F7;border-top:1px solid var(--line);padding:46px 0 30px}
   .foot-grid{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
   footer .brand .txt{font-size:1.05rem}
   .foot-links{display:flex;gap:22px;flex-wrap:wrap}
@@ -573,7 +573,7 @@
     <div class="grid">
       <!-- 1 Seed Cleaners -->
       <article class="card reveal" data-href="#/seed-cleaners">
-        <div class="thumb" style="background:radial-gradient(120% 100% at 30% 20%,#eef1e9,#e2e7d9)">
+        <div class="thumb" style="background:radial-gradient(120% 100% at 30% 20%,#F7F7F7,#e2e7d9)">
           <span class="tag" data-i18n="p1.tag">Air-Screen</span>
           <img class="thumb-photo" loading="lazy" decoding="async" src="images/seed-cleaners.jpg" alt="MFroes seed cleaner" onerror="this.remove()">
           <svg viewBox="0 0 300 190" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"><rect x="70" y="55" width="160" height="90" rx="6" fill="#2c281f" stroke="#4a4436"/><g stroke="#5f9e2a" stroke-width="2" opacity=".7"><line x1="80" y1="72" x2="220" y2="72"/><line x1="80" y1="90" x2="220" y2="90"/><line x1="80" y1="108" x2="220" y2="108"/><line x1="80" y1="126" x2="220" y2="126"/></g><g fill="#8cc63f"><circle cx="100" cy="80" r="3"/><circle cx="140" cy="98" r="3"/><circle cx="180" cy="82" r="3"/><circle cx="160" cy="118" r="3"/><circle cx="120" cy="116" r="3"/></g><path d="M150 30 L130 55 L170 55 Z" fill="#4a4436"/></svg>
@@ -587,7 +587,7 @@
       </article>
       <!-- 3 Destoners -->
       <article class="card reveal" data-href="#/destoners">
-        <div class="thumb" style="background:radial-gradient(120% 100% at 40% 30%,#eef1e9,#e2e7d9)">
+        <div class="thumb" style="background:radial-gradient(120% 100% at 40% 30%,#F7F7F7,#e2e7d9)">
           <span class="tag" data-i18n="p3.tag">De-Stoning</span>
           <img class="thumb-photo" loading="lazy" decoding="async" src="images/destoners.jpg" alt="MFroes destoner" onerror="this.remove()">
           <svg viewBox="0 0 300 190" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"><rect x="80" y="55" width="140" height="90" rx="6" fill="#2c281f" stroke="#4a4436"/><path d="M90 130 L210 130 L200 70 L100 70 Z" fill="#14110c" stroke="#4a4436"/><g fill="#8cc63f"><circle cx="130" cy="90" r="3"/><circle cx="165" cy="86" r="3"/><circle cx="150" cy="108" r="3"/></g><g fill="#8a8a8a"><circle cx="185" cy="118" r="4"/><circle cx="118" cy="118" r="4"/></g></svg>
@@ -601,7 +601,7 @@
       </article>
       <!-- 4 Bucket Elevators -->
       <article class="card reveal" data-href="#/bucket-elevators">
-        <div class="thumb" style="background:radial-gradient(120% 100% at 60% 30%,#eef1e9,#e2e7d9)">
+        <div class="thumb" style="background:radial-gradient(120% 100% at 60% 30%,#F7F7F7,#e2e7d9)">
           <span class="tag" data-i18n="p4.tag">Handling</span>
           <img class="thumb-photo" loading="lazy" decoding="async" src="images/bucket-elevators.jpg" alt="MFroes bucket elevator" onerror="this.remove()">
           <svg viewBox="0 0 300 190" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"><rect x="120" y="40" width="60" height="120" rx="6" fill="#2c281f" stroke="#4a4436"/><g fill="#5f9e2a" opacity=".85"><rect x="132" y="56" width="36" height="10" rx="2"/><rect x="132" y="76" width="36" height="10" rx="2"/><rect x="132" y="96" width="36" height="10" rx="2"/><rect x="132" y="116" width="36" height="10" rx="2"/></g><g fill="#8cc63f"><circle cx="150" cy="61" r="2.5"/><circle cx="150" cy="81" r="2.5"/><circle cx="150" cy="101" r="2.5"/></g></svg>
@@ -615,7 +615,7 @@
       </article>
       <!-- 5 Belt Conveyors -->
       <article class="card reveal" data-href="#/belt-conveyors">
-        <div class="thumb" style="background:radial-gradient(120% 100% at 30% 40%,#eef1e9,#e2e7d9)">
+        <div class="thumb" style="background:radial-gradient(120% 100% at 30% 40%,#F7F7F7,#e2e7d9)">
           <span class="tag" data-i18n="p5.tag">Transport</span>
           <img class="thumb-photo" loading="lazy" decoding="async" src="images/belt-conveyors.jpg" alt="MFroes belt conveyor" onerror="this.remove()">
           <svg viewBox="0 0 300 190" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"><rect x="60" y="120" width="180" height="16" rx="8" fill="#2c281f" stroke="#4a4436" transform="rotate(-18 150 128)"/><circle cx="80" cy="140" r="14" fill="#14110c" stroke="#4a4436"/><circle cx="220" cy="90" r="14" fill="#14110c" stroke="#4a4436"/><g fill="#8cc63f"><circle cx="120" cy="112" r="3"/><circle cx="150" cy="103" r="3"/><circle cx="180" cy="94" r="3"/></g></svg>
@@ -629,7 +629,7 @@
       </article>
       <!-- Magnetic Belt Conveyor -->
       <article class="card reveal" data-href="#/magnetic-belt">
-        <div class="thumb" style="background:radial-gradient(120% 100% at 55% 30%,#eef1e9,#e2e7d9)">
+        <div class="thumb" style="background:radial-gradient(120% 100% at 55% 30%,#F7F7F7,#e2e7d9)">
           <span class="tag" data-i18n="p8.tag">Separation</span>
           <img class="thumb-photo" loading="lazy" decoding="async" src="images/magnetic-belt.jpg" alt="MFroes magnetic belt conveyor" onerror="this.remove()">
           <svg viewBox="0 0 300 190" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
@@ -652,7 +652,7 @@
       </article>
       <!-- 6 Polishers -->
       <article class="card reveal" data-href="#/polishers">
-        <div class="thumb" style="background:radial-gradient(120% 100% at 50% 30%,#eef1e9,#e2e7d9)">
+        <div class="thumb" style="background:radial-gradient(120% 100% at 50% 30%,#F7F7F7,#e2e7d9)">
           <span class="tag" data-i18n="p7.tag">Finishing</span>
           <img class="thumb-photo" loading="lazy" decoding="async" src="images/polishers.jpg" alt="MFroes polisher" onerror="this.remove()">
           <svg viewBox="0 0 300 190" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
@@ -673,7 +673,7 @@
       </article>
       <!-- 7 Used & Refurbished -->
       <article class="card reveal" data-href="#/used-equipment">
-        <div class="thumb" style="background:radial-gradient(120% 100% at 70% 40%,#eef1e9,#e2e7d9)">
+        <div class="thumb" style="background:radial-gradient(120% 100% at 70% 40%,#F7F7F7,#e2e7d9)">
           <span class="tag" data-i18n="p6.tag">Value</span>
           <img class="thumb-photo" loading="lazy" decoding="async" src="images/used-equipment.jpg" alt="MFroes used and refurbished equipment" onerror="this.remove()">
           <svg viewBox="0 0 300 190" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"><rect x="95" y="55" width="110" height="90" rx="6" fill="#2c281f" stroke="#4a4436"/><path d="M150 45 L120 78 L180 78 Z" fill="#4a4436"/><circle cx="150" cy="105" r="26" fill="none" stroke="#5f9e2a" stroke-width="3"/><path d="M138 105 l8 8 16 -18" fill="none" stroke="#8cc63f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -1379,7 +1379,7 @@
   ];
 
   // Reusable thumb illustration (air-screen style) for model cards
-  const THUMB=(grad,img,alt)=>`<div class="thumb" style="background:radial-gradient(120% 100% at ${grad},#eef1e9,#e2e7d9)">${img?`<img class="thumb-photo" loading="lazy" decoding="async" src="${img}" alt="${alt||''}" onerror="this.remove()">`:''}<svg viewBox="0 0 300 190" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"><rect x="70" y="55" width="160" height="90" rx="6" fill="#2c281f" stroke="#4a4436"/><g stroke="#5f9e2a" stroke-width="2" opacity=".7"><line x1="80" y1="72" x2="220" y2="72"/><line x1="80" y1="90" x2="220" y2="90"/><line x1="80" y1="108" x2="220" y2="108"/><line x1="80" y1="126" x2="220" y2="126"/></g><g fill="#8cc63f"><circle cx="100" cy="80" r="3"/><circle cx="140" cy="98" r="3"/><circle cx="180" cy="82" r="3"/><circle cx="160" cy="118" r="3"/><circle cx="120" cy="116" r="3"/></g><path d="M150 30 L130 55 L170 55 Z" fill="#4a4436"/></svg></div>`;
+  const THUMB=(grad,img,alt)=>`<div class="thumb" style="background:radial-gradient(120% 100% at ${grad},#F7F7F7,#e2e7d9)">${img?`<img class="thumb-photo" loading="lazy" decoding="async" src="${img}" alt="${alt||''}" onerror="this.remove()">`:''}<svg viewBox="0 0 300 190" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"><rect x="70" y="55" width="160" height="90" rx="6" fill="#2c281f" stroke="#4a4436"/><g stroke="#5f9e2a" stroke-width="2" opacity=".7"><line x1="80" y1="72" x2="220" y2="72"/><line x1="80" y1="90" x2="220" y2="90"/><line x1="80" y1="108" x2="220" y2="108"/><line x1="80" y1="126" x2="220" y2="126"/></g><g fill="#8cc63f"><circle cx="100" cy="80" r="3"/><circle cx="140" cy="98" r="3"/><circle cx="180" cy="82" r="3"/><circle cx="160" cy="118" r="3"/><circle cx="120" cy="116" r="3"/></g><path d="M150 30 L130 55 L170 55 Z" fill="#4a4436"/></svg></div>`;
 
   const CATEGORIES = {
     'seed-cleaners': {
