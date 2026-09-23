@@ -18,6 +18,16 @@
 # replace the old link with the new site. These paths are not used by the
 # current site, so /admin, /images, /content and real files are untouched.
 [[redirects]]
+  from = "/categories/seed-cleaning"
+  to = "/seed-cleaners/"
+  status = 301
+
+[[redirects]]
+  from = "/categories/seed-cleaning/"
+  to = "/seed-cleaners/"
+  status = 301
+
+[[redirects]]
   from = "/categories/*"
   to = "/"
   status = 301
@@ -36,4 +46,20 @@
 [[redirects]]
   from = "/pages/*"
   to = "/"
+  status = 301
+
+# Map important legacy top-level URLs to the closest current destination.
+[[redirects]]
+  from = "/equipment"
+  to = "/#products"
+  status = 301
+
+[[redirects]]
+  from = "/contact-us"
+  to = "/#contact"
+  status = 301
+
+[[redirects]]
+  from = "/about"
+  to = "/#story"
   status = 301
