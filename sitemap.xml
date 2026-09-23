@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://mfroesmfg.com/</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://mfroesmfg.com/</loc></url>
+  <url><loc>https://mfroesmfg.com/seed-cleaners/</loc></url>
+  <url><loc>https://mfroesmfg.com/seed-cleaners/frontier-34-3/</loc></url>
+  <url><loc>https://mfroesmfg.com/seed-cleaners/gv254/</loc></url>
+  <url><loc>https://mfroesmfg.com/seed-cleaners/gv260/</loc></url>
+  <url><loc>https://mfroesmfg.com/seed-cleaners/genx-8026/</loc></url>
+  <url><loc>https://mfroesmfg.com/seed-cleaners/c588/</loc></url>
+  <url><loc>https://mfroesmfg.com/seed-cleaners/c688/</loc></url>
+  <url><loc>https://mfroesmfg.com/seed-cleaners/c788/</loc></url>
 </urlset>
