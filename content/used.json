@@ -71,6 +71,22 @@
       "imgs": [
         "images/used-oliver-3600.jpg"
       ]
+    },
+    {
+      "title": {
+        "en": "Used Carter Day UF510LH",
+        "es": "Usado Carter Day UF510LH"
+      },
+      "desc": {
+        "en": "Completely Refurbished Carter Day UF510LH Cleaner\nComplete with top and bottom aspiration fans.",
+        "es": "Carter Day modelo UF510LH completamente reacondicionada.\nEquipada con sistema de aspiración superior e inferior (ventiladores superior e inferior)."
+      },
+      "status": "available",
+      "imgs": [
+        "/images/WhatsApp Image 2026-09-28 at 8.13.55 AM.jpeg",
+        "/images/WhatsApp Image 2026-09-28 at 8.13.55 AM (2).jpeg",
+        "/images/WhatsApp Image 2026-09-28 at 8.13.55 AM (1).jpeg"
+      ]
     }
   ]
 }
