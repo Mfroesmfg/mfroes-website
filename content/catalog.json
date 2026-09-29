@@ -4,7 +4,7 @@
       "category": "seed-cleaners",
       "name": "Frontier 34-3",
       "photos": [
-        "images/eclipse-334.jpg"
+        "/images/34 3 Cleaner no background.png"
       ],
       "cap": "3 t/h",
       "screens": "3",
@@ -17,6 +17,7 @@
         "en": "A versatile air-screen cleaner in the Frontier series — precise cleaning across a wide range of crops.",
         "es": "Una cribadora de precisión versátil de la serie Frontier — limpieza precisa para una amplia gama de cultivos."
       },
+      "pdf": "",
       "specs": [],
       "features": [
         {
@@ -89,6 +90,7 @@
         "en": "A Seed Master GV-series cleaner combining screens and aspiration for clean, high-quality output.",
         "es": "Una cribadora de precisión Seed Master serie GV que combina cribas y aspiración para una salida limpia y de alta calidad."
       },
+      "pdf": "",
       "specs": [
         {
           "group": {
@@ -264,6 +266,7 @@
         "en": "The GV260 steps up capacity in the Seed Master line while keeping the same cleaning precision.",
         "es": "La GV260 aumenta la capacidad en la línea Seed Master manteniendo la misma precisión de limpieza."
       },
+      "pdf": "",
       "specs": [
         {
           "group": {
@@ -459,6 +462,7 @@
         "en": "A GenX-series cleaner engineered for demanding, higher-volume operations.",
         "es": "Una cribadora de precisión serie GenX diseñada para operaciones exigentes de mayor volumen."
       },
+      "pdf": "",
       "specs": [
         {
           "group": {
@@ -654,6 +658,7 @@
         "en": "An entry in the C-series, balancing throughput and footprint for growing operations.",
         "es": "Un modelo de la serie C que equilibra capacidad y espacio para operaciones en crecimiento."
       },
+      "pdf": "",
       "specs": [
         {
           "group": {
@@ -992,6 +997,7 @@
         "en": "The compact AG destoner — dependable stone removal for smaller lines and specialty lots.",
         "es": "La despedradora AG compacta — remoción de piedras confiable para líneas pequeñas y lotes especiales."
       },
+      "pdf": "",
       "specs": [],
       "features": [
         {
@@ -1064,6 +1070,7 @@
         "en": "A step up in capacity, keeping the same high separation efficiency for growing operations.",
         "es": "Un aumento en capacidad, manteniendo la misma alta eficiencia de separación para operaciones en crecimiento."
       },
+      "pdf": "",
       "specs": [],
       "features": [
         {
@@ -1136,6 +1143,7 @@
         "en": "A higher-capacity AG destoner for busier lines that still demand clean, precise stone removal.",
         "es": "Una despedradora AG de mayor capacidad para líneas más ocupadas que aún exigen una remoción de piedras limpia y precisa."
       },
+      "pdf": "",
       "specs": [],
       "features": [
         {
@@ -1204,6 +1212,7 @@
         "en": "The high-capacity flagship of the AG line, built for maximum throughput in demanding operations.",
         "es": "El modelo insignia de alta capacidad de la línea AG, hecho para el máximo rendimiento en operaciones exigentes."
       },
+      "pdf": "",
       "specs": [],
       "features": [
         {
@@ -1272,6 +1281,7 @@
         "en": "The compact entry — a dependable elevator for smaller lines and tight footprints.",
         "es": "El modelo compacto — un elevador confiable para líneas pequeñas y espacios reducidos."
       },
+      "pdf": "",
       "specs": [
         {
           "group": {
@@ -1365,6 +1375,8 @@
         "images/c-600.jpg"
       ],
       "cap": "10 t/h",
+      "screens": "",
+      "size": "",
       "series": {
         "en": "C Series",
         "es": "Serie C"
@@ -1373,6 +1385,7 @@
         "en": "A step up in capacity for growing operations that need more lift.",
         "es": "Un aumento en capacidad para operaciones en crecimiento que necesitan más elevación."
       },
+      "pdf": "",
       "specs": [
         {
           "group": {
@@ -1466,6 +1479,7 @@
         "en": "A higher-capacity elevator for busier lines and taller lifts.",
         "es": "Un elevador de mayor capacidad para líneas más ocupadas y elevaciones más altas."
       },
+      "pdf": "",
       "specs": [
         {
           "group": {
@@ -1559,6 +1573,7 @@
         "en": "Serious throughput for high-volume plants, with the same gentle handling.",
         "es": "Rendimiento serio para plantas de alto volumen, con el mismo manejo suave."
       },
+      "pdf": "",
       "specs": [
         {
           "group": {
@@ -1652,6 +1667,7 @@
         "en": "An extended-capacity elevator for demanding, continuous operations.",
         "es": "Un elevador de capacidad extendida para operaciones exigentes y continuas."
       },
+      "pdf": "",
       "specs": [
         {
           "group": {
@@ -1745,6 +1761,7 @@
         "en": "The high-capacity flagship, built for maximum throughput across the biggest lines.",
         "es": "El modelo insignia de alta capacidad, hecho para el máximo rendimiento en las líneas más grandes."
       },
+      "pdf": "",
       "specs": [
         {
           "group": {
@@ -1848,6 +1865,7 @@
         "en": "A gentle belt conveyor for transferring and feeding across your line, sized to your layout.",
         "es": "Una banda transportadora suave para transferir y alimentar a lo largo de tu línea, a la medida de tu planta."
       },
+      "pdf": "",
       "specs": [
         {
           "group": {
@@ -1897,6 +1915,7 @@
       ],
       "cap": "",
       "screens": "",
+      "size": "",
       "series": {
         "en": "Belt Series",
         "es": "Serie de Banda"
@@ -1905,6 +1924,7 @@
         "en": "A wider-belt conveyor for higher throughput while keeping the same low-impact handling.",
         "es": "Una banda más ancha para mayor rendimiento manteniendo el mismo manejo de bajo impacto."
       },
+      "pdf": "",
       "specs": [
         {
           "group": {
@@ -1963,6 +1983,7 @@
         "en": "Separates seed by surface texture using iron powder and a magnetic belt — ideal for removing dodder, buckhorn, and other rough weed seeds from clover, alfalfa, flax, and grasses.",
         "es": "Separa la semilla por textura de superficie usando polvo de hierro y una banda magnética — ideal para remover cuscuta, llantén y otras semillas de maleza rugosas del trébol, la alfalfa, el lino y los pastos."
       },
+      "pdf": "",
       "specs": [],
       "features": [
         {
@@ -2035,6 +2056,7 @@
         "en": "The high-capacity MF polisher — five polishing boxes buff the seed coat and remove hairs and awns for smooth, free-flowing seed.",
         "es": "La pulidora MF de alta capacidad — cinco cajas de pulido pulen la cubierta de la semilla y remueven pelos y aristas para una semilla lisa y de libre flujo."
       },
+      "pdf": "",
       "specs": [
         {
           "group": {
@@ -2101,6 +2123,8 @@
         "images/mf536.jpg"
       ],
       "cap": "up to 5–6 t/h",
+      "screens": "",
+      "size": "",
       "series": {
         "en": "MF Series",
         "es": "Serie MF"
@@ -2109,6 +2133,7 @@
         "en": "A mid-capacity MF polisher with two polishing boxes — clean finishing that improves flow, metering, and bag presentation.",
         "es": "Una pulidora MF de capacidad media con dos cajas de pulido — un acabado limpio que mejora el flujo, la dosificación y la presentación en la bolsa."
       },
+      "pdf": "",
       "specs": [
         {
           "group": {
@@ -2175,6 +2200,8 @@
         "images/mf218.jpg"
       ],
       "cap": "up to 2 t/h",
+      "screens": "",
+      "size": "",
       "series": {
         "en": "MF Series · Compact",
         "es": "Serie MF · Compacta"
@@ -2183,6 +2210,7 @@
         "en": "The compact single-box MF polisher — finishes seed to a smooth, uniform coat, ready for treating or bagging.",
         "es": "La pulidora MF compacta de una caja — da a la semilla un acabado liso y uniforme, lista para tratar o embolsar."
       },
+      "pdf": "",
       "specs": [
         {
           "group": {
